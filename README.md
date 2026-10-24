@@ -1,7 +1,7 @@
 # From Subcellular Spatial Biophysics to Routine Digital Pathology AI: Resolving Non-Genetic Osimertinib Resistance via Microvascular Decoupling
 
 [![Master Study CI](https://github.com/Lukecele/spatial-oncology-master/actions/workflows/ci.yml/badge.svg)](https://github.com/Lukecele/spatial-oncology-master/actions/workflows/ci.yml)
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23620878-blue.svg)](https://doi.org/10.5281/zenodo.23620878)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23623653-blue.svg)](https://doi.org/10.5281/zenodo.23623653)
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Lukecele/spatial-oncology-master/blob/main/notebooks/InSituVision_Master_Pipeline.ipynb)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
@@ -190,7 +190,7 @@ If you use this codebase, mathematical model, clinical findings, or diagnostic A
   author={Celebrano, Luca},
   journal={GitHub Repository: Lukecele/spatial-oncology-master},
   year={2026},
-  doi={10.5281/zenodo.23620878},
+  doi={10.5281/zenodo.23623653},
   url={https://github.com/Lukecele/spatial-oncology-master}
 }
 ```

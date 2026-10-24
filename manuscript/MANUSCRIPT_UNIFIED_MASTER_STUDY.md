@@ -7,7 +7,7 @@ $^{2}$Telethon Institute of Genetics and Medicine (TIGEM), Via Campi Flegrei 34,
 $^*$Correspondence: `l.celebrano@studenti.unina.it` | ORCID: [0009-0007-0931-3555](https://orcid.org/0009-0007-0931-3555)  
 **Classification:** Major Research Article • Computational Oncology, Spatial Biophysics, Digital Pathology & Artificial Intelligence  
 **Master Repository:** [https://github.com/Lukecele/spatial-oncology-master](https://github.com/Lukecele/spatial-oncology-master)  
-**Open Science Archive:** DOI: [10.5281/zenodo.23620878](https://doi.org/10.5281/zenodo.23620878) • License: GNU General Public License v3.0 (GPL-3.0)
+**Open Science Archive:** DOI: [10.5281/zenodo.23623653](https://doi.org/10.5281/zenodo.23623653) • License: GNU General Public License v3.0 (GPL-3.0)
 
 ---
 
@@ -188,4 +188,4 @@ In future investigations (Study 5 Pan-Cancer Horizon), we anticipate that the ch
 4. Minchinton, A. I., & Tannock, I. F. (2006). Drug penetration in solid tumours. *Nature Reviews Cancer*, 6(8), 583-592.
 5. Ilse, M., Tomczak, J., & Welling, M. (2018). Attention-based deep multiple instance learning. *International Conference on Machine Learning (ICML)*, 2127-2136.
 6. Lu, M. Y., et al. (2021). Data-efficient and weakly supervised computational pathology on whole-slide images. *Nature Biomedical Engineering*, 5(6), 555-570.
-7. Celebrano, L. (2026). *Spatial Oncology Tetralogy & Master Study*. GitHub Repository: `Lukecele/spatial-oncology-master`. DOI: `10.5281/zenodo.23620878`.
+7. Celebrano, L. (2026). *Spatial Oncology Tetralogy & Master Study*. GitHub Repository: `Lukecele/spatial-oncology-master`. DOI: `10.5281/zenodo.23623653`.
