@@ -99,7 +99,9 @@ $$\lambda = \sqrt{\frac{D}{k}} = \sqrt{\frac{1.3 \times 10^{-6}\,\text{cm}^2/\te
 In confluent solid neoplastic sheets exceeding a radius of $600\text{--}700\,\mu\text{m}$, the central core drug concentration plummets below the therapeutic in vitro threshold:
 $$C_{\text{core}} < \text{IC}_{50} \approx 12.4\,\text{nM} \quad (\approx 0.35 C_0)$$
 
-As demonstrated in **Figure 2**, neoplastic cells residing within these cores are physically shielded from drug exposure, creating a **pharmacological sanctuary** where sensitive subclones survive despite systemic treatment, without requiring a single resistance-conferring genetic mutation.
+As demonstrated in **Figure 1**, neoplastic cells residing within these cores are physically shielded from drug exposure, creating a **pharmacological sanctuary** where sensitive subclones survive despite systemic treatment, without requiring a single resistance-conferring genetic mutation.
+
+![**Figure 1: Subcellular Spatial Reaction-Diffusion Dynamics and Multi-Drug Penetration Spectrum.** (A) Radial concentration decay C(r) across solid neoplastic nests. (B) Bootstrap validation across multi-drug targeted therapies. (C) Heterogeneity perturbation robustness.](../results/broad_generalizability_benchmark.png){width=95%}
 
 ---
 
@@ -126,6 +128,8 @@ As shown in **Figure 3**, survival analysis revealed an enormous clinical diverg
 - **Harrell's Concordance Index (C-index):** **$0.939$** within the validated clinical subcohort.
 
 In multivariable Cox models adjusting for patient age, sex, smoking history, pathologic stage, and specific *EGFR* mutation subtype, microvascular decoupling remained the single most powerful independent prognostic predictor of disease progression ($p < 0.0001$), decisively outperforming traditional TNM staging metrics.
+
+![**Figure 2: Multi-Center Population Clinical Survival Validation ($N = 854$).** Kaplan-Meier progression-free survival (PFS) curves stratified by microvascular decoupling status demonstrating massive clinical divergence (HR = 19.45, p < 10^-15).](../results/figure_study3_kaplan_meier_validation.png){width=90%}
 
 ---
 
@@ -158,7 +162,9 @@ where $\mathcal{R}(T_i) = \{j : T_j \ge T_i\}$ denotes the risk set at event tim
 Across $N = 570$ Whole-Slide Images from TCGA-LUAD, InSituVision achieved:
 - **Harrell's Concordance Index:** $C = 0.739 \pm 0.024$ on held-out validation cases.
 - **Cost Reduction:** $99.91\%$ cost reduction compared to Visium HD ($4.50\text{ €}$ vs $5,000\text{ €}$).
-- **Spatial Attention Projection:** As shown in **Figure 4** and **Figure 5**, 2D projection of patch attention weights onto the original gigapixel histology maps cleanly to solid neoplastic nests lacking capillary networks, reproducing the physical sanctuary zones identified in Study 2.
+- **Spatial Attention Projection:** As shown in **Figure 3**, 2D projection of patch attention weights onto the original gigapixel histology maps cleanly to solid neoplastic nests lacking capillary networks, reproducing the physical sanctuary zones identified in Study 2.
+
+![**Figure 3: Routine Diagnostic H&E Attention-MIL Hotspot Projections.** High-resolution whole-slide image patch attention heatmaps projecting spatial sanctuary risk specifically onto avascular neoplastic nests.](../results/figure_sample_attention_heatmap.png){width=90%}
 
 ---
 
@@ -200,6 +206,8 @@ To prevent clinical over-claiming and establish the true domain of scientific va
 4. **Glioblastoma Multiforme (GBM):** Active blood-brain barrier P-glycoprotein (ABCB1) efflux pumps extrude small molecules, collapsing $\lambda$ to $136.9\,\mu\text{m}$ and violating passive diffusion assumptions.
 5. **Giant Tumors ($> 1,600\,\mu\text{m}$):** The oxygen diffusion limit ($150\text{--}200\,\mu\text{m}$) causes central anoxic infarction ($pO_2 < 5\,\text{mmHg}$). Cells die of hypoxia/ischemia rather than pharmacological evasion.
 
+![**Figure 4: Pan-Cancer Microenvironmental Mechanics and Boundary Conditions.** (A) Interstitial fluid pressure and collagen sieving. (B) Pan-cancer screening length comparisons across solid malignancies.](../results/exhaustive_tme_and_pancancer_limits.png){width=95%}
+
 ---
 
 ## 8. Multi-Center Blinded Clinical Validation and Formal Statistical Power Analysis (N = 246)
@@ -220,6 +228,10 @@ When evaluated strictly blinded to clinical outcomes:
 - **Extreme Contrast in the MSKCC Cohort:** In patients with verified histopathology, low sanctuary cases (lepidic pattern, $N = 38$) experienced a **$0.0\%$ recurrence rate at 24 months** under oral TKI monotherapy ($100\%$ control), whereas high sanctuary cases (solid/micropapillary nests, $N = 18$) suffered a **$16.7\%$ rapid relapse rate** with early progressions emerging at $1.7$ months ($HR = 4.89$, $95\%$ CI: $1.78\text{--}13.46$, Log-Rank **$p = 0.0212$**).
 - **Subgroup Robustness:** The deleterious impact of high $C\text{-SSI}$ was independently confirmed across clinical phenotypes: *EGFR* L858R point mutations ($HR = 3.56$, $p = 0.0016$), females ($HR = 2.81$, $p = 0.0038$), smokers ($HR = 2.73$, $p = 0.0024$), and early stage I/II resections with solid nests ($HR = 2.78$, $p = 0.0367$).
 - **Longitudinal Discrimination & Calibration:** The time-dependent AUC peaked at **$AUC = 0.714$** at 18 months (the clinical median PFS milestone of osimertinib), with an exceptional 18-month Brier calibration score of **$0.223$**.
+
+![**Figure 5: Multi-Center Blinded Real-World Clinical Cohort Validation ($N = 246$).** (A) MSKCC RFS curves stratified by blinded C-SSI (p = 0.0212). (B) TCGA PFS curves. (C) Multi-center ROC curve. (D) C-SSI by histologic subtype. (E) Multivariable Forest Plot. (F) Clinical Decision Curve Analysis (DCA).](../results/blinded_real_world_cohort_validation.png){width=95%}
+
+![**Figure 6: Formal Statistical Power Analysis and Longitudinal Calibration.** (A) Schoenfeld power curve achieving > 95.8% power. (B) Multivariable Cox proportional hazards forest plot. (C) Longitudinal time-dependent AUC(t). (D) 18-month calibration curve (Brier = 0.223). (E) Subgroup sensitivity forest plot. (F) Nest diameter vs core penetration.](../results/formal_statistical_study_validation.png){width=95%}
 
 ---
 
