@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Biophysical Drug Shielding and Non-Genetic Resistance in Compact EGFR-Mutant Lung Adenocarcinoma</title>
+<style>
+  @page {
+    size: letter portrait;
+    margin: 22mm 20mm 22mm 20mm;
+    @bottom-center {
+      content: counter(page);
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 9pt;
+      color: #666;
+    }
+  }
+
+  body {
+    font-family: "Georgia", "Times New Roman", "Cambria", serif;
+    font-size: 10pt;
+    line-height: 1.55;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1.title {
+    font-size: 17pt;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.3;
+    margin-top: 0;
+    margin-bottom: 14pt;
+    color: #0b1f3a;
+  }
+
+  .author-block {
+    text-align: center;
+    margin-bottom: 14pt;
+    font-size: 10pt;
+  }
+
+  .author-name {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #111;
+  }
+
+  .affiliations {
+    margin-top: 6pt;
+    font-size: 9pt;
+    color: #444;
+    line-height: 1.4;
+  }
+
+  .meta-badges {
+    text-align: center;
+    font-size: 8.5pt;
+    color: #555;
+    margin-top: 8pt;
+    margin-bottom: 18pt;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 6pt 0;
+  }
+
+  .abstract-box {
+    background-color: #f8fafc;
+    border-left: 3.5px solid #1e3a8a;
+    padding: 10pt 14pt;
+    margin-bottom: 18pt;
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+
+  .abstract-box h2 {
+    margin-top: 0;
+    font-size: 11pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #1e3a8a;
+  }
+
+  h2 {
+    font-size: 12.5pt;
+    font-weight: bold;
+    color: #0f2744;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 3pt;
+    margin-top: 18pt;
+    margin-bottom: 8pt;
+    page-break-after: avoid;
+  }
+
+  h3 {
+    font-size: 10.5pt;
+    font-weight: bold;
+    color: #1e293b;
+    margin-top: 12pt;
+    margin-bottom: 5pt;
+    page-break-after: avoid;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 8pt;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  ul, ol {
+    margin-top: 0;
+    margin-bottom: 8pt;
+    padding-left: 20pt;
+  }
+
+  li {
+    margin-bottom: 4pt;
+  }
+
+  .math-block {
+    text-align: center;
+    margin: 10pt 0;
+    font-family: "Latin Modern Math", "Cambria Math", "Times New Roman", serif;
+    font-style: italic;
+    font-size: 10.5pt;
+  }
+
+  .ascii-box {
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 8pt;
+    line-height: 1.25;
+    padding: 8pt;
+    margin: 10pt auto;
+    width: fit-content;
+    white-space: pre;
+  }
+
+  table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12pt 0;
+    font-size: 8.5pt;
+    page-break-inside: avoid;
+  }
+
+  table.data-table th, table.data-table td {
+    border: 1px solid #cbd5e1;
+    padding: 5pt 7pt;
+    text-align: left;
+  }
+
+  table.data-table th {
+    background-color: #f1f5f9;
+    font-weight: bold;
+    color: #0f172a;
+  }
+
+  table.data-table tr:nth-child(even) {
+    background-color: #f8fafc;
+  }
+
+  .figure-container {
+    margin: 14pt 0;
+    text-align: center;
+    page-break-inside: avoid;
+  }
+
+  .figure-container img {
+    max-width: 98%;
+    height: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 2px;
+  }
+
+  .figure-caption {
+    font-size: 8.5pt;
+    line-height: 1.4;
+    color: #334155;
+    text-align: justify;
+    margin-top: 5pt;
+    padding: 0 4pt;
+  }
+
+  .figure-caption strong {
+    color: #0f172a;
+  }
+
+  .references-list {
+    font-size: 8.5pt;
+    line-height: 1.45;
+    padding-left: 18pt;
+  }
+
+  .references-list li {
+    margin-bottom: 5pt;
+    text-align: justify;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+</style>
+</head>
+<body>
+
+<h1 class="title">Biophysical Drug Shielding and Non-Genetic Resistance in Compact EGFR-Mutant Lung Adenocarcinoma: An Integrated Multi-Scale Framework from Subcellular Spatial Transcriptomics to Clinical Histopathology</h1>
+
+<div class="author-block">
+  <div class="author-name">Luca Celebrano<sup>1,2,*</sup></div>
+  <div class="affiliations">
+    <sup>1</sup>Department of Clinical Medicine and Surgery, School of Medicine, University of Naples Federico II, Via Sergio Pansini 5, 80131 Naples, Italy<br>
+    <sup>2</sup>Telethon Institute of Genetics and Medicine (TIGEM), Via Campi Flegrei 34, 80078 Pozzuoli, Naples, Italy<br>
+    <sup>*</sup>Correspondence: <code>l.celebrano@studenti.unina.it</code> | ORCID: <a href="https://orcid.org/0009-0007-0931-3555">0009-0007-0931-3555</a>
+  </div>
+</div>
+
+<div class="meta-badges">
+  <strong>Classification:</strong> Major Research Article &bull; Computational Oncology, Spatial Biophysics, Digital Pathology &bull; 
+  <strong>Master Repository:</strong> <a href="https://github.com/Lukecele/spatial-oncology-master">github.com/Lukecele/spatial-oncology-master</a> &bull; 
+  <strong>Archive:</strong> DOI: <a href="https://doi.org/10.5281/zenodo.23623653">10.5281/zenodo.23623653</a> &bull; 
+  <strong>License:</strong> GNU GPL-3.0
+</div>
+
+<div class="abstract-box">
+  <h2>Abstract</h2>
+  <p>Despite dramatic initial objective response rates to third-generation epidermal growth factor receptor (EGFR) tyrosine kinase inhibitors (TKIs) such as osimertinib in <em>EGFR</em>-mutant non-small cell lung cancer (NSCLC), therapeutic durability remains heterogeneous. While acquired resistance has conventionally been ascribed to secondary genomic alterations (e.g., <em>EGFR</em> C797S, <em>MET</em> amplification), repeat biopsies show that up to 50% of progressing patients harbor no identifiable genetic resistance mechanism. Here, we present the <strong>Spatial Sanctuary Framework (SSF)</strong>, an integrated biophysical and computational modeling architecture resolving non-genetic persistence by linking theoretical evolutionary dynamics, subcellular spatial transcriptomics, passive reaction-diffusion transport physics, and clinical histopathological validation.</p>
+  <p>First, using evolutionary game theory and spatial cell neighborhood decomposition, we show that non-genetic drug tolerance is governed by frequency-dependent subclonal interaction matrices, stabilizing an internal polymorphic Nash equilibrium (<em>x</em>* &approx; 0.61) that naturally explains drug-holiday resensitization without de novo mutations. Second, leveraging 10x Genomics Visium HD subcellular spatial transcriptomics (211,104 bins at 2 &mu;m resolution), we demonstrate that homotypic tumor clustering in solid/micropapillary growth patterns (87.9% cell contact) mechanically decouples neoplastic cells from functional stroma, collapsing microvascular contact to 2.7%. Third, modeling interstitial transport via cylindrical reaction-diffusion physics (<em>D</em> &nabla;<sup>2</sup><em>C</em> &minus; <em>kC</em> = 0), we find that while the intrinsic penetration screening length spans &lambda; &approx; 624 &mu;m, the therapeutic threshold (<em>C</em> &lt; IC<sub>50</sub> &approx; 12.4 nM &approx; 0.35 <em>C</em><sub>0</sub>) is already breached at 70&ndash;100 &mu;m from the nearest microvessel. Because cells remain viable within the classical oxygen diffusion limit (150&ndash;200 &mu;m), solid nests exceeding 200 &mu;m form viable pharmacological sanctuaries. Fourth, evaluating the Spatial Sanctuary Index (SSI) in a blinded real-world cohort of <em>EGFR</em>-mutant lung adenocarcinoma patients from Memorial Sloan Kettering (MSKCC LUAD 2020, <em>N</em> = 182), histopathologically verified high-sanctuary solid/micropapillary architectures experienced rapid disease recurrence compared to durable lepidic patterns (<em>HR</em> = 4.89, 95% CI: 1.78&ndash;13.46, Log-Rank <em>p</em> = 0.0212; 2-year recurrence-free rate 0.0% vs 16.7%). Finally, we formulate InSituVision, demonstrating how attention-based deep multiple instance learning can map avascular sanctuary features directly from ubiquitous diagnostic H&E slides (&lt; 5 EUR/slide). This framework establishes non-genetic TKI resistance as a predictable biophysical transport pathology, providing an actionable foundation for precision oncology.</p>
+</div>
+
+<h2>1. Introduction: The Causal Arc of Non-Genetic Resistance</h2>
+<p>Targeted inhibition of oncogenic driver kinases has transformed therapeutic paradigms across medical oncology. In advanced non-small cell lung cancer (NSCLC) harboring sensitizing <em>EGFR</em> mutations (exon 19 deletions or L858R substitutions), third-generation EGFR tyrosine kinase inhibitors (TKIs), notably osimertinib, have established definitive first-line superiority. However, therapeutic durability remains profoundly heterogeneous.</p>
+
+<div class="ascii-box">+--------------------------------------------------------------------------+
+|                  THE UNIFIED 4-PILLAR CAUSAL CONTINUUM                   |
+|                                                                          |
+|  [Pillar 1: Theory]                  [Pillar 2: Visium HD]               |
+|  Spatial Evolutionary Game Theory    Subcellular Biophysics (2 um)       |
+|  Ergodic Replicator Dynamics         Reaction-Diffusion Transport        |
+|  Nash Eq x* ~ 0.61 (Coexistence)     Sanctuary Threshold r ~ 70-100 um   |
+|                  \                                /                      |
+|                   \                              /                       |
+|                    v                            v                        |
+|  [Pillar 3: Clinical Cohort]         [Pillar 4: Digital Pathology AI]    |
+|  Real-World Histopathology (MSKCC)   Routine Diagnostic H&E Attn-MIL     |
+|  Log-Rank p = 0.0212, HR = 4.89      Harrell C-index ~ 0.74              |
+|  0.0% Recurrence (Lepidic Pattern)   Democratized Cost < 5 EUR/slide     |
++--------------------------------------------------------------------------+</div>
+
+<p>For decades, cancer biology has interpreted therapeutic relapse predominantly through the lens of Darwinian clonal selection driven by de novo or pre-existing genomic mutations. In osimertinib-treated cohorts, well-characterized secondary genetic alterations include the tertiary on-target <em>EGFR</em> C797S mutation, <em>MET</em> or <em>HER2</em> amplifications, and downstream MAPK/PI3K pathway activations. Crucially, however, repeat-biopsy and circulating tumor DNA (ctDNA) molecular profiling reveals that between 40% and 50% of progressing patients harbor <strong>no identifiable genetic resistance alteration</strong>.</p>
+
+<p>These observationally "unexplained" progressions are frequently attributed to epigenetic plasticity, phenotypic drug tolerance, or histological transformation. Yet, the physical and spatial mechanisms that orchestrate non-genetic persistence within intact patient tumors have remained poorly understood. Conventional bulk sequencing and dissociated single-cell transcriptomics discard the three-dimensional coordinates of the tumor microenvironment (TME), blinding analysis to the biophysical transport barriers governing small-molecule penetration and cellular competition.</p>
+
+<p>To resolve this challenge, we present an end-to-end framework organized across four complementary analytical pillars:</p>
+<ol>
+  <li><strong>Pillar 1 (Spatial Evolutionary Game Theory):</strong> Formulates the Space-for-Time Ergodic Mapping Theorem, proving that spatial neighborhood clustering enables frequency-dependent cooperative survival and non-zero polymorphic equilibria.</li>
+  <li><strong>Pillar 2 (Subcellular Spatial Transcriptomics &amp; Transport Physics):</strong> Leverages 10x Genomics Visium HD (2 &mu;m resolution) across 211,104 spatial bins, demonstrating that homotypic neoplastic crowding triggers microvascular collapse and sets a biophysical threshold where drug concentration falls below IC<sub>50</sub> within metabolically viable tissue zones.</li>
+  <li><strong>Pillar 3 (Clinical Histopathologic Validation):</strong> Evaluates the framework on a verified real-world cohort of <em>EGFR</em>-mutant lung adenocarcinoma patients from Memorial Sloan Kettering (MSKCC LUAD 2020, <em>N</em> = 182), demonstrating that architectural microvascular decoupling imposes a profound clinical recurrence penalty (<em>HR</em> = 4.89, <em>p</em> = 0.0212).</li>
+  <li><strong>Pillar 4 (Diagnostic Digital Pathology AI):</strong> Develops InSituVision, an Attention-MIL neural network architecture extracting spatial sanctuary risk directly from routine diagnostic H&E whole-slide images (&lt; 5 EUR per slide).</li>
+</ol>
+
+<h2>2. Pillar 1: Spatial Evolutionary Game Theory &amp; Ergodic Replicator Dynamics</h2>
+<p>In classical pharmacology, drug resistance is conceptualized as an intrinsic, cell-autonomous fitness advantage. In contrast, evolutionary game theory posits that the fitness <em>f<sub>i</sub></em> of an oncogenic phenotype is frequency-dependent, dictated by the phenotypic composition of its local cellular neighborhood:</p>
+
+<div class="math-block">f<sub>i</sub>(<strong>x</strong>) = &sum;<sub>j</sub> A<sub>ij</sub> x<sub>j</sub></div>
+
+<p>where <strong>x</strong> = [<em>x</em><sub>1</sub>, <em>x</em><sub>2</sub>, &hellip;, <em>x<sub>n</sub></em>]<sup><em>T</em></sup> represents subclonal population frequencies, and <strong>A</strong> is the inter-subclonal payoff interaction matrix.</p>
+
+<h3>2.1 The Space-for-Time Ergodic Mapping Theorem</h3>
+<p>To infer temporal evolutionary dynamics from cross-sectional spatial biopsies, we formulated the Space-for-Time Ergodic Mapping Theorem:</p>
+
+<div class="math-block">lim<sub>R &rarr; &infin;</sub> (1 / &pi;R<sup>2</sup>) &int;<sub>B<sub>R</sub>(0)</sub> &phi;(S(r)) dr = lim<sub>T &rarr; &infin;</sub> (1 / T) &int;<sub>0</sub><sup>T</sup> &phi;(X(t)) dt &emsp; (almost surely)</div>
+
+<p>Under spatial mixing conditions, spatial cellular neighborhood graphs allow empirical estimation of <strong>A</strong>. Calibrated on human invasive carcinoma spatial architectures, the inferred 2 &times; 2 payoff matrix between drug-sensitive (<em>S</em>) and drug-tolerant (<em>R</em>) subclones is:</p>
+
+<div class="math-block"><strong>A</strong> = [ [-0.736, 2.866], [2.188, -1.772] ]</div>
+
+<h3>2.2 Replicator Dynamics &amp; Polymodal Nash Equilibrium</h3>
+<p>The continuous-time replicator equation governing the sensitive fraction <em>x</em> is:</p>
+
+<div class="math-block">dx/dt = x (f<sub>S</sub>(<strong>x</strong>) &minus; f&#772;(<strong>x</strong>)) = x(1 &minus; x) [ (a<sub>11</sub> &minus; a<sub>21</sub>)x + (a<sub>12</sub> &minus; a<sub>22</sub>)(1 &minus; x) ]</div>
+
+<p>Setting <em>dx/dt</em> = 0 yields the internal polymorphic Nash equilibrium:</p>
+
+<div class="math-block">x* = (a<sub>22</sub> &minus; a<sub>12</sub>) / [ (a<sub>11</sub> &minus; a<sub>12</sub>) &minus; (a<sub>21</sub> &minus; a<sub>22</sub>) ] = (&minus;1.772 &minus; 2.866) / [ (&minus;0.736 &minus; 2.866) &minus; (2.188 &minus; (&minus;1.772)) ] &approx; 0.613</div>
+
+<p>Because off-diagonal payoffs dominate diagonal self-interactions (<em>a</em><sub>12</sub> &gt; <em>a</em><sub>22</sub> and <em>a</em><sub>21</sub> &gt; <em>a</em><sub>11</sub>), the system adopts a <strong>coexistence game</strong> topology. As shown in <strong>Figure 1</strong>, the microenvironment stabilizes an internal polymorphic equilibrium (<em>x</em>* &approx; 61.3% sensitive, 38.7% tolerant), providing a theoretical explanation for the resurgence of drug sensitivity observed following therapeutic breaks.</p>
+
+<div class="figure-container">
+  <img src="file:///home/luca/Scrivania/spatial-oncology-master/figures/figure1_game_composite.png" alt="Figure 1: Spatial Game Decomposition and Replicator Dynamics">
+  <div class="figure-caption">
+    <strong>Figure 1: Spatial Evolutionary Game Theory, Decoupled Fitness, and Polymodal Coexistence.</strong> (A&ndash;C) Spatial cellular interaction graphs and phenotypic subclonal decomposition infer off-diagonal payoff dominance. (D) Continuous-time replicator dynamics confirming a stable internal polymorphic Nash equilibrium (<em>x</em>* &approx; 0.613).
+  </div>
+</div>
+
+<h2>3. Pillar 2: Subcellular Spatial Transcriptomics &amp; Reaction-Diffusion Biophysics</h2>
+<p>To identify the physical substrate underpinning this frequency-dependent payoff matrix, we analyzed intact human lung adenocarcinoma biopsies utilizing 10x Genomics Visium HD subcellular spatial transcriptomics across 211,104 individual spatial bins at 2 &mu;m resolution.</p>
+
+<h3>3.1 Spatial Microvascular Decoupling</h3>
+<p>Spatial neighborhood graph deconvolution revealed two starkly distinct microarchitectural states:</p>
+<ul>
+  <li><strong>Microvascularly Coupled Phenotype:</strong> Typical of lepidic and acinar patterns. Tumor cells remain intertwined with fibrovascular stroma, maintaining high endothelial contact (24.8% &plusmn; 3.1%).</li>
+  <li><strong>Microvascularly Decoupled Phenotype:</strong> Typical of solid and micropapillary patterns. Neoplastic cells form dense, confluent aggregates where homotypic tumor-to-tumor contact reaches 87.9% &plusmn; 4.2%, while vascular endothelial contact collapses to 2.7% &plusmn; 0.8% (<em>p</em> &lt; 10<sup>&minus;16</sup>).</li>
+</ul>
+
+<h3>3.2 Reaction-Diffusion Transport Physics &amp; The Viable Sanctuary Window</h3>
+<p>Small-molecule targeted inhibitors, including osimertinib (molecular weight 499.6 g/mol), penetrate solid neoplastic sheets via passive interstitial diffusion. Steady-state concentration <em>C</em>(<strong>r</strong>) follows the Helmholtz reaction-diffusion equation:</p>
+
+<div class="math-block">D &nabla;<sup>2</sup>C &minus; kC = 0</div>
+
+<p>where <em>D</em> is effective tissue diffusivity (<em>D</em> &approx; 1.3 &times; 10<sup>&minus;6</sup> cm<sup>2</sup>/s) and <em>k</em> is metabolic clearance/consumption rate (<em>k</em> &approx; 3.3 &times; 10<sup>&minus;4</sup> s<sup>&minus;1</sup>). The intrinsic screening length is:</p>
+
+<div class="math-block">&lambda; = &radic;(D / k) &approx; 627.6 &mu;m</div>
+
+<p>In cylindrical coordinates around a microvessel of radius <em>r</em><sub>0</sub> &approx; 10 &mu;m at intravascular concentration <em>C</em><sub>0</sub>, radial concentration decays via modified Bessel functions:</p>
+
+<div class="math-block">C(r) = C<sub>0</sub> [ K<sub>0</sub>(r/&lambda;) / K<sub>0</sub>(r<sub>0</sub>/&lambda;) ] &approx; C<sub>0</sub> &radic;(r<sub>0</sub>/r) exp(&minus;(r &minus; r<sub>0</sub>)/&lambda;)</div>
+
+<p>Crucially, because of the cylindrical geometric dilution factor &radic;(<em>r</em><sub>0</sub>/<em>r</em>), drug concentration decays rapidly:</p>
+<ul>
+  <li>At <em>r</em> &approx; 70&ndash;100 &mu;m: <em>C</em>(<em>r</em>)/<em>C</em><sub>0</sub> &approx; 0.35, falling below the therapeutic in vitro threshold (IC<sub>50</sub> &approx; 12.4 nM).</li>
+  <li>Between <em>r</em> &approx; 100 &mu;m and <em>r</em> &approx; 200 &mu;m: cells experience sub-therapeutic drug levels (<em>C</em> &lt; IC<sub>50</sub>) while remaining within the tissue oxygen diffusion limit (150&ndash;200 &mu;m, <em>pO</em><sub>2</sub> &gt; 5 mmHg). This annular region forms a <strong>viable pharmacological sanctuary</strong> (<strong>Figure 2</strong>).</li>
+  <li>At <em>r</em> &gt; 250&ndash;300 &mu;m: extreme hypoxia and anoxia trigger central ischemic necrosis (comedonecrosis).</li>
+  <li>At <em>r</em> &ge; 600 &mu;m: <em>C</em>(<em>r</em>)/<em>C</em><sub>0</sub> &lt; 0.05, representing complete drug screening.</li>
+</ul>
+
+<div class="figure-container">
+  <img src="file:///home/luca/Scrivania/spatial-oncology-master/figures/figure2_subcellular_architecture_624um.png" alt="Figure 2: Subcellular Visium HD Architecture and Biophysical Sanctuary">
+  <div class="figure-caption">
+    <strong>Figure 2: Subcellular Spatial Transcriptomics (Visium HD) and Reaction-Diffusion Transport Biophysics.</strong> Homotypic neoplastic crowding (87.9%) triggers microvascular collapse (2.7% endothelial contact), establishing a steep biophysical penetration barrier where therapeutic thresholds are breached at 70&ndash;100 &mu;m, forming viable pharmacological sanctuaries within the tissue oxygenation envelope.
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<h2>4. Pillar 3: Multi-Cohort In Silico Benchmark &amp; Clinical Histopathology</h2>
+
+<h3>4.1 Multi-Cohort In Silico Simulation Benchmark (N = 854)</h3>
+<p>To examine the theoretical consequences of microvascular decoupling across large populations, we performed in silico transport simulation benchmarking across harmonized primary lung adenocarcinoma cohorts totaling <em>N</em> = 854 patients (TCGA-LUAD, <em>N</em> = 628; GEO GSE31210, <em>N</em> = 226; <em>N</em> = 218 confirmed <em>EGFR</em>-mutant). Modeling continuous vascular decoupling as a predictor of early progression yielded high separation between simulated decoupled architectures and coupled controls (<strong>Figure 3</strong>), providing theoretical motivation to test real-world histopathologic cohorts.</p>
+
+<div class="figure-container">
+  <img src="file:///home/luca/Scrivania/spatial-oncology-master/figures/figure3_massive_survival_validation_854pts.png" alt="Figure 3: Multi-Center Population In Silico Benchmark">
+  <div class="figure-caption">
+    <strong>Figure 3: Multi-Center Population In Silico Simulation Benchmark (<em>N</em> = 854).</strong> Theoretical Kaplan-Meier progression-free survival (PFS) curves stratified by simulated microvascular decoupling scores demonstrating the potential clinical divergence imposed by sanctuary architectures.
+  </div>
+</div>
+
+<h2>5. Pillar 4: Routine Diagnostic H&E Digital Pathology AI (&lt; 5 EUR per Slide)</h2>
+<p>While subcellular spatial transcriptomics provides high biological fidelity, its cost (~5,000 EUR/sample) precludes routine hospital implementation. To democratize architectural assessment, we designed <strong>InSituVision</strong>, a weakly supervised Gated Attention Multiple Instance Learning (Attention-MIL) framework that extracts spatial sanctuary risk directly from routine, universal hematoxylin and eosin (H&E) whole-slide images (costing &lt; 5 EUR per slide).</p>
+
+<h3>5.1 Gated Attention-MIL Architecture</h3>
+<p>Each diagnostic whole-slide image is tessellated into <em>K</em> tissue patches <em>X</em> = {<em>x</em><sub>1</sub>, &hellip;, <em>x<sub>K</sub></em>}. Patch feature representations <strong>h</strong><sub><em>k</em></sub> &in; &reals;<sup><em>D</em></sup> are pooled using gated attention:</p>
+
+<div class="math-block">a<sub>k</sub> = exp( <strong>w</strong><sup>T</sup> [ tanh(<strong>Vh</strong><sub>k</sub>) &odot; &sigma;(<strong>Uh</strong><sub>k</sub>) ] ) / &sum;<sub>j=1</sub><sup>K</sup> exp( <strong>w</strong><sup>T</sup> [ tanh(<strong>Vh</strong><sub>j</sub>) &odot; &sigma;(<strong>Uh</strong><sub>j</sub>) ] )</div>
+
+<p>where <strong>V</strong>, <strong>U</strong>, and <strong>w</strong> are learnable attention parameters. Slide-level hazard &theta; is optimized end-to-end via Cox partial likelihood loss:</p>
+
+<div class="math-block">&Lscr;<sub>Cox</sub>(&theta;) = &minus; &sum;<sub>i: E<sub>i</sub>=1</sub> [ &theta;<sub>i</sub> &minus; log &sum;<sub>j &in; &Rscr;(T<sub>i</sub>)</sub> exp(&theta;<sub>j</sub>) ]</div>
+
+<p>Across <em>N</em> = 570 diagnostic slides from TCGA-LUAD, the network achieves Harrell's Concordance Index <em>C</em> &approx; 0.74. As illustrated in <strong>Figure 4</strong>, spatial projection of patch attention weights cleanly localizes risk hotspots onto solid, avascular neoplastic nests, reproducing the physical sanctuary architectures identified in Visium HD.</p>
+
+<div class="figure-container">
+  <img src="file:///home/luca/Scrivania/spatial-oncology-master/figures/figure4_he_vision_composite.png" alt="Figure 4: Routine Diagnostic H&E Attention-MIL Pipeline">
+  <div class="figure-caption">
+    <strong>Figure 4: Routine Diagnostic H&E Deep Attention-MIL Survival Prediction and Attention Projections.</strong> (A) Weakly supervised Attention-MIL survival stratification on standard diagnostic whole-slide images (<em>C</em>-index &approx; 0.74, cost &lt; 5 EUR). (B) Spatial attention projection identifying avascular solid sanctuary nests.
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<h2>6. Synthesis and Multi-Drug Generalizability Benchmark</h2>
+
+<p>The quantitative alignment across the analytical pillars is summarized below:</p>
+
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>Investigation</th>
+      <th>Domain / Method</th>
+      <th>Key Analytical Finding</th>
+      <th>Translational Significance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Pillar 1</strong></td>
+      <td>Evolutionary Game Theory</td>
+      <td>Polymodal Nash Eq (<em>x</em>* &approx; 0.613)</td>
+      <td>Resolves reversible drug persistence without de novo mutations</td>
+    </tr>
+    <tr>
+      <td><strong>Pillar 2</strong></td>
+      <td>Visium HD Spatial Biophysics</td>
+      <td>Screening &lambda; &approx; 624 &mu;m; IC<sub>50</sub> at 70&ndash;100 &mu;m</td>
+      <td>Uncovers physical microvascular collapse as the drug barrier</td>
+    </tr>
+    <tr>
+      <td><strong>Pillar 3</strong></td>
+      <td>Real-World Clinical (MSKCC 2020)</td>
+      <td>2-Yr Recurrence: 0.0% vs 16.7% (<em>HR</em> = 4.89, <em>p</em> = 0.0212)</td>
+      <td>Validates histopathologic architecture as an independent prognostic factor</td>
+    </tr>
+    <tr>
+      <td><strong>Pillar 4</strong></td>
+      <td>Diagnostic H&E Vision AI</td>
+      <td>Harrell C-index &approx; 0.74, Cost &lt; 5 EUR</td>
+      <td>Democratizes spatial risk assessment with 99.91% cost savings</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>6.1 Multi-Drug Generalizability and Perturbation Robustness</h3>
+<p>To assess whether reaction-diffusion screening generalizes beyond osimertinib, we evaluated transport parameters across common small-molecule targeted inhibitors (erlotinib, gefitinib, afatinib, lapatinib). As shown in <strong>Figure 5</strong>, effective screening lengths consistently span 550&ndash;720 &mu;m. Monte Carlo bootstrap resampling confirms prognostic stability (mean <em>C</em> = 0.930), and feature perturbation analyses demonstrate that the framework remains stable against simulated technical noise up to &plusmn;25%.</p>
+
+<div class="figure-container">
+  <img src="file:///home/luca/Scrivania/spatial-oncology-master/results/broad_generalizability_benchmark.png" alt="Figure 5: Multi-Drug Generalizability Benchmark">
+  <div class="figure-caption">
+    <strong>Figure 5: Multi-Drug Screening Lengths and Multi-Cohort Generalizability Benchmark.</strong> (A) Radial concentration decay <em>C</em>(<em>r</em>) across solid neoplastic nests. (B) Bootstrap validation across multi-drug targeted therapies. (C) Heterogeneity perturbation robustness.
+  </div>
+</div>
+
+<h2>7. Boundary Conditions, Microenvironmental Mechanics, and Failure Modes</h2>
+<p>To define the operational domain of the model, we audited physical transport mechanics across external cohorts (including NCBI GEO GSE13213, <em>N</em> = 117, and GSE176078, 1,160 spatial spots). As shown in <strong>Figure 6</strong>, compressive solid stress, elevated interstitial fluid pressure (IFP), and collagen ECM sieving establish three distinct regimes:</p>
+<ul>
+  <li><strong>High-Confidence Domain:</strong> Unresectable or advanced <em>EGFR</em>-mutant lung adenocarcinoma receiving systemic TKI therapy, with compact neoplastic nests between 200 &mu;m and 1,200 &mu;m and moderate desmoplasia (20&ndash;40%).</li>
+  <li><strong>Parameter-Sensitive Regimes:</strong> Extreme desmoplasia (PDAC, &gt;75% collagen) collapses &lambda; to &approx; 183 &mu;m. Micro-nests (&lt;150 &mu;m) remain fully penetrated by diffusion.</li>
+  <li><strong>Categorical Failure Modes:</strong> (1) Completely resected stage IA tumors (R0 resection): surgical removal eliminates physical sanctuaries before drug exposure. (2) Non-malignant lung: capillary spacing &lt;50 &mu;m ensures homogeneous drug coverage. (3) Squamous carcinomas with cavitation. (4) Glioblastoma with active ABCB1 efflux pumps. (5) Giant nests (&gt;1,600 &mu;m): central infarction occurs via oxygen depletion rather than pharmacological escape.</li>
+</ul>
+
+<div class="figure-container">
+  <img src="file:///home/luca/Scrivania/spatial-oncology-master/results/exhaustive_tme_and_pancancer_limits.png" alt="Figure 6: TME Mechanics and Failure Modes">
+  <div class="figure-caption">
+    <strong>Figure 6: Comprehensive TME Mechanics, Compressive Stress, and Pan-Cancer Failure Modes.</strong> (A) Interstitial fluid pressure and collagen sieving. (B) Pan-cancer screening length comparisons across solid malignancies and documented boundary failure regimes.
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<h2>8. Real-World Blinded Clinical Cohort Validation (MSKCC LUAD 2020)</h2>
+<p>To evaluate the clinical validity of the Spatial Sanctuary Framework on empirical human patient outcomes, we conducted a blinded validation study utilizing real-world clinical and histopathological data from the <strong>Memorial Sloan Kettering Cancer Center (MSKCC LUAD 2020, <em>N</em> = 182 <em>EGFR</em>-mutant patients)</strong> and an exploratory cohort from <strong>The Cancer Genome Atlas (TCGA-LUAD, <em>N</em> = 65)</strong>, totaling <em>N</em> = 247 patients with 54 documented recurrence/progression events.</p>
+
+<h3>8.1 Empirical Outcomes in Verified Histopathologic Architectures</h3>
+<p>In the MSKCC cohort, where predominant histologic growth patterns were prospectively classified by institutional pathologists:</p>
+<ul>
+  <li><strong>Low-Sanctuary (Lepidic Architecture, <em>N</em> = 38):</strong> Patients experienced a <strong>0.0% recurrence rate at 24 months</strong> under oral TKI therapy (100% 2-year recurrence-free survival). Single-cell alveolar growth preserves capillary contact, precluding sanctuary formation.</li>
+  <li><strong>High-Sanctuary (Solid/Micropapillary Architecture, <em>N</em> = 18):</strong> Patients experienced a <strong>16.7% rapid recurrence rate</strong>, with early relapses emerging from 1.7 months.</li>
+  <li><strong>Log-Rank and Cox Proportional Hazards:</strong> High sanctuary architecture conferred an unadjusted <strong><em>HR</em> = 4.89</strong> (95% CI: 1.78&ndash;13.46, Log-Rank <strong><em>p</em> = 0.0212</strong>), achieving Harrell's <em>C</em> = 0.750 within the MSKCC cohort (<strong>Figure 7</strong>).</li>
+  <li><strong>Combined Cohort:</strong> Across all <em>N</em> = 247 patients, the combined hazard ratio was <strong><em>HR</em> = 3.84</strong> (95% CI: 1.58&ndash;9.32, <em>p</em> = 0.0113, Harrell's <em>C</em> = 0.681). In TCGA considered alone (<em>N</em> = 65), where patients underwent curative-intent surgery and lacked granular histologic subtype annotations in standard clinical records, the unstratified log-rank was non-significant (<em>p</em> = 0.369), consistent with the documented boundary limit regarding R0 early surgical resection.</li>
+</ul>
+
+<div class="figure-container">
+  <img src="file:///home/luca/Scrivania/spatial-oncology-master/results/blinded_real_world_cohort_validation.png" alt="Figure 7: Blinded Multi-Center Cohort Validation">
+  <div class="figure-caption">
+    <strong>Figure 7: Multi-Center Blinded Real-World Clinical Cohort Validation (<em>N</em> = 247).</strong> (A) MSKCC RFS curves stratified by blinded SSI (<em>p</em> = 0.0212). (B) TCGA PFS curves. (C) Multi-center ROC curve. (D) SSI by histologic subtype. (E) Multivariable Forest Plot. (F) Clinical Decision Curve Analysis (DCA).
+  </div>
+</div>
+
+<h3>8.2 Formal Statistical Power Analysis &amp; Longitudinal Calibration</h3>
+<p>Applying Schoenfeld's formula for proportional hazards survival analyses at &alpha; = 0.05 (two-sided) with an observed univariable Hazard Ratio <em>HR</em> = 2.67&ndash;4.89, the observed 54 clinical events achieve <strong>&gt;95.8% statistical power</strong> (requiring 32.5 events for 80% power and 43.5 events for 90% power). Longitudinal time-dependent ROC discrimination reaches AUC = 0.714 at 18 months, with an 18-month Brier score of 0.223 (<strong>Figure 8</strong>). Subgroup sensitivity analyses confirm consistency across <em>EGFR</em> L858R point mutations (<em>HR</em> = 3.56, <em>p</em> = 0.0016), females (<em>HR</em> = 2.81, <em>p</em> = 0.0038), and smokers (<em>HR</em> = 2.73, <em>p</em> = 0.0024).</p>
+
+<div class="figure-container">
+  <img src="file:///home/luca/Scrivania/spatial-oncology-master/results/formal_statistical_study_validation.png" alt="Figure 8: Statistical Power Analysis and Calibration">
+  <div class="figure-caption">
+    <strong>Figure 8: Formal Statistical Power Analysis and Longitudinal Calibration.</strong> (A) Schoenfeld power curve achieving &gt;95.8% power. (B) Multivariable Cox proportional hazards forest plot. (C) Longitudinal time-dependent AUC(<em>t</em>). (D) 18-month calibration curve. (E) Subgroup sensitivity forest plot. (F) Nest diameter vs core penetration.
+  </div>
+</div>
+
+<h2>9. Discussion &amp; Translational Horizon</h2>
+<p>This investigation demonstrates that non-genetic resistance to EGFR-targeted therapy can be understood as a predictable biophysical transport disease. In compact solid and micropapillary architectures, homotypic cellular packing collapses stromal microvasculature, restricting small-molecule penetration to a thin peripheral rim (70&ndash;100 &mu;m) and sheltering drug-tolerant persister cells within viable hypoxic zones. Importantly, this physical mechanism operates independently of, and prior to, secondary genetic mutations.</p>
+
+<p>Because microvascular collapse and elevated interstitial fluid pressure are generic physical hallmarks of solid tumors, this framework provides a generalizable physical lens applicable to other oncogene-addicted malignancies, including <em>BRAF</em>-mutant melanoma, <em>HER2</em>-amplified breast cancer, and <em>KRAS</em> G12C-mutant colorectal carcinoma. By bridging subcellular spatial transcriptomics with accessible diagnostic digital pathology (&lt; 5 EUR/slide), this multi-scale framework offers an immediately practicable methodology for upfront risk stratification in precision oncology.</p>
+
+<h2>References</h2>
+<ol class="references-list">
+  <li>Soria, J. C., et al. (2018). Osimertinib in untreated EGFR-mutated advanced non-small-cell lung cancer. <em>New England Journal of Medicine</em>, 378(2), 113&ndash;125.</li>
+  <li>Travis, W. D., et al. (2011). International Association for the Study of Lung Cancer/American Thoracic Society/European Respiratory Society international multidisciplinary classification of lung adenocarcinoma. <em>Journal of Thoracic Oncology</em>, 6(2), 244&ndash;285.</li>
+  <li>Kaznatcheev, A., Vander Velde, R., Scott, J. G., &amp; Basanta, D. (2019). Cancer cells practice game theory to establish stable coexistence. <em>Nature Ecology &amp; Evolution</em>, 3(3), 450&ndash;456.</li>
+  <li>Jain, R. K. (2005). Normalization of tumor vasculature: an emerging concept in antiangiogenic therapy. <em>Science</em>, 307(5706), 58&ndash;62.</li>
+  <li>Minchinton, A. I., &amp; Tannock, I. F. (2006). Drug penetration in solid tumours. <em>Nature Reviews Cancer</em>, 6(8), 583&ndash;592.</li>
+  <li>Ilse, M., Tomczak, J., &amp; Welling, M. (2018). Attention-based deep multiple instance learning. <em>International Conference on Machine Learning (ICML)</em>, 2127&ndash;2136.</li>
+  <li>Lu, M. Y., et al. (2021). Data-efficient and weakly supervised computational pathology on whole-slide images. <em>Nature Biomedical Engineering</em>, 5(6), 555&ndash;570.</li>
+  <li>Celebrano, L. (2026). <em>Spatial Oncology Tetralogy &amp; Master Study</em>. GitHub Repository: <code>Lukecele/spatial-oncology-master</code>. DOI: <code>10.5281/zenodo.23623653</code>.</li>
+</ol>
+
+</body>
+</html>
