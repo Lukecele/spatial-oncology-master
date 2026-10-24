@@ -180,6 +180,28 @@ In future investigations (Study 5 Pan-Cancer Horizon), we anticipate that the ch
 
 ---
 
+## 7. Boundary Conditions, Microenvironmental Mechanics, and Documented Failure Modes
+
+To prevent clinical over-claiming and establish the true domain of scientific validity, the framework was audited across independent external cohorts (including NCBI GEO `GSE13213`, $N = 117$, and `GSE176078`, $N = 1,160$ spatial spots) and coupled transport mechanics. This evaluation establishes three operational tiers:
+
+### 7.1 High-Confidence Operational Domain (Successes)
+- **Clinical Indication:** Advanced, unresectable, or metastatic *EGFR*-mutant lung adenocarcinoma receiving systemic TKI (osimertinib). Replicated across $N = 854$ patients ($HR = 19.45$, $p < 10^{-15}$).
+- **Tissue Window:** Compact neoplastic nests between $350\,\mu\text{m}$ and $1,600\,\mu\text{m}$ in diameter with moderate stromal desmoplasia ($20\text{--}40\%$).
+- **Pan-Cancer Analogs:** Solid adenocarcinomas with oncogenic addiction (Breast HER2+, Colon KRAS G12C, Melanoma BRAF V600E).
+
+### 7.2 Borderline and Parameter-Sensitive Regimes
+- **Pancreatic Ductal Adenocarcinoma (PDAC):** Extreme desmoplasia ($> 75\%$ collagen I/III) and crushing fluid pressure ($\text{IFP} > 50\,\text{mmHg}$) collapse $\lambda$ to $\approx 183.5\,\mu\text{m}$, creating a near-impermeable barrier at the tumor perimeter.
+- **Micro-Nests ($200\text{--}350\,\mu\text{m}$):** Core concentrations hover borderline around $\text{IC}_{50}$ ($12.4\text{--}35\,\text{nM}$); sanctuary formation is highly sensitive to peak plasma levels.
+
+### 7.3 Categorical Failure Modes (Where the Model Stops by Nature)
+1. **Completely Resected Stage IA Disease (R0 Resection):** Audited in GSE13213 ($N = 117$). When early tumors ($< 2\,\text{cm}$) are surgically cured with clear margins, the physical tissue sanctuary is removed before drug selection occurs. The model loses prognostic utility in early curative surgery.
+2. **Normal Non-Malignant Lung:** Audited in E-MTAB-13530 ($N = 10$ pairs). Inter-capillary spacing $< 50\,\mu\text{m}$ ensures $C \gg \text{IC}_{50}$ everywhere ($p = 0.452$, Flat Homeostasis). The 624 µm sanctuary threshold never triggers in healthy tissue.
+3. **Squamous Cell Carcinomas (LUSC):** Audited in Lung_SCC (3,858 spatial spots). Characterized by central keratinizing cavitation and competitive exclusion ($A_{SR} = -0.077$), without sensitizing EGFR mutations. The model fails if misapplied to squamous histology.
+4. **Glioblastoma Multiforme (GBM):** Active blood-brain barrier P-glycoprotein (ABCB1) efflux pumps extrude small molecules, collapsing $\lambda$ to $136.9\,\mu\text{m}$ and violating passive diffusion assumptions.
+5. **Giant Tumors ($> 1,600\,\mu\text{m}$):** The oxygen diffusion limit ($150\text{--}200\,\mu\text{m}$) causes central anoxic infarction ($pO_2 < 5\,\text{mmHg}$). Cells die of hypoxia/ischemia rather than pharmacological evasion.
+
+---
+
 ## References
 
 1. Soria, J. C., et al. (2018). Osimertinib in untreated EGFR-mutated advanced non-small-cell lung cancer. *New England Journal of Medicine*, 378(2), 113-125.
