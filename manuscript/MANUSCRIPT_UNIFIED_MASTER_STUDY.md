@@ -24,15 +24,21 @@ First, using evolutionary game theory and the Space-for-Time Ergodic Mapping The
 Targeted inhibition of oncogenic driver kinases has transformed therapeutic paradigms across medical oncology. In advanced non-small cell lung cancer (NSCLC) harboring sensitizing *EGFR* mutations (exon 19 in-frame deletions or exon 21 L858R substitutions), third-generation EGFR tyrosine kinase inhibitors (TKIs), notably osimertinib, have established definitive first-line superiority over earlier generations. However, drug resistance remains an almost universal eventuality.
 
 ```
-+---------------------------------------------------------------------------------------------------+
-|                           THE UNIFIED 4-PILLAR CAUSAL CONTINUUM                                    |
-|                                                                                                   |
-|  [Pillar 1: Theory]            [Pillar 2: Visium HD]         [Pillar 3: Clinical]       [Pillar 4: AI]   |
-|  Spatial Game Theory    --->   Subcellular Biophysics  --->  Population Cohort    --->  Routine H&E MIL  |
-|  Ergodic Replicator            Reaction-Diffusion            N = 854 Patients           N = 570 Slides   |
-|  Nash Eq x* ≈ 0.61             λ ≈ 624 µm Sanctuary          HR = 19.45, p < 10^-15     C-index ≈ 0.74   |
-|  (Frequency-dependent)         (Microvascular collapse)      (Clinical validation)      (< 5 € / slide)  |
-+---------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------+
+|                  THE UNIFIED 4-PILLAR CAUSAL CONTINUUM                   |
+|                                                                          |
+|  [Pillar 1: Theory]                  [Pillar 2: Visium HD]               |
+|  Spatial Evolutionary Game Theory    Subcellular Biophysics (2 um)       |
+|  Ergodic Replicator Dynamics         Reaction-Diffusion Solver           |
+|  Nash Eq x* ~ 0.61 (Coexistence)     Sanctuary Threshold lambda ~ 624 um |
+|                  \                                /                      |
+|                   \                              /                       |
+|                    v                            v                        |
+|  [Pillar 3: Clinical Cohort]         [Pillar 4: Digital Pathology AI]    |
+|  Population Survival (N = 854)       Routine Diagnostic H&E Attn-MIL     |
+|  Log-Rank p < 10^-15, HR = 19.45     Harrell C-index ~ 0.74              |
+|  Median PFS: 17.9 vs 38.1 months     Democratized Cost < 5 EUR/slide     |
++--------------------------------------------------------------------------+
 ```
 
 For decades, cancer biology has interpreted therapeutic relapse through the lens of clonal selection driven by de novo or pre-existing genomic mutations. In osimertinib-treated cohorts, well-characterized secondary genetic alterations include the tertiary on-target *EGFR* C797S mutation, *MET* or *HER2* amplifications, and downstream MAPK/PI3K pathway activations. Crucially, however, rigorous repeat-biopsy and circulating tumor DNA (ctDNA) molecular profiling reveals that between $40\%$ and $50\%$ of patients progressing on first-line osimertinib harbor **no identifiable genetic resistance mechanism**.
@@ -72,6 +78,8 @@ $$x^* = \frac{a_{22} - a_{12}}{(a_{11} - a_{12}) - (a_{21} - a_{22})} = \frac{-1
 
 Because the off-diagonal payoff terms dominate the diagonal self-interaction penalties ($a_{12} > a_{22}$ and $a_{21} > a_{11}$), the evolutionary game adopts a **coexistence game** (Hawk-Dove / Snowdrift) topology. As shown in **Figure 1**, rather than sensitive clones being driven to absolute extinction, the tumor microenvironment stabilizes an internal polymorphic equilibrium ($x^* \approx 61.3\%$ sensitive, $38.7\%$ tolerant), naturally explaining the rapid resurgence of drug sensitivity observed following drug holidays.
 
+![**Spatial Evolutionary Game Theory, Decoupled Fitness, and Polymodal Coexistence.** (A--C) Spatial cellular interaction graphs and phenotypic subclonal decomposition infer off-diagonal payoff dominance. (D) Continuous-time replicator dynamics confirming a stable internal polymorphic Nash equilibrium ($x^* \approx 0.613$).](../figures/figure1_game_composite.png){width=95%}
+
 ---
 
 ## 3. Pillar 2: Subcellular Spatial Transcriptomics & Reaction-Diffusion Transport Biophysics
@@ -99,9 +107,9 @@ $$\lambda = \sqrt{\frac{D}{k}} = \sqrt{\frac{1.3 \times 10^{-6}\,\text{cm}^2/\te
 In confluent solid neoplastic sheets exceeding a radius of $600\text{--}700\,\mu\text{m}$, the central core drug concentration plummets below the therapeutic in vitro threshold:
 $$C_{\text{core}} < \text{IC}_{50} \approx 12.4\,\text{nM} \quad (\approx 0.35 C_0)$$
 
-As demonstrated in **Figure 1**, neoplastic cells residing within these cores are physically shielded from drug exposure, creating a **pharmacological sanctuary** where sensitive subclones survive despite systemic treatment, without requiring a single resistance-conferring genetic mutation.
+As demonstrated in **Figure 2**, neoplastic cells residing within these cores are physically shielded from drug exposure, creating a **pharmacological sanctuary** where sensitive subclones survive despite systemic treatment, without requiring a single resistance-conferring genetic mutation.
 
-![**Subcellular Spatial Reaction-Diffusion Dynamics and Multi-Drug Penetration Spectrum.** (A) Radial concentration decay C(r) across solid neoplastic nests. (B) Bootstrap validation across multi-drug targeted therapies. (C) Heterogeneity perturbation robustness.](../results/broad_generalizability_benchmark.png){width=95%}
+![**Subcellular Spatial Transcriptomics (Visium HD) and Reaction-Diffusion Transport Biophysics.** Homotypic neoplastic crowding ($87.9\%$) triggers microvascular collapse ($2.7\%$ endothelial contact), establishing a steep biophysical penetration barrier ($\lambda = \sqrt{D/k} \approx 624\,\mu\text{m}$) and pharmacological sanctuaries ($C_{\text{core}} < \text{IC}_{50} \approx 12.4\,\text{nM}$) in solid nests.](../figures/figure2_subcellular_architecture_624um.png){width=95%}
 
 ---
 
@@ -129,7 +137,7 @@ As shown in **Figure 3**, survival analysis revealed an enormous clinical diverg
 
 In multivariable Cox models adjusting for patient age, sex, smoking history, pathologic stage, and specific *EGFR* mutation subtype, microvascular decoupling remained the single most powerful independent prognostic predictor of disease progression ($p < 0.0001$), decisively outperforming traditional TNM staging metrics.
 
-![**Multi-Center Population Clinical Survival Validation ($N = 854$).** Kaplan-Meier progression-free survival (PFS) curves stratified by microvascular decoupling status demonstrating massive clinical divergence (HR = 19.45, p < 10^-15).](../results/figure_study3_kaplan_meier_validation.png){width=90%}
+![**Multi-Center Population Clinical Survival Validation ($N = 854$).** Kaplan-Meier progression-free survival (PFS) curves stratified by microvascular decoupling status demonstrating massive clinical divergence (median PFS $17.9$ vs $38.1$ months, $HR = 19.45$, Log-Rank $p < 10^{-15}$).](../figures/figure3_massive_survival_validation_854pts.png){width=95%}
 
 ---
 
@@ -162,9 +170,11 @@ where $\mathcal{R}(T_i) = \{j : T_j \ge T_i\}$ denotes the risk set at event tim
 Across $N = 570$ Whole-Slide Images from TCGA-LUAD, InSituVision achieved:
 - **Harrell's Concordance Index:** $C = 0.739 \pm 0.024$ on held-out validation cases.
 - **Cost Reduction:** $99.91\%$ cost reduction compared to Visium HD ($4.50\text{ €}$ vs $5,000\text{ €}$).
-- **Spatial Attention Projection:** As shown in **Figure 3**, 2D projection of patch attention weights onto the original gigapixel histology maps cleanly to solid neoplastic nests lacking capillary networks, reproducing the physical sanctuary zones identified in Study 2.
+- **Spatial Attention Projection:** As shown in **Figure 4**, 2D projection of patch attention weights onto the original gigapixel histology maps cleanly to solid neoplastic nests lacking capillary networks, reproducing the physical sanctuary zones identified in Study 2.
 
-![**Routine Diagnostic H&E Attention-MIL Hotspot Projections.** High-resolution whole-slide image patch attention heatmaps projecting spatial sanctuary risk specifically onto avascular neoplastic nests.](../results/figure_sample_attention_heatmap.png){width=90%}
+![**Routine Diagnostic H&E Deep Attention-MIL Survival Prediction and Attention Projections.** (A) Weakly supervised Attention-MIL survival stratification on standard diagnostic whole-slide images ($C\text{-index} \approx 0.74$, cost $< 5\text{ €}$). (B) 2D projection of patch attention weights localizing high-risk scores directly onto avascular solid sanctuary histology.](../figures/figure4_he_vision_composite.png){width=95%}
+
+\clearpage
 
 ---
 
@@ -184,11 +194,16 @@ The conceptual breakthrough of this unified master study lies in demonstrating t
 
 In future investigations (Study 5 Pan-Cancer Horizon), we anticipate that the characteristic penetration screening length $\lambda = \sqrt{D/k} \approx 600\text{--}700\,\mu\text{m}$ will define pharmacological sanctuaries across a broad spectrum of oncogene-driven solid malignancies, including *BRAF*-mutant metastatic melanoma treated with dabrafenib/trametinib, *HER2*-amplified breast cancer treated with trastuzumab deruxtecan or lapatinib, and *KRAS* G12C-mutant colorectal cancers treated with sotorasib.
 
+### 6.1 Multi-Drug Generalizability and Robustness Benchmark
+To ensure that the biophysical reaction-diffusion screening depth is not an idiosyncratic feature of osimertinib, we benchmarked penetration screening across a panel of targeted therapeutics (erlotinib, gefitinib, afatinib, and lapatinib). As demonstrated in **Figure 5**, the characteristic penetration length $\lambda = \sqrt{D/k}$ consistently spans $550\text{--}720\,\mu\text{m}$. Furthermore, 100-fold Monte Carlo bootstrap resampling confirms exceptional prognostic stability ($C = 0.930 \pm 0.012$), and feature perturbation analyses demonstrate that the framework remains impervious to simulated technical noise up to $\pm 25\%$.
+
+![**Multi-Drug Screening Lengths and Multi-Cohort Generalizability Benchmark.** (A) Radial concentration decay $C(r)$ across solid neoplastic nests. (B) Bootstrap validation across multi-drug targeted therapies. (C) Heterogeneity perturbation robustness.](../results/broad_generalizability_benchmark.png){width=95%}
+
 ---
 
 ## 7. Boundary Conditions, Microenvironmental Mechanics, and Documented Failure Modes
 
-To prevent clinical over-claiming and establish the true domain of scientific validity, the framework was audited across independent external cohorts (including NCBI GEO `GSE13213`, $N = 117$, and `GSE176078`, $N = 1,160$ spatial spots) and coupled transport mechanics. This evaluation establishes three operational tiers:
+To prevent clinical over-claiming and establish the true domain of scientific validity, the framework was audited across independent external cohorts (including NCBI GEO `GSE13213`, $N = 117$, and `GSE176078`, $N = 1,160$ spatial spots) and coupled transport mechanics. As detailed in **Figure 6**, compressive solid stress, elevated interstitial fluid pressure (IFP), and dense collagen extracellular matrix (ECM) sieving alter the effective screening depth across solid tumor types, defining clear operational boundaries for the Celebrano Sanctuary Model. This evaluation establishes three operational tiers:
 
 ### 7.1 High-Confidence Operational Domain (Successes)
 - **Clinical Indication:** Advanced, unresectable, or metastatic *EGFR*-mutant lung adenocarcinoma receiving systemic TKI (osimertinib). Replicated across $N = 854$ patients ($HR = 19.45$, $p < 10^{-15}$).
@@ -206,7 +221,7 @@ To prevent clinical over-claiming and establish the true domain of scientific va
 4. **Glioblastoma Multiforme (GBM):** Active blood-brain barrier P-glycoprotein (ABCB1) efflux pumps extrude small molecules, collapsing $\lambda$ to $136.9\,\mu\text{m}$ and violating passive diffusion assumptions.
 5. **Giant Tumors ($> 1,600\,\mu\text{m}$):** The oxygen diffusion limit ($150\text{--}200\,\mu\text{m}$) causes central anoxic infarction ($pO_2 < 5\,\text{mmHg}$). Cells die of hypoxia/ischemia rather than pharmacological evasion.
 
-![**Pan-Cancer Microenvironmental Mechanics and Boundary Conditions.** (A) Interstitial fluid pressure and collagen sieving. (B) Pan-cancer screening length comparisons across solid malignancies.](../results/exhaustive_tme_and_pancancer_limits.png){width=95%}
+![**Comprehensive TME Mechanics, Compressive Stress, and Pan-Cancer Failure Modes.** (A) Interstitial fluid pressure and collagen sieving. (B) Pan-cancer screening length comparisons across solid malignancies and documented boundary failure regimes.](../results/exhaustive_tme_and_pancancer_limits.png){width=95%}
 
 ---
 
@@ -229,9 +244,13 @@ When evaluated strictly blinded to clinical outcomes:
 - **Subgroup Robustness:** The deleterious impact of high $C\text{-SSI}$ was independently confirmed across clinical phenotypes: *EGFR* L858R point mutations ($HR = 3.56$, $p = 0.0016$), females ($HR = 2.81$, $p = 0.0038$), smokers ($HR = 2.73$, $p = 0.0024$), and early stage I/II resections with solid nests ($HR = 2.78$, $p = 0.0367$).
 - **Longitudinal Discrimination & Calibration:** The time-dependent AUC peaked at **$AUC = 0.714$** at 18 months (the clinical median PFS milestone of osimertinib), with an exceptional 18-month Brier calibration score of **$0.223$**.
 
-![**Multi-Center Blinded Real-World Clinical Cohort Validation ($N = 246$).** (A) MSKCC RFS curves stratified by blinded C-SSI (p = 0.0212). (B) TCGA PFS curves. (C) Multi-center ROC curve. (D) C-SSI by histologic subtype. (E) Multivariable Forest Plot. (F) Clinical Decision Curve Analysis (DCA).](../results/blinded_real_world_cohort_validation.png){width=95%}
+As presented in **Figure 7**, the blinded evaluation across MSKCC and TCGA cohorts confirms that high $C\text{-SSI}$ acts as a potent, independent predictor of recurrence ($p = 0.0212$, $HR = 4.89$ in histologically verified cases). In **Figure 8**, the formal statistical power calculation demonstrates $> 95.8\%$ power ($D = 54$ events), accompanied by time-dependent ROC discrimination ($\text{AUC} = 0.714$ at 18 months), robust calibration ($\text{Brier} = 0.223$), and extensive clinical subgroup sensitivity analyses.
 
-![**Formal Statistical Power Analysis and Longitudinal Calibration.** (A) Schoenfeld power curve achieving > 95.8% power. (B) Multivariable Cox proportional hazards forest plot. (C) Longitudinal time-dependent AUC(t). (D) 18-month calibration curve (Brier = 0.223). (E) Subgroup sensitivity forest plot. (F) Nest diameter vs core penetration.](../results/formal_statistical_study_validation.png){width=95%}
+![**Multi-Center Blinded Real-World Clinical Cohort Validation ($N = 246$).** (A) MSKCC RFS curves stratified by blinded $C\text{-SSI}$ ($p = 0.0212$). (B) TCGA PFS curves. (C) Multi-center ROC curve. (D) $C\text{-SSI}$ by histologic subtype. (E) Multivariable Forest Plot. (F) Clinical Decision Curve Analysis (DCA).](../results/blinded_real_world_cohort_validation.png){width=95%}
+
+![**Formal Statistical Power Analysis and Longitudinal Calibration.** (A) Schoenfeld power curve achieving $> 95.8\%$ power. (B) Multivariable Cox proportional hazards forest plot. (C) Longitudinal time-dependent $\text{AUC}(t)$. (D) 18-month calibration curve ($\text{Brier} = 0.223$). (E) Subgroup sensitivity forest plot. (F) Nest diameter vs core penetration.](../results/formal_statistical_study_validation.png){width=95%}
+
+\clearpage
 
 ---
 
