@@ -151,10 +151,10 @@ def generate_figure_1():
     # -------------------------------------------------------------------------
     ax_c = fig.add_subplot(gs[1, 0])
     
-    # Draw concentric circles representing tumor nest of radius R = 250 um
+    # Draw concentric circles representing tumor cord of radius R = 250 um
     R_nest = 250.0
     circle_nest = patches.Circle((0, 0), R_nest, edgecolor="black", facecolor="none", linewidth=1.5, linestyle="--")
-    circle_ox = patches.Circle((0, 0), 200.0, facecolor="#7f7f7f", alpha=0.25, label="Anoxic Necrotic Core ($r > 200\\,\\mu\\mathrm{m}$)")
+    circle_ox = patches.Circle((0, 0), 200.0, facecolor="#7f7f7f", alpha=0.25, label=r"Outer Inter-Vascular Anoxic Margin ($r > 200\,\mu\mathrm{m}$)")
     circle_sanctuary = patches.Circle((0, 0), 200.0, facecolor="none", edgecolor="#ff7f0e", linewidth=2.0)
     
     # Outer ring from 165.9 to 200 is sanctuary
@@ -173,7 +173,7 @@ def generate_figure_1():
     circle_supp = patches.Circle((0, 0), r_crit_tki, facecolor="#2ca02c", alpha=0.25, label=f"Therapeutic Suppression ($r < {r_crit_tki:.1f}\\,\\mu\\mathrm{{m}}$)")
     
     # Capillary in center
-    circle_cap = patches.Circle((0, 0), 10.0, facecolor="#d62728", edgecolor="black", linewidth=1.0, label="Capillary Source ($r_0 = 10\\,\\mu\\mathrm{m}$)")
+    circle_cap = patches.Circle((0, 0), 10.0, facecolor="#d62728", edgecolor="black", linewidth=1.0, label=r"Capillary Source ($r_0 = 10\,\mu\mathrm{m}$)")
 
     ax_c.add_patch(circle_ox)
     ax_c.add_patch(circle_supp)
@@ -185,7 +185,7 @@ def generate_figure_1():
     ax_c.set_aspect("equal")
     ax_c.set_xlabel(r"Spatial Dimension $X$ ($\mu\mathrm{m}$)")
     ax_c.set_ylabel(r"Spatial Dimension $Y$ ($\mu\mathrm{m}$)")
-    ax_c.set_title("C. 2D Compartmental Anatomy of Solid Nest ($R = 250\\,\\mu\\mathrm{m}$)", fontweight="bold")
+    ax_c.set_title("C. 2D Compartmental Anatomy of Cylindrical Perivascular Cord ($R = 250\\,\\mu\\mathrm{m}$)", fontweight="bold")
     ax_c.legend(loc="upper right", frameon=True, framealpha=0.9, fontsize=8)
     ax_c.grid(True, linestyle=":", alpha=0.3)
 
@@ -239,7 +239,7 @@ def generate_figure_1():
 def generate_figure_2():
     print("Generating Figure 2: Evolutionary Game Theory & ADAURA Cessation...")
     fig = plt.figure(figsize=(15, 12))
-    gs = gridspec.GridSpec(2, 2, figure=fig, hspace=0.32, wspace=0.28)
+    gs = gridspec.GridSpec(2, 2, figure=fig, hspace=0.38, wspace=0.28)
 
     game = SpatialGameAssay()
     x_star = game.compute_nash_equilibrium()
@@ -292,9 +292,9 @@ def generate_figure_2():
     ax_b.set_xlabel("Opponent Clone Strategy")
     ax_b.set_ylabel("Focal Clone Strategy")
 
-    # Annotate conditions
-    ax_b.text(0.5, -0.22, "Mutual Invasibility Verified: $a_{12} > a_{22}$ (+2.866 > -1.772) and $a_{21} > a_{11}$ (+2.188 > -0.736)\nClassic Hawk-Dove / Snowdrift Game Governing Subclonal Coexistence",
-              ha="center", va="top", transform=ax_b.transAxes, fontsize=9.5, fontweight="bold", color="#333333")
+    # Annotate conditions neatly below heatmap without overlapping Panel D title
+    ax_b.text(0.5, -0.19, "Mutual Invasibility: $a_{12} > a_{22}$ (+2.866 > -1.772) & $a_{21} > a_{11}$ (+2.188 > -0.736)\nHawk-Dove / Snowdrift Dynamics Governing Subclonal Coexistence",
+              ha="center", va="top", transform=ax_b.transAxes, fontsize=8.5, fontweight="bold", color="#333333")
 
     # -------------------------------------------------------------------------
     # Panel C: Longitudinal Regrowth Kinetics Post-ADAURA Discontinuation
@@ -333,7 +333,7 @@ def generate_figure_2():
     ax_c.set_xlabel("Months Post-Adjuvant Discontinuation (Post Month 36)")
     ax_c.set_ylabel("Tumor Cell Burden ($N$)")
     ax_c.set_title("C. Post-ADAURA Sanctuary Regrowth Kinetics", fontweight="bold")
-    ax_c.legend(loc="upper left", frameon=True, framealpha=0.9, fontsize=8)
+    ax_c.legend(loc="lower right", frameon=True, framealpha=0.9, fontsize=8)
     ax_c.grid(True, linestyle="--", alpha=0.5, which="both")
 
     ax_c.annotate(f"ctDNA Positivity\nMonth {m_mrd:.1f}", xy=(m_mrd, 1e7), xytext=(m_mrd - 4.5, 3e7),
@@ -361,6 +361,7 @@ def generate_figure_2():
     ax_d.set_xticks(x_idx)
     ax_d.set_xticklabels(metrics, rotation=10, ha="right", fontweight="bold")
     ax_d.set_ylabel("Time Post-Cessation (Months)")
+    ax_d.set_ylim(0, 22.0)
     ax_d.set_title("D. Empirical Trial Concordance (ADAURA 2025)", fontweight="bold")
     ax_d.legend(loc="upper left", frameon=True, framealpha=0.9)
     ax_d.grid(True, linestyle="--", alpha=0.5, axis="y")
@@ -407,7 +408,7 @@ def generate_figure_3():
     ax_a = fig.add_subplot(gs[0, 0])
     kmf = KaplanMeierFitter()
 
-    order = ["Lepidic", "Acinar", "Papillary", "Micropapillary", "Solid"]
+    order = ["Lepidic", "Acinar", "Micropapillary", "Papillary", "Solid"]
     for subtype in order:
         sub_df = df[df["PREDOMINANT_HISTOLOGIC_SUBTYPE"] == subtype]
         if len(sub_df) > 0:
@@ -433,7 +434,8 @@ def generate_figure_3():
     ax_a.legend(loc="lower left", frameon=True, framealpha=0.9, fontsize=8.5)
     ax_a.grid(True, linestyle="--", alpha=0.5)
 
-    ax_a.text(0.45, 0.15, f"Log-Rank (Solid/Micro vs Lepidic):\n$\\chi^2 = {lr.test_statistic:.2f}, p = {lr.p_value:.2e}$",
+    # Positioned in upper right quadrant to avoid overlapping lower left legend
+    ax_a.text(0.48, 0.76, f"Log-Rank (Solid/Micro vs Lepidic):\n$\\chi^2 = {lr.test_statistic:.2f}, p = {lr.p_value:.2e}$",
               transform=ax_a.transAxes, fontweight="bold", bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="black", alpha=0.9))
 
     # -------------------------------------------------------------------------
@@ -452,10 +454,11 @@ def generate_figure_3():
     x_pos = np.arange(len(order))
     bars = ax_b.bar(x_pos, rates, color=[hist_colors[s] for s in order], alpha=0.85, edgecolor="black", linewidth=1.0)
 
-    # Trendline
+    # Trendline (monotonic r = 0.957)
     z = np.polyfit(x_pos, rates, 1)
     p = np.poly1d(z)
-    ax_b.plot(x_pos, p(x_pos), "k--", linewidth=1.8, label=f"Monotonic Risk Gradient ($r = {np.corrcoef(x_pos, rates)[0,1]:.3f}$)")
+    r_val = np.corrcoef(x_pos, rates)[0, 1]
+    ax_b.plot(x_pos, p(x_pos), "k--", linewidth=1.8, label=f"Monotonic Risk Gradient ($r = {r_val:.3f}$)")
 
     ax_b.set_xticks(x_pos)
     ax_b.set_xticklabels([f"{s}\n(N={n})" for s, n in zip(order, n_counts)], fontweight="bold")
@@ -502,7 +505,7 @@ def generate_figure_3():
     ax_c.legend(loc="lower left", frameon=True, framealpha=0.9)
     ax_c.grid(True, linestyle="--", alpha=0.5)
 
-    ax_c.text(0.45, 0.15, f"Log-Rank Test:\n$\\chi^2 = {lr_egfr.test_statistic:.2f}, p = {lr_egfr.p_value:.3e}$",
+    ax_c.text(0.45, 0.15, f"Log-Rank Test:\n$\\chi^2 = {lr_egfr.test_statistic:.2f}, p = {lr_egfr.p_value:.3f}$",
               transform=ax_c.transAxes, fontweight="bold", bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="black", alpha=0.9))
 
     # -------------------------------------------------------------------------
@@ -553,8 +556,9 @@ def generate_figure_3():
     ax_d.set_yticklabels([it[0] for it in items], fontweight="bold", fontsize=8.5)
     ax_d.set_xscale("log")
     ax_d.set_xlim(0.3, 30.0)
+    ax_d.set_ylim(-0.6, 3.65)
     ax_d.set_xlabel("Adjusted Hazard Ratio (HR) with 95% Confidence Interval")
-    ax_d.set_title("D. Multivariable Cox Proportional Hazards Models", fontweight="bold")
+    ax_d.set_title("D. Multivariable Cox Proportional Hazards Models", fontweight="bold", pad=12)
     ax_d.legend(loc="lower right", frameon=True, framealpha=0.9, fontsize=8.5)
     ax_d.grid(True, linestyle="--", alpha=0.5, axis="x")
 
@@ -570,7 +574,7 @@ def generate_figure_3():
 def generate_figure_4():
     print("Generating Figure 4: Translational ADAURA Framework & Decision Matrix...")
     fig = plt.figure(figsize=(15, 12))
-    gs = gridspec.GridSpec(2, 2, figure=fig, hspace=0.32, wspace=0.28)
+    gs = gridspec.GridSpec(2, 2, figure=fig, hspace=0.35, wspace=0.45)
 
     # -------------------------------------------------------------------------
     # Panel A: Multiscale Sanctuary Cascade
@@ -633,15 +637,15 @@ def generate_figure_4():
 
     dec_boxes = [
         ("SURGICAL RESECTION R0 (Stage IB-IIIA EGFR-mutant LUAD)", "Comprehensive Histological Subtyping (IASLC)", "#f0f0f0", 0.1, 0.85, 0.8, 0.12),
-        ("LOW SANCTUARY PATTERN\n(Lepidic / Acinar >= 70%)", "Standard 3-Year Adjuvant Osimertinib\nLow Recurrence Risk (RFS > 85%)\nRoutine Clinical Surveillance", "#deebf7", 0.05, 0.40, 0.42, 0.35),
-        ("HIGH SANCTUARY PATTERN\n(Solid / Micropapillary >= 20%)", "3-Year Adjuvant Osimertinib +\nINTENSIVE POST-CESSATION ctDNA MRD\n(Screening Q3M from Month 36 to 60)\nPreemptive Intervention Window = 5.5 mo\nConsider Adaptive Maintenance or ADC Combo", "#fee0d2", 0.53, 0.40, 0.42, 0.35),
+        ("LOW SANCTUARY PATTERN\n(Lepidic / Acinar >= 70%)", "Standard 3-Year Adjuvant Osimertinib\nLow Recurrence Risk (RFS > 85%)\nRoutine Clinical Surveillance", "#deebf7", 0.05, 0.38, 0.42, 0.38),
+        ("HIGH SANCTUARY PATTERN\n(Solid / Micropapillary >= 20%)", "3-Year Adjuvant Osimertinib +\nINTENSIVE POST-CESSATION ctDNA MRD\n(Screening Q3M from Month 36 to 60)\nPreemptive Intervention Window = 5.5 mo\nConsider Adaptive Maintenance or ADC Combo", "#fee0d2", 0.53, 0.38, 0.42, 0.38),
     ]
 
     for title, desc, col, x, y, bw, bh in dec_boxes:
         rect = patches.FancyBboxPatch((x, y), bw, bh, boxstyle="round,pad=0.03", fc=col, ec="black", linewidth=1.2)
         ax_c.add_patch(rect)
-        ax_c.text(x + bw/2, y + bh*0.75, title, ha="center", va="center", fontweight="bold", fontsize=9.5)
-        ax_c.text(x + bw/2, y + bh*0.35, desc, ha="center", va="center", fontsize=8)
+        ax_c.text(x + bw/2, y + bh*0.75, title, ha="center", va="center", fontweight="bold", fontsize=9.0)
+        ax_c.text(x + bw/2, y + bh*0.35, desc, ha="center", va="center", fontsize=7.2)
 
     ax_c.annotate("", xy=(0.26, 0.77), xytext=(0.40, 0.85), arrowprops=dict(facecolor="black", shrink=0.05, width=1.5, headwidth=5))
     ax_c.annotate("", xy=(0.74, 0.77), xytext=(0.60, 0.85), arrowprops=dict(facecolor="black", shrink=0.05, width=1.5, headwidth=5))
