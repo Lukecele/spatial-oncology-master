@@ -25,13 +25,13 @@ flowchart LR
         A["Spatial Game Theory<br/>• Space-for-Time Ergodicity<br/>• Polymodal Nash Eq x* ≈ 0.61<br/>• Frequency-Dependent Fitness"]
     end
     subgraph Pillar2["Pillar 2: Visium HD"]
-        B["Subcellular Biophysics<br/>• 211,104 Bins @ 2 µm<br/>• Homotypic Crowding (87.9%)<br/>• Reaction-Diffusion λ ≈ 624 µm"]
+        B["Subcellular Biophysics<br/>• 211,104 Bins @ 2 µm<br/>• Homotypic Crowding 87.9%<br/>• Reaction-Diffusion λ ≈ 624 µm"]
     end
     subgraph Pillar3["Pillar 3: Clinical Cohort"]
-        C["Population Survival (N = 854)<br/>• Log-Rank p < 10^-15<br/>• Hazard Ratio HR = 19.45<br/>• Median PFS: 17.9 vs 38.1 mo"]
+        C["Population Survival N = 854<br/>• Log-Rank p &lt; 10⁻¹⁵<br/>• Hazard Ratio HR = 19.45<br/>• Median PFS: 17.9 vs 38.1 mo"]
     end
     subgraph Pillar4["Pillar 4: Digital Pathology AI"]
-        D["Routine Diagnostic H&E AI<br/>• Gated Attention-MIL (N = 570)<br/>• Harrell C-index ≈ 0.74<br/>• Cost < 5 € (-99.91% vs ST)"]
+        D["Routine Diagnostic H&E AI<br/>• Gated Attention-MIL N = 570<br/>• Harrell C-index ≈ 0.74<br/>• Cost under 5 € (-99.91%)"]
     end
 
     A --> B
