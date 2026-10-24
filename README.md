@@ -1,4 +1,4 @@
-# From Subcellular Spatial Biophysics to Routine Digital Pathology AI: Resolving Non-Genetic Osimertinib Resistance via Microvascular Decoupling
+# The Celebrano Sanctuary Model: Decoding Biophysical Drug Shielding and Non-Genetic Resistance from Subcellular Spatial Biophysics to Routine H&E Digital Pathology AI
 
 [![Master Study CI](https://github.com/Lukecele/spatial-oncology-master/actions/workflows/ci.yml/badge.svg)](https://github.com/Lukecele/spatial-oncology-master/actions/workflows/ci.yml)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23623653-blue.svg)](https://doi.org/10.5281/zenodo.23623653)
@@ -17,7 +17,7 @@
 
 Targeted therapy with third-generation EGFR tyrosine kinase inhibitors (TKIs), notably **osimertinib**, has transformed the management of sensitizing *EGFR*-mutated non-small cell lung cancer (NSCLC). However, therapeutic durability remains profoundly heterogeneous, and up to **50% of progressing patients display no detectable genetic resistance alterations** (such as *EGFR* C797S or *MET* amplification).
 
-This repository houses the **Master Unified Study**, synthesizing four interconnected investigations into an unbroken causal continuum:
+This repository houses the **Celebrano Sanctuary Model (CSM)**, formalizing the biophysical and microarchitectural mechanics of drug shielding into the **Celebrano Spatial Sanctuary Index ($C\text{-SSI}$)**, synthesizing four interconnected investigations into an unbroken causal continuum:
 
 ```mermaid
 flowchart LR
@@ -207,6 +207,9 @@ cd spatial-oncology-master
 
 # Install dependencies
 pip install -r requirements.txt
+
+# Run the Celebrano Sanctuary Model Clinical Demonstrator
+python3 scripts/celebrano_sanctuary_demo.py --pattern Solid --diameter 850
 ```
 
 ### 2. Run the End-to-End Master Pipeline
