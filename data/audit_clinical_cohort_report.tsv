@@ -1,0 +1,15 @@
+Metric	Value	Status
+Study_ID	luad_mskcc_2020	VERIFIED
+Source_Publication	Caso_et_al_JTO_2020_PMID_32791233	VERIFIED
+Total_Patients	604	PASS
+Unique_Patients	604	PASS
+Duplicates_Count	0	PASS
+EGFR_Mutant_Count	182	PASS
+Total_Recurrences	98	PASS
+High_vs_Low_Sample_Size	193	PASS
+LogRank_Chi2	20.3867	PASS
+LogRank_P_Value	6.3268e-06	PASS
+Unadjusted_HR	7.75	PASS
+Stage_Adjusted_HR	6.75	PASS
+Stage_Adjusted_P_Value	5.5218e-04	PASS
+Dataset_MD5	880b15b3734cd0d2d1a6184100c3d02c	VERIFIED

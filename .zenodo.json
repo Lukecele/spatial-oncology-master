@@ -1,0 +1,30 @@
+{
+  "title": "Biophysical Reaction-Diffusion Transport and Evolutionary Sanctuary Dynamics in Compact EGFR-Mutant Lung Adenocarcinoma",
+  "description": "<p>Unified computational, biophysical, and clinical cohort repository resolving non-genetic persistence and recurrence under osimertinib in EGFR-mutant lung adenocarcinoma (LUAD). Integrates modified Bessel reaction-diffusion transport physics, evolutionary game theory replicator dynamics, and clinical recurrence validation across the authenticated MSKCC 2020 cohort (N = 604).</p>",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "GPL-3.0-or-later",
+  "version": "v2.0.0",
+  "creators": [
+    {
+      "name": "Celebrano, Luca",
+      "affiliation": "Department of Clinical Medicine and Surgery, School of Medicine, University of Naples Federico II, Naples, Italy; Telethon Institute of Genetics and Medicine (TIGEM), Pozzuoli, Italy",
+      "orcid": "0009-0007-0931-3555"
+    }
+  ],
+  "keywords": [
+    "Spatial Oncology",
+    "Reaction-Diffusion Transport",
+    "Microvascular Decoupling",
+    "Osimertinib Resistance",
+    "Evolutionary Game Theory",
+    "Replicator Dynamics",
+    "ADAURA Trial",
+    "EGFR-mutant NSCLC",
+    "IASLC Histological Subtypes",
+    "Computational Oncology"
+  ],
+  "communities": [
+    {"identifier": "zenodo"}
+  ]
+}

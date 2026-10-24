@@ -81,10 +81,19 @@ flowchart LR
 ```text
 spatial-oncology-master/
 ├── data/
-│   └── mskcc_2020_real_cohort.csv      # Authenticated clinical cohort (MD5: 880b15b3734cd0d2d1a6184100c3d02c)
+│   ├── mskcc_2020_real_cohort.csv      # Authenticated clinical cohort (MD5: 880b15b3734cd0d2d1a6184100c3d02c)
+│   └── audit_clinical_cohort_report.tsv # Data integrity certificate & hash verification
 ├── src/
 │   ├── biophysical_diffusion_model.py  # Exact modified Bessel K0 solver and ODE integration
-│   └── replicator_dynamics_game.py     # 2x2 non-zero sum game, Lyapunov stability & ADAURA regrowth
+│   ├── replicator_dynamics_game.py     # 2x2 non-zero sum game, Lyapunov stability & ADAURA regrowth
+│   └── clinical_validation.py          # MSKCC 2020 cohort survival analytics & multivariable Cox models
+├── notebooks/
+│   └── Spatial_Oncology_Master_Study.ipynb # Interactive demonstration of transport, game theory & clinical stats
+├── figures/
+│   ├── figure1_reaction_diffusion_sanctuary.png    # Figure 1 at 600 DPI
+│   ├── figure2_evolutionary_game_and_cessation.png # Figure 2 at 600 DPI
+│   ├── figure3_mskcc_clinical_validation.png       # Figure 3 at 600 DPI
+│   └── figure4_translational_adaura_framework.png  # Figure 4 at 600 DPI
 ├── results/
 │   ├── figure1_reaction_diffusion_sanctuary.png    # Figure 1 at 600 DPI
 │   ├── figure2_evolutionary_game_and_cessation.png # Figure 2 at 600 DPI
@@ -92,11 +101,12 @@ spatial-oncology-master/
 │   ├── figure4_translational_adaura_framework.png  # Figure 4 at 600 DPI
 │   └── audit_clinical_cohort_report.tsv            # Automated data audit and integrity certificate
 ├── scripts/
-│   └── generate_unified_publication_figures.py     # End-to-end figure generation pipeline
+│   ├── generate_unified_publication_figures.py     # End-to-end 600 DPI figure generation pipeline
+│   └── celebrano_sanctuary_demo.py                 # Interactive CLI tool for biophysical sanctuary equations
 ├── tests/
-│   ├── test_exact_biophysical_model.py # Unit tests for Bessel K0 solver and sanctuary shells
-│   ├── test_exact_game_theory_model.py # Unit tests for replicator equations and stability
-│   └── test_master_pipeline.py         # Full master pipeline execution tests
+│   ├── test_exact_biophysical_model.py     # Unit tests for Bessel K0 solver and sanctuary shells
+│   ├── test_exact_game_theory_model.py     # Unit tests for replicator equations and stability
+│   └── test_master_clinical_validation.py  # Unit tests for MSKCC clinical survival validation
 └── manuscript/
     ├── MANUSCRIPT_UNIFIED_MASTER_STUDY.pdf  # Publication-grade vector PDF (8 pages A4)
     ├── MANUSCRIPT_UNIFIED_MASTER_STUDY.html # Academic HTML source
@@ -113,7 +123,7 @@ All models, statistical tests, and figures can be verified and reproduced with a
 
 ```bash
 # 1. Run unit test suites (15/15 tests pass)
-uv run python -m unittest discover tests
+uv run --with matplotlib --with seaborn --with scipy --with pandas --with lifelines python3 -m unittest discover tests
 
 # 2. Re-generate all 4 publication figures at 600 DPI
 uv run --with matplotlib --with seaborn --with scipy --with pandas --with lifelines python3 scripts/generate_unified_publication_figures.py
