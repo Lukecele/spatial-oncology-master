@@ -156,6 +156,18 @@ Importantly, our findings reconcile conflicting observations surrounding post-AD
 
 ---
 
+## Declarations
+
+**Funding:** This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
+
+**Competing Interests:** The author declares no competing financial or non-financial interests.
+
+**Ethics Declaration:** This study exclusively analyzes publicly available, de-identified clinical and genomic data from the Memorial Sloan Kettering Cancer Center cohort (cBioPortal, Caso et al., *J Thorac Oncol* 2020). In accordance with international guidelines, secondary analysis of de-identified public datasets requires no additional institutional review board approval.
+
+**Data and Code Availability:** The authenticated clinical dataset (`mskcc_2020_real_cohort.csv`, MD5: `880b15b3734cd0d2d1a6184100c3d02c`), exact Bessel analytical solvers, evolutionary replicator scripts, and automated verification suite are publicly available at https://github.com/Lukecele/spatial-oncology-master and archived on Zenodo at https://doi.org/10.5281/zenodo.23623653.
+
+---
+
 ## References
 
 1. Wu YL, Tsuboi M, He J, et al. Osimertinib in Resected *EGFR*-Mutated Non-Small-Cell Lung Cancer. *N Engl J Med*. 2020;383(18):1711-1723.
