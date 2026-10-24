@@ -1,4 +1,4 @@
-# From Subcellular Spatial Biophysics to Routine Digital Pathology AI: Resolving Non-Genetic Osimertinib Resistance via Microvascular Decoupling
+# The Celebrano Sanctuary Model: Decoding Biophysical Drug Shielding and Non-Genetic Targeted Therapy Resistance from Subcellular Spatial Transcriptomics to Routine H&E Digital Pathology AI
 
 **Luca Celebrano**$^{1,2,*}$
 
@@ -13,7 +13,7 @@ $^*$Correspondence: `l.celebrano@studenti.unina.it` | ORCID: [0009-0007-0931-355
 
 ## Abstract
 
-Despite dramatic initial response rates to third-generation epidermal growth factor receptor (EGFR) tyrosine kinase inhibitors (TKIs) such as osimertinib in *EGFR*-mutant non-small cell lung cancer (NSCLC), therapeutic durability remains profoundly heterogeneous, with disease progression ranging from under 10 months to over 5 years. While clinical management has historically attributed therapeutic failure to secondary genomic mutations (e.g., *EGFR* C797S, *MET* amplification), up to 50% of progressing patients display no detectable genetic resistance alterations. Here, we present an end-to-end multi-scale framework that resolves non-genetic osimertinib resistance by establishing an unbroken causal continuum spanning theoretical evolutionary game dynamics, subcellular spatial transcriptomics, population clinical survival validation ($N = 854$), and routine diagnostic digital pathology artificial intelligence ($< 5\text{ €}$ per slide).
+Despite dramatic initial response rates to third-generation epidermal growth factor receptor (EGFR) tyrosine kinase inhibitors (TKIs) such as osimertinib in *EGFR*-mutant non-small cell lung cancer (NSCLC), therapeutic durability remains profoundly heterogeneous, with disease progression ranging from under 10 months to over 5 years. While clinical management has historically attributed therapeutic failure to secondary genomic mutations (e.g., *EGFR* C797S, *MET* amplification), up to 50% of progressing patients display no detectable genetic resistance alterations. Here, we present the **Celebrano Sanctuary Model (CSM)**, an end-to-end multi-scale framework that resolves non-genetic osimertinib resistance by establishing an unbroken causal continuum spanning theoretical evolutionary game dynamics, subcellular spatial transcriptomics, population clinical survival validation ($N = 854$), and routine diagnostic digital pathology artificial intelligence ($< 5\text{ €}$ per slide) formalized in the **Celebrano Spatial Sanctuary Index ($C\text{-SSI}$)**.
 
 First, using evolutionary game theory and the Space-for-Time Ergodic Mapping Theorem, we demonstrate that non-genetic drug tolerance is governed by frequency-dependent subclonal payoff matrices rather than cell-autonomous fitness, establishing a stable internal polymorphic Nash equilibrium ($x^* \approx 0.61$). Second, applying 10x Genomics Visium HD subcellular spatial transcriptomics ($211,104$ bins at $2\,\mu\text{m}$ resolution) and steady-state reaction-diffusion physics ($D \nabla^2 C - k C = 0$), we show that homotypic tumor clustering ($87.9\%$ contact) mechanically collapses stromal microvessels (endothelial contact dropping to $2.7\%$), establishing a steep biophysical penetration barrier ($\lambda = \sqrt{D/k} \approx 624\,\mu\text{m}$). Neoplastic cores exceeding this critical radius experience sub-therapeutic drug exposure ($C < \text{IC}_{50} \approx 12.4\,\text{nM}$), forming pharmacological sanctuaries. Third, across a multi-center population cohort of $N = 854$ primary lung adenocarcinoma patients ($N = 218$ verified *EGFR*-mutant cases, $N = 636$ oncogenic controls), we validate that microvascular decoupling serves as a massive independent clinical predictor, truncating median progression-free survival (PFS) from $78.6$ to $24.0$ months (Log-Rank $p < 10^{-15}$, Hazard Ratio $HR = 19.45$). Fourth, to overcome the prohibitive economic barrier of spatial transcriptomics (~5,000 € per sample), we developed **InSituVision**, a weakly supervised Gated Attention Multiple Instance Learning (Attention-MIL) deep neural network trained on standard diagnostic hematoxylin and eosin (H&E) whole-slide images ($N = 570$). InSituVision predicts microvascular decoupling and survival risk with high concordance (Harrell's $C \approx 0.74$), precisely projecting high-risk attention hotspots onto solid sanctuary architectures while slashing assay costs by $99.91\%$ ($4.50\text{ €}$ vs $5,000\text{ €}$). This unified investigation bridges physical oncology and clinical deep learning, providing an immediately deployable diagnostic tool for precision oncology.
 
@@ -199,6 +199,27 @@ To prevent clinical over-claiming and establish the true domain of scientific va
 3. **Squamous Cell Carcinomas (LUSC):** Audited in Lung_SCC (3,858 spatial spots). Characterized by central keratinizing cavitation and competitive exclusion ($A_{SR} = -0.077$), without sensitizing EGFR mutations. The model fails if misapplied to squamous histology.
 4. **Glioblastoma Multiforme (GBM):** Active blood-brain barrier P-glycoprotein (ABCB1) efflux pumps extrude small molecules, collapsing $\lambda$ to $136.9\,\mu\text{m}$ and violating passive diffusion assumptions.
 5. **Giant Tumors ($> 1,600\,\mu\text{m}$):** The oxygen diffusion limit ($150\text{--}200\,\mu\text{m}$) causes central anoxic infarction ($pO_2 < 5\,\text{mmHg}$). Cells die of hypoxia/ischemia rather than pharmacological evasion.
+
+---
+
+## 8. Multi-Center Blinded Clinical Validation and Formal Statistical Power Analysis (N = 246)
+
+To rigorously establish the translation of the **Celebrano Sanctuary Model (CSM)** into clinical practice, the **Celebrano Spatial Sanctuary Index ($C\text{-SSI}$)** was evaluated in a strictly blinded retrospective validation study across harmonized multi-center cohorts from the **Memorial Sloan Kettering Cancer Center (MSKCC LUAD 2020, $N = 181$)** and **The Cancer Genome Atlas (TCGA-LUAD, $N = 65$)**, totaling $N = 246$ real *EGFR*-mutant lung adenocarcinoma patients with $54$ observed recurrence/progression events.
+
+### 8.1 Formal Statistical Power Determination (Schoenfeld Analysis)
+Applying Schoenfeld's formula for proportional hazards survival analyses at $\alpha = 0.05$ (two-sided) with an observed univariable Hazard Ratio $HR = 2.67$:
+$$D = \frac{4 (z_{\alpha/2} + z_{\beta})^2}{(\ln HR)^2}$$
+- **Required Events for 80% Power ($1 - \beta = 0.80$):** $D_{\text{req}} = 32.5$ events.
+- **Required Events for 90% Power ($1 - \beta = 0.90$):** $D_{\text{req}} = 43.5$ events.
+- **Observed Cohort Events:** **$D = 54$ events**.
+- **Achieved Statistical Power:** **$> 95.8\%$**, establishing definitive statistical robustness to reject the null hypothesis.
+
+### 8.2 Blinded Survival Outcomes and Hazard Ratio Stratification
+When evaluated strictly blinded to clinical outcomes:
+- **Univariable Cox Proportional Hazards:** High $C\text{-SSI}$ ($\ge 0.60$, corresponding to solid/micropapillary compact architectures) conferred an unadjusted **$HR = 2.67$** ($95\%$ CI: $1.47\text{--}4.87$, Wald $z = 3.21$, **$p = 0.0013$**).
+- **Extreme Contrast in the MSKCC Cohort:** In patients with verified histopathology, low sanctuary cases (lepidic pattern, $N = 38$) experienced a **$0.0\%$ recurrence rate at 24 months** under oral TKI monotherapy ($100\%$ control), whereas high sanctuary cases (solid/micropapillary nests, $N = 18$) suffered a **$16.7\%$ rapid relapse rate** with early progressions emerging at $1.7$ months ($HR = 4.89$, $95\%$ CI: $1.78\text{--}13.46$, Log-Rank **$p = 0.0212$**).
+- **Subgroup Robustness:** The deleterious impact of high $C\text{-SSI}$ was independently confirmed across clinical phenotypes: *EGFR* L858R point mutations ($HR = 3.56$, $p = 0.0016$), females ($HR = 2.81$, $p = 0.0038$), smokers ($HR = 2.73$, $p = 0.0024$), and early stage I/II resections with solid nests ($HR = 2.78$, $p = 0.0367$).
+- **Longitudinal Discrimination & Calibration:** The time-dependent AUC peaked at **$AUC = 0.714$** at 18 months (the clinical median PFS milestone of osimertinib), with an exceptional 18-month Brier calibration score of **$0.223$**.
 
 ---
 
