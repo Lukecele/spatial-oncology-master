@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, unified pipeline, biophysical model, or clinical findings, please cite it as below."
+authors:
+  - family-names: "Celebrano"
+    given-names: "Luca"
+    orcid: "https://orcid.org/0009-0007-0931-3555"
+    affiliation: "Department of Clinical Medicine and Surgery, School of Medicine, University of Naples Federico II, Naples, Italy; Telethon Institute of Genetics and Medicine (TIGEM), Pozzuoli, Italy"
+title: "From Subcellular Spatial Biophysics to Routine Digital Pathology AI: Resolving Non-Genetic Osimertinib Resistance via Microvascular Decoupling"
+version: "1.0.0"
+doi: "10.5281/zenodo.23620878"
+date-released: 2026-10-24
+url: "https://github.com/Lukecele/spatial-oncology-master"
+repository-code: "https://github.com/Lukecele/spatial-oncology-master"
+keywords:
+  - "spatial oncology"
+  - "osimertinib resistance"
+  - "visium hd"
+  - "reaction-diffusion"
+  - "microvascular decoupling"
+  - "deep multiple instance learning"
+  - "digital pathology"
+  - "computational oncology"
+license: "GPL-3.0-or-later"
