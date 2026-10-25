@@ -2,7 +2,7 @@
 """
 MSKCC 2020 Clinical Cohort Validation Engine (N = 604).
 Analyzes architectural sanctuary patterns, IASLC histological subtypes,
-and recurrence-free survival (RFS) in EGFR-mutant lung adenocarcinoma.
+and recurrence-free survival (RFS) in surgically resected lung adenocarcinoma.
 """
 
 from pathlib import Path
@@ -71,7 +71,7 @@ class MSKCCClinicalValidator:
     def compare_high_vs_low_sanctuary(self) -> Dict[str, Any]:
         """
         Log-rank comparison between high-sanctuary (Solid/Micropapillary)
-        and baseline lepidic architecture.
+        and baseline lepidic architecture (Extreme biophysical contrast, N=193).
         """
         sub_df = self.df[self.df["PREDOMINANT_HISTOLOGIC_SUBTYPE"].isin(["Solid", "Micropapillary", "Lepidic"])].copy()
         sub_df["is_high_sanctuary"] = sub_df["PREDOMINANT_HISTOLOGIC_SUBTYPE"].isin(["Solid", "Micropapillary"]).astype(int)
@@ -94,13 +94,47 @@ class MSKCCClinicalValidator:
             "logrank_p_value": float(lr.p_value)
         }
 
+    def compute_followup_and_survival_metrics(self) -> Dict[str, Any]:
+        """
+        Computes follow-up duration distributions and Kaplan-Meier metrics,
+        auditing statistical power and tail reliability.
+        """
+        median_fu = float(self.df["RFS_MONTHS"].median())
+        q25 = float(self.df["RFS_MONTHS"].quantile(0.25))
+        q75 = float(self.df["RFS_MONTHS"].quantile(0.75))
+        n_at_36 = int((self.df["RFS_MONTHS"] >= 36).sum())
+        n_at_60 = int((self.df["RFS_MONTHS"] >= 60).sum())
+
+        # Lepidic follow-up
+        lep_df = self.df[self.df["PREDOMINANT_HISTOLOGIC_SUBTYPE"] == "Lepidic"]
+        n_lep_at_60 = int((lep_df["RFS_MONTHS"] >= 60).sum())
+
+        # Solid median RFS
+        solid_df = self.df[self.df["PREDOMINANT_HISTOLOGIC_SUBTYPE"] == "Solid"]
+        kmf_solid = KaplanMeierFitter()
+        kmf_solid.fit(solid_df["RFS_MONTHS"], solid_df["RECURRENCE_EVENT"])
+        solid_median_rfs = float(kmf_solid.median_survival_time_)
+        n_solid_at_40 = int((solid_df["RFS_MONTHS"] >= 40).sum())
+
+        return {
+            "median_rfs_followup_months": median_fu,
+            "iqr_rfs_followup": (q25, q75),
+            "patients_at_risk_36_months": n_at_36,
+            "patients_at_risk_60_months": n_at_60,
+            "lepidic_patients_at_risk_60_months": n_lep_at_60,
+            "solid_median_rfs_months": solid_median_rfs,
+            "solid_patients_at_risk_at_median": n_solid_at_40
+        }
+
     def fit_multivariable_cox_models(self) -> Dict[str, Any]:
         """
         Fits multivariable Cox Proportional Hazards models:
         1. Model 1: Architectural Extreme Comparison (N=193: Solid/Micro vs Lepidic, adjusted for Stage)
-        2. Model 2: Full Cohort Multivariable (N=604: Solid/Micro vs Rest, Stage II/III vs I, EGFR status)
+        2. Model 2A: Full Cohort Multivariable (N=604: Solid/Micro vs Rest, Stage II/III vs I)
+        3. Model 2B: Full Cohort Multivariable (N=604: Solid/Micro vs Rest, Stage II/III vs I, EGFR status)
+        4. Model 3: 5-Subtype Model with Acinar as reference (N=604, adjusted for Stage)
         """
-        # Model 1
+        # Model 1: Extreme Contrast (N=193)
         df_comp = self.df[self.df["PREDOMINANT_HISTOLOGIC_SUBTYPE"].isin(["Solid", "Micropapillary", "Lepidic"])].copy()
         df_comp["is_solid_micro"] = df_comp["PREDOMINANT_HISTOLOGIC_SUBTYPE"].isin(["Solid", "Micropapillary"]).astype(int)
         df_comp["stage_adv"] = (df_comp["PATHOLOGIC_STAGE"] >= 2).astype(int)
@@ -110,18 +144,33 @@ class MSKCCClinicalValidator:
                  duration_col="RFS_MONTHS", event_col="RECURRENCE_EVENT")
         s1 = cph1.summary.loc["is_solid_micro"]
 
-        # Model 2
+        # Model 2A: Full Cohort Stage-Adjusted (N=604)
         df_full = self.df.copy()
         df_full["is_solid_micro"] = df_full["PREDOMINANT_HISTOLOGIC_SUBTYPE"].isin(["Solid", "Micropapillary"]).astype(int)
         df_full["stage_adv"] = (df_full["PATHOLOGIC_STAGE"] >= 2).astype(int)
 
-        cph2 = CoxPHFitter()
-        cph2.fit(df_full[["RFS_MONTHS", "RECURRENCE_EVENT", "is_solid_micro", "stage_adv", "IS_EGFR_MUTANT"]],
-                 duration_col="RFS_MONTHS", event_col="RECURRENCE_EVENT")
-        s2 = cph2.summary.loc["is_solid_micro"]
+        cph2a = CoxPHFitter()
+        cph2a.fit(df_full[["RFS_MONTHS", "RECURRENCE_EVENT", "is_solid_micro", "stage_adv"]],
+                  duration_col="RFS_MONTHS", event_col="RECURRENCE_EVENT")
+        s2a = cph2a.summary.loc["is_solid_micro"]
+
+        # Model 2B: Full Cohort Stage + EGFR Adjusted (N=604)
+        cph2b = CoxPHFitter()
+        cph2b.fit(df_full[["RFS_MONTHS", "RECURRENCE_EVENT", "is_solid_micro", "stage_adv", "IS_EGFR_MUTANT"]],
+                  duration_col="RFS_MONTHS", event_col="RECURRENCE_EVENT")
+        s2b = cph2b.summary.loc["is_solid_micro"]
+
+        # Model 3: 5 Subtypes with Acinar Reference (N=604)
+        df_sub = pd.get_dummies(df_full["PREDOMINANT_HISTOLOGIC_SUBTYPE"], prefix="sub", dtype=int)
+        df_cox3 = pd.concat([df_full[["RFS_MONTHS", "RECURRENCE_EVENT", "stage_adv"]],
+                             df_sub[["sub_Lepidic", "sub_Solid", "sub_Micropapillary", "sub_Papillary"]]], axis=1)
+        cph3 = CoxPHFitter()
+        cph3.fit(df_cox3, duration_col="RFS_MONTHS", event_col="RECURRENCE_EVENT")
+        s3 = cph3.summary
 
         return {
             "model1_extreme": {
+                "description": "Solid/Micropapillary vs Lepidic (N=193, stage-adjusted)",
                 "n": len(df_comp),
                 "events": int(df_comp["RECURRENCE_EVENT"].sum()),
                 "adjusted_hr": float(s1["exp(coef)"]),
@@ -130,11 +179,56 @@ class MSKCCClinicalValidator:
                 "p_value": float(s1["p"])
             },
             "model2_full_cohort": {
+                "description": "Solid/Micropapillary vs Rest (N=604, stage & EGFR adjusted)",
                 "n": len(df_full),
                 "events": int(df_full["RECURRENCE_EVENT"].sum()),
-                "adjusted_hr": float(s2["exp(coef)"]),
-                "ci_lower": float(s2["exp(coef) lower 95%"]),
-                "ci_upper": float(s2["exp(coef) upper 95%"]),
-                "p_value": float(s2["p"])
+                "adjusted_hr": float(s2b["exp(coef)"]),
+                "ci_lower": float(s2b["exp(coef) lower 95%"]),
+                "ci_upper": float(s2b["exp(coef) upper 95%"]),
+                "p_value": float(s2b["p"])
+            },
+            "model2a_full_cohort_stage_only": {
+                "description": "Solid/Micropapillary vs Rest (N=604, stage-adjusted only)",
+                "n": len(df_full),
+                "events": int(df_full["RECURRENCE_EVENT"].sum()),
+                "adjusted_hr": float(s2a["exp(coef)"]),
+                "ci_lower": float(s2a["exp(coef) lower 95%"]),
+                "ci_upper": float(s2a["exp(coef) upper 95%"]),
+                "p_value": float(s2a["p"])
+            },
+            "model3_subtypes_acinar_ref": {
+                "description": "5-subtype multivariable model with Acinar as reference (N=604, stage-adjusted)",
+                "lepidic": {
+                    "hr": float(s3.loc["sub_Lepidic", "exp(coef)"]),
+                    "ci_lower": float(s3.loc["sub_Lepidic", "exp(coef) lower 95%"]),
+                    "ci_upper": float(s3.loc["sub_Lepidic", "exp(coef) upper 95%"]),
+                    "p_value": float(s3.loc["sub_Lepidic", "p"])
+                },
+                "solid": {
+                    "hr": float(s3.loc["sub_Solid", "exp(coef)"]),
+                    "ci_lower": float(s3.loc["sub_Solid", "exp(coef) lower 95%"]),
+                    "ci_upper": float(s3.loc["sub_Solid", "exp(coef) upper 95%"]),
+                    "p_value": float(s3.loc["sub_Solid", "p"])
+                },
+                "micropapillary": {
+                    "hr": float(s3.loc["sub_Micropapillary", "exp(coef)"]),
+                    "ci_lower": float(s3.loc["sub_Micropapillary", "exp(coef) lower 95%"]),
+                    "ci_upper": float(s3.loc["sub_Micropapillary", "exp(coef) upper 95%"]),
+                    "p_value": float(s3.loc["sub_Micropapillary", "p"])
+                },
+                "papillary": {
+                    "hr": float(s3.loc["sub_Papillary", "exp(coef)"]),
+                    "ci_lower": float(s3.loc["sub_Papillary", "exp(coef) lower 95%"]),
+                    "ci_upper": float(s3.loc["sub_Papillary", "exp(coef) upper 95%"]),
+                    "p_value": float(s3.loc["sub_Papillary", "p"])
+                }
             }
         }
+
+
+if __name__ == "__main__":
+    v = MSKCCClinicalValidator(Path(__file__).parent / "06_DATI_CLINICI_MSKCC_604_PAZIENTI.csv")
+    print("MSKCC 2020 Validation Engine Output:")
+    print("Cohort summary:", v.get_cohort_summary())
+    print("\nFollow-up metrics:", v.compute_followup_and_survival_metrics())
+    print("\nCox models:", v.fit_multivariable_cox_models())
