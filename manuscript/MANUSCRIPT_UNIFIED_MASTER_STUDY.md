@@ -30,7 +30,7 @@ However, clinical outcomes following the completion of adjuvant treatment exhibi
 
 Crucially, re-biopsy and liquid biopsy analyses reveal that late recurrences following adjuvant discontinuation frequently lack canonical on-target genomic resistance mutations (such as *EGFR* C797S) or off-target bypass activations (such as *MET* amplification). Instead, these relapses frequently preserve clonal sensitivity to EGFR inhibition, demonstrating marked objective responses to osimertinib rechallenge. This phenomenon indicates that post-discontinuation relapses do not primarily emerge from de novo genetic mutations selected under high drug exposure, but rather from persistent, non-mutational subclonal populations that survive three years of therapy in an uninhibited or sub-therapeutic spatial state.
 
-While bulk pharmacokinetic assays demonstrate extensive systemic distribution of osimertinib (apparent volume of distribution $V_d/F \approx 918\,\text{L}$, human plasma protein binding 94.7%, steady-state free vascular concentration $C_{0,\text{free}} \approx 25\,\text{nM}$), bulk assays assume spatial homogeneity. Inside solid and micropapillary lung adenocarcinoma nests, the loss of alveolar architecture and elevated interstitial fluid pressure shut down microvascular perfusion, forcing drugs to penetrate exclusively via passive interstitial diffusion. Here, we present a unified biophysical, evolutionary, and clinical investigation examining the spatial sanctuary mechanism underlying non-mutational persistence and post-cessation recurrence in human lung adenocarcinoma.
+While bulk pharmacokinetic assays demonstrate extensive systemic distribution of osimertinib (apparent volume of distribution $V_d/F \approx 918\,\text{L}$, human plasma protein binding 94.7%, steady-state free vascular concentration $C_{0,\text{free}} \approx 25.0\,\text{nM}$), bulk assays assume spatial homogeneity. Inside solid and micropapillary lung adenocarcinoma nests, the loss of alveolar architecture and elevated interstitial fluid pressure shut down microvascular perfusion, forcing drugs to penetrate exclusively via passive interstitial diffusion. Here, we present a unified biophysical, evolutionary, and clinical investigation examining the spatial sanctuary mechanism underlying non-mutational persistence and post-cessation recurrence in human lung adenocarcinoma.
 
 ---
 
@@ -99,6 +99,7 @@ Upon treatment cessation at month 36, drug clears from the sanctuary shell. Reli
 $$N(t) = N_0 \left[ x^* e^{g_S t} + (1 - x^*) e^{g_P t} \right]$$
 
 The model projects:
+
 - **Molecular ctDNA Detection Threshold ($10^7$ cells, ~0.01% VAF):** reached at day 325 post-cessation = **10.7 months** (10.68 months).
 - **Radiographic CT Detection Threshold ($10^9$ cells, 1 cm lesion):** reached at day 491 post-cessation = **16.1 months** (16.13 months).
 - **Diagnostic Lead Time Window:** $\Delta t = 16.13 - 10.68 = \mathbf{5.45 \approx 5.4\,\text{months}}$ (rounded to 5.5 months in preliminary summaries).
@@ -159,6 +160,7 @@ Integrating biophysical penetration limits, subclonal game dynamics, and clinica
 
 ### 5.1 Histology-Guided Post-Cessation ctDNA Surveillance
 Current clinical guidelines suggest uniform follow-up intervals for all resected stage IB–IIIA patients completing 3 years of adjuvant osimertinib. Our findings suggest that surgical pathology should inform post-cessation monitoring intensity:
+
 - **Low-Sanctuary Pattern (Lepidic / Acinar Predominant):** Associated with favorable baseline prognosis (observed recurrence rate: 4.5%–14.7%). Routine clinical and radiographic follow-up every 6 months is appropriate.
 - **High-Sanctuary Pattern (Solid / Micropapillary Components $\ge 20\%$):** Higher intrinsic recurrence risk and potential for residual microscopic sanctuaries justify **intensive longitudinal ctDNA MRD screening every 3 months starting from month 36 through month 60**.
 
