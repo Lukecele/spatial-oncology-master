@@ -1,6 +1,6 @@
 # Biophysical Reaction-Diffusion Transport and Evolutionary Sanctuary Dynamics in Compact EGFR-Mutant Lung Adenocarcinoma
 
-[![Preprint: bioRxiv](https://img.shields.io/badge/bioRxiv-BIORXIV%2F2026%2F761568-b31b1b.svg)](https://submit.biorxiv.org/)
+[![Preprint: bioRxiv](https://img.shields.io/badge/bioRxiv-BIORXIV%2F2026%2F761610-b31b1b.svg)](https://submit.biorxiv.org/)
 [![DOI: Zenodo](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23623653-blue.svg)](https://doi.org/10.5281/zenodo.23623653)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Unit Tests](https://img.shields.io/badge/tests-15%2F15%20passing-brightgreen.svg)]()
@@ -133,7 +133,7 @@ If you use this model, the clinical analysis pipeline, or the analytical Bessel 
   year={2026},
   publisher={Cold Spring Harbor Laboratory},
   doi={10.5281/zenodo.23623653},
-  note={bioRxiv tracking ID: BIORXIV/2026/761568}
+  note={bioRxiv tracking ID: BIORXIV/2026/761610}
 }
 ```
 

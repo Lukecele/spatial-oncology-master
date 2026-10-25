@@ -7,6 +7,7 @@
 **Istituzione:** Università degli Studi di Napoli Federico II & TIGEM  
 **Portale di Sottomissione:** [https://submit.biorxiv.org/](https://submit.biorxiv.org/)  
 **Costo:** **0 € (Completamente Gratuito)**  
+**bioRxiv Official Tracking ID:** `BIORXIV/2026/761610`
 **Tempo di pubblicazione online:** 24–48 ore dalla sottomissione (previo controllo formale della redazione bioRxiv).
 
 ---

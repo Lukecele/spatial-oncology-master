@@ -6,7 +6,7 @@
 **Date:** October 25, 2026  
 **Subject:** Submission of Original Research Article: *"Biophysical Reaction-Diffusion Transport and Evolutionary Sanctuary Dynamics in Compact EGFR-Mutant Lung Adenocarcinoma"*  
 **Corresponding Author:** Luca Celebrano (University of Naples Federico II / TIGEM)  
-**Preprint Reference:** bioRxiv Tracking ID: `BIORXIV/2026/761568` (Submitted under CC-BY 4.0 license)  
+**Preprint Reference:** bioRxiv Tracking ID: `BIORXIV/2026/761610` (Submitted under CC-BY 4.0 license)  
 
 ---
 
@@ -39,7 +39,7 @@ In this manuscript, we present a multi-scale biophysical and evolutionary framew
    We synthesize these findings into an actionable framework for risk-stratified post-cessation ctDNA surveillance and provide a biophysical rationale for combining small molecules with perivascular cytoreductive macromolecules (ADCs/amivantamab) to decompress interstitial pressure, eliminate the perivascular consumption sink ($k \to 0$), and expand small-molecule penetration to collapse the sanctuary shell.
 
 ### Commitment to Open Science & Reproducibility
-In adherence to the highest standards of scientific reproducibility, the complete pipeline—including the exact analytical Bessel solvers, evolutionary replicator scripts, authenticated MSKCC dataset, unit test suite, and high-resolution 600 DPI vector figures—is fully open-source and publicly accessible in our GitHub repository (`https://github.com/Lukecele/spatial-oncology-master`) and permanently archived on Zenodo (`https://doi.org/10.5281/zenodo.23623653`). A preprint version has been deposited on bioRxiv under tracking ID `BIORXIV/2026/761568`.
+In adherence to the highest standards of scientific reproducibility, the complete pipeline—including the exact analytical Bessel solvers, evolutionary replicator scripts, authenticated MSKCC dataset, unit test suite, and high-resolution 600 DPI vector figures—is fully open-source and publicly accessible in our GitHub repository (`https://github.com/Lukecele/spatial-oncology-master`) and permanently archived on Zenodo (`https://doi.org/10.5281/zenodo.23623653`). A preprint version has been deposited on bioRxiv under tracking ID `BIORXIV/2026/761610`.
 
 This manuscript represents original work that has not been published previously and is not under consideration elsewhere. The author has approved the submission and declares no competing interests.
 

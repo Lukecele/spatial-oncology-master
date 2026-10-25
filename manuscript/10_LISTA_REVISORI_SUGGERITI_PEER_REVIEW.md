@@ -2,7 +2,7 @@
 
 **Manuscript Title:** *Biophysical Reaction-Diffusion Transport and Evolutionary Sanctuary Dynamics in Compact EGFR-Mutant Lung Adenocarcinoma*  
 **Author:** Luca Celebrano (University of Naples Federico II & TIGEM)  
-**Preprint Reference:** bioRxiv MS ID: `BIORXIV/2026/761568`  
+**Preprint Reference:** bioRxiv MS ID: `BIORXIV/2026/761610`  
 
 When submitting to peer-reviewed international journals (*Bulletin of Mathematical Biology*, *Mathematical Biosciences*, *Lung Cancer*, *PLOS Computational Biology*, or *JTO Clinical and Research Reports*), submission portals require 3 to 5 independent suggested reviewers. 
 
