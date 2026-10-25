@@ -1,8 +1,9 @@
-# Spatial Reaction-Diffusion Transport and Evolutionary Sanctuary Dynamics in Compact EGFR-Mutant Lung Adenocarcinoma
+# Biophysical Reaction-Diffusion Transport and Evolutionary Sanctuary Dynamics in Compact EGFR-Mutant Lung Adenocarcinoma
 
-[![Master Study CI](https://github.com/Lukecele/spatial-oncology-master/actions/workflows/ci.yml/badge.svg)](https://github.com/Lukecele/spatial-oncology-master/actions/workflows/ci.yml)
-[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23623653-blue.svg)](https://doi.org/10.5281/zenodo.23623653)
-[![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Preprint: bioRxiv](https://img.shields.io/badge/bioRxiv-BIORXIV%2F2026%2F761568-b31b1b.svg)](https://submit.biorxiv.org/)
+[![DOI: Zenodo](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23623653-blue.svg)](https://doi.org/10.5281/zenodo.23623653)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Unit Tests](https://img.shields.io/badge/tests-15%2F15%20passing-brightgreen.svg)]()
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
 [![Platform: Linux | macOS | Windows](https://img.shields.io/badge/platform-Linux%20%7C%20macOS%20%7C%20Windows-lightgrey.svg)](https://github.com/Lukecele/spatial-oncology-master)
 
@@ -103,15 +104,37 @@ spatial-oncology-master/
 │   ├── MANUSCRIPT_UNIFIED_MASTER_STUDY.pdf         # Complete 11-page master manuscript with vector MathJax
 │   ├── MANUSCRIPT_UNIFIED_MASTER_STUDY.md          # Full source text in GitHub Flavored Markdown
 │   ├── MANUSCRIPT_UNIFIED_MASTER_STUDY.html        # Interactive self-contained web edition
-│   ├── COVER_LETTER_EDITORIAL_SUBMISSION.md        # Editorial submission letter
+│   ├── 08_BIORXIV_SUBMISSION_DOSSIER.md           # bioRxiv submission dossier & sanitized metadata
+│   ├── 09_MANOSCRITTO_FORMATO_WORD.docx            # Journal submission manuscript in Word (.docx) with embedded 600 DPI figures
+│   ├── 10_LISTA_REVISORI_SUGGERITI_PEER_REVIEW.md  # 5 curated international independent peer reviewers
+│   ├── 11_PRESENTAZIONE_STUDIO_SLIDES.html         # Interactive slide presentation deck (HTML5/CSS3)
+│   ├── COVER_LETTER_EDITORIAL_SUBMISSION.md        # Editorial submission letter with bioRxiv ID & suggested reviewers
 │   └── AUDIT_AGENT_EXPLANATION_MANIFESTO.md       # Methodological briefing & audit reconciliation
 ├── tests/
 │   ├── test_exact_biophysical_model.py # Exact Bessel ODE solutions & boundary checks
 │   ├── test_exact_game_theory_model.py # Replicator dynamics, Nash attractor & Lyapunov stability
 │   └── test_master_clinical_validation.py # MSKCC 2020 cohort statistics & Cox PH models
 ├── CITATION.cff                        # Machine-readable academic citation metadata
-├── LICENSE                             # GNU General Public License v3.0
+├── LICENSE                             # Creative Commons Attribution 4.0 International
 └── requirements.txt                    # Minimal deterministic dependencies
+```
+
+---
+
+## Citation
+
+If you use this model, the clinical analysis pipeline, or the analytical Bessel solvers, please cite the preprint:
+
+```bibtex
+@article{celebrano2026spatial,
+  title={Biophysical Reaction-Diffusion Transport and Evolutionary Sanctuary Dynamics in Compact EGFR-Mutant Lung Adenocarcinoma},
+  author={Celebrano, Luca},
+  journal={bioRxiv},
+  year={2026},
+  publisher={Cold Spring Harbor Laboratory},
+  doi={10.5281/zenodo.23623653},
+  note={bioRxiv tracking ID: BIORXIV/2026/761568}
+}
 ```
 
 ---

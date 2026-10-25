@@ -6,6 +6,7 @@
 **Date:** October 25, 2026  
 **Subject:** Submission of Original Research Article: *"Biophysical Reaction-Diffusion Transport and Evolutionary Sanctuary Dynamics in Compact EGFR-Mutant Lung Adenocarcinoma"*  
 **Corresponding Author:** Luca Celebrano (University of Naples Federico II / TIGEM)  
+**Preprint Reference:** bioRxiv Tracking ID: `BIORXIV/2026/761568` (Submitted under CC-BY 4.0 license)  
 
 ---
 
@@ -38,9 +39,16 @@ In this manuscript, we present a multi-scale biophysical and evolutionary framew
    We synthesize these findings into an actionable framework for risk-stratified post-cessation ctDNA surveillance and provide a biophysical rationale for combining small molecules with perivascular cytoreductive macromolecules (ADCs/amivantamab) to decompress interstitial pressure, eliminate the perivascular consumption sink ($k \to 0$), and expand small-molecule penetration to collapse the sanctuary shell.
 
 ### Commitment to Open Science & Reproducibility
-In adherence to the highest standards of scientific reproducibility, the complete pipeline—including the exact analytical Bessel solvers, evolutionary replicator scripts, authenticated MSKCC dataset, unit test suite, and high-resolution 600 DPI vector figures—is fully open-source and publicly accessible in our GitHub repository (`https://github.com/Lukecele/spatial-oncology-master`) and permanently archived on Zenodo (`https://doi.org/10.5281/zenodo.23623653`).
+In adherence to the highest standards of scientific reproducibility, the complete pipeline—including the exact analytical Bessel solvers, evolutionary replicator scripts, authenticated MSKCC dataset, unit test suite, and high-resolution 600 DPI vector figures—is fully open-source and publicly accessible in our GitHub repository (`https://github.com/Lukecele/spatial-oncology-master`) and permanently archived on Zenodo (`https://doi.org/10.5281/zenodo.23623653`). A preprint version has been deposited on bioRxiv under tracking ID `BIORXIV/2026/761568`.
 
 This manuscript represents original work that has not been published previously and is not under consideration elsewhere. The author has approved the submission and declares no competing interests.
+
+### Suggested Independent Reviewers
+1. **Prof. Alexander R. A. Anderson, Ph.D.** (Chair, Integrated Mathematical Oncology, Moffitt Cancer Center, USA; `Alexander.Anderson@moffitt.org`) — Expert in mathematical oncology and microenvironmental gradients.
+2. **Assoc. Prof. Jacob G. Scott, M.D., Ph.D.** (Department of Translational Hematology & Oncology Research, Cleveland Clinic, USA; `scottj10@ccf.org`) — Expert in evolutionary game theory and cancer drug tolerance.
+3. **Prof. Dr. Christian Grohé, M.D.** (Director, Department of Pneumology, Evangelische Lungenklinik Berlin, Germany; `christian.grohe@jsd.de`) — Co-author of the prospective ADAURA ctDNA surveillance study (*Nature Medicine* 2025).
+4. **Prof. Philip K. Maini, FRS** (Mathematical Institute, University of Oxford, UK; `philip.maini@maths.ox.ac.uk`) — Authority in reaction-diffusion equations and continuum biophysical models.
+5. **Prof. Natasha B. Leighl, M.D.** (Princess Margaret Cancer Centre, University of Toronto, Canada; `natasha.leighl@uhn.ca`) — Authority in EGFR-mutant lung cancer and liquid biopsy biomarkers.
 
 Thank you very much for your time, consideration, and editorial review.
 
