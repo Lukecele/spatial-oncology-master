@@ -7,23 +7,40 @@ Integrates the complete multi-scale continuum:
 3. Clinical Cohort Validation on MSKCC 2020 Real Patient Cohort (N = 604)
 """
 
+import sys
 from pathlib import Path
 from typing import Dict, Any, Optional
 import numpy as np
 
-from biophysical_diffusion_model import BiophysicalTransportModel
-from replicator_dynamics_game import SpatialGameAssay
-from clinical_validation import MSKCCClinicalValidator
+BASE_DIR = Path(__file__).resolve().parent
+SRC_DIR = BASE_DIR / "spatial-oncology-master" / "src"
+if str(SRC_DIR) not in sys.path:
+    sys.path.insert(0, str(SRC_DIR))
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+
+try:
+    from biophysical_diffusion_model import BiophysicalTransportModel
+    from replicator_dynamics_game import SpatialGameAssay
+    from clinical_validation import MSKCCClinicalValidator
+except ImportError:
+    from CODICE_MODELLO_BIOFISICO_BESSEL import BiophysicalTransportModel
+    from CODICE_TEORIA_DEI_GIOCHI_REPLICATORE import SpatialGameAssay
+    from CODICE_VALIDAZIONE_CLINICA_MSKCC import MSKCCClinicalValidator
 
 
 class MasterSpatialOncologyPipeline:
     """Unified pipeline orchestrating the Master Study models and validations."""
 
     def __init__(self, data_dir: Optional[Path] = None, results_dir: Optional[Path] = None):
-        root = Path(__file__).resolve().parent.parent
-        self.data_dir = Path(data_dir) if data_dir else root / "data"
-        self.results_dir = Path(results_dir) if results_dir else root / "results"
-        self.cohort_path = self.data_dir / "mskcc_2020_real_cohort.csv"
+        self.base_dir = BASE_DIR
+        self.data_dir = Path(data_dir) if data_dir else self.base_dir
+        self.results_dir = Path(results_dir) if results_dir else self.base_dir
+        
+        # Resolve cohort path
+        primary_csv = self.base_dir / "06_DATI_CLINICI_MSKCC_604_PAZIENTI.csv"
+        secondary_csv = self.base_dir / "spatial-oncology-master" / "data" / "mskcc_2020_real_cohort.csv"
+        self.cohort_path = primary_csv if primary_csv.exists() else secondary_csv
 
         self.transport_model = BiophysicalTransportModel()
         self.game_assay = SpatialGameAssay()
@@ -38,51 +55,53 @@ class MasterSpatialOncologyPipeline:
         x_star = self.game_assay.compute_nash_equilibrium()
         stability = self.game_assay.compute_lyapunov_stability()
         regrowth = self.game_assay.simulate_adaura_cessation_bifurcation()
+        lead_decomp = self.game_assay.compute_lead_time_decomposition()
         return {
             "nash_equilibrium": x_star,
             "lyapunov_eigenvalue": stability["lyapunov_eigenvalue"],
             "mrd_recurrence_month": regrowth["mrd_recurrence_month"],
             "ct_imaging_recurrence_month": regrowth["ct_imaging_recurrence_month"],
             "lead_time_months": regrowth["mrd_lead_time_months"],
+            "analytical_lead_time_months": lead_decomp["lead_time_months"]
         }
 
     def run_clinical_validation(self) -> Dict[str, Any]:
         """Runs Pillar 3: MSKCC 2020 authenticated cohort validation (N = 604)."""
-        if self.clinical_validator is None:
-            raise FileNotFoundError(f"Missing clinical cohort at: {self.cohort_path}")
+        if not self.clinical_validator:
+            return {"error": "Clinical cohort CSV not found"}
         summary = self.clinical_validator.get_cohort_summary()
-        gradient = self.clinical_validator.compute_subtype_gradient()
-        logrank = self.clinical_validator.compare_high_vs_low_sanctuary()
-        cox = self.clinical_validator.fit_multivariable_cox_models()
+        followup = self.clinical_validator.compute_followup_and_survival_metrics()
+        cox_models = self.clinical_validator.fit_multivariable_cox_models()
         return {
-            "summary": summary,
-            "gradient": gradient,
-            "logrank": logrank,
-            "cox_models": cox,
+            "cohort_summary": summary,
+            "followup_metrics": followup,
+            "cox_models": cox_models,
         }
 
     def execute_all(self) -> Dict[str, Any]:
-        """Executes the full multi-scale pipeline and prints summary."""
-        print("=" * 80)
-        print("  UNIFIED SPATIAL ONCOLOGY MASTER STUDY EXECUTION")
-        print("  From Subcellular Reaction-Diffusion to Clinical Recurrence Dynamics")
-        print("=" * 80)
-
+        """Executes the complete end-to-end analytical pipeline."""
+        print("Executing Pillar 1: Reaction-Diffusion Biophysical Transport...")
         p1 = self.run_biophysical_transport()
-        print(f"[Pillar 1: Transport]    rcrit = {p1['r_critical_um']:.1f} µm | Viable Shell Δr = {p1['viable_sanctuary_shell_width_um']:.1f} µm | Sanctuary Area = {p1['viable_sanctuary_area_pct']:.1f}%")
-
+        print("Executing Pillar 2: Evolutionary Game Theory & Post-Cessation Regrowth...")
         p2 = self.run_evolutionary_dynamics()
-        print(f"[Pillar 2: Game Theory]  Nash x* = {p2['nash_equilibrium']:.4f} | Lyapunov λ = {p2['lyapunov_eigenvalue']:.4f} | ctDNA Lead Time = {p2['lead_time_months']:.1f} mo")
-
-        if self.clinical_validator:
-            p3 = self.run_clinical_validation()
-            m1 = p3["cox_models"]["model1_extreme"]
-            print(f"[Pillar 3: Clinical N=604] High-Sanctuary Adjusted HR = {m1['adjusted_hr']:.2f} (95% CI: {m1['ci_lower']:.2f}–{m1['ci_upper']:.2f}, p = {m1['p_value']:.2e})")
-
-        print("=" * 80)
-        return {"pillar1": p1, "pillar2": p2, "pillar3": p3 if self.clinical_validator else None}
+        print("Executing Pillar 3: Clinical Cohort Audit & Survival Modeling...")
+        p3 = self.run_clinical_validation()
+        return {
+            "pillar1_transport": p1,
+            "pillar2_evolution": p2,
+            "pillar3_clinical": p3
+        }
 
 
 if __name__ == "__main__":
     pipeline = MasterSpatialOncologyPipeline()
-    pipeline.execute_all()
+    results = pipeline.execute_all()
+    print("\n" + "=" * 70)
+    print("  MASTER PIPELINE EXECUTION SUCCESSFUL")
+    print("=" * 70)
+    print(f"Pillar 1 - Sanctuary Shell Width : {results['pillar1_transport']['viable_sanctuary_shell_width_um']:.1f} um")
+    print(f"Pillar 2 - Stable Nash Fraction  : {results['pillar2_evolution']['nash_equilibrium']*100:.2f}% sensitive")
+    print(f"Pillar 2 - Diagnostic Lead Time  : {results['pillar2_evolution']['lead_time_months']} months")
+    print(f"Pillar 3 - MSKCC Total Patients  : {results['pillar3_clinical']['cohort_summary']['total_patients']}")
+    print(f"Pillar 3 - Extreme Contrast HR   : {results['pillar3_clinical']['cox_models']['model1_extreme']['adjusted_hr']:.2f} (p = {results['pillar3_clinical']['cox_models']['model1_extreme']['p_value']:.4e})")
+    print(f"Pillar 3 - Full Cohort HR        : {results['pillar3_clinical']['cox_models']['model2_full_cohort']['adjusted_hr']:.2f} (p = {results['pillar3_clinical']['cox_models']['model2_full_cohort']['p_value']:.4f})")

@@ -14,6 +14,11 @@ Mathematical Formulation:
       x* = (a22 - a12) / [ (a11 - a12) - (a21 - a22) ] ≈ 0.6133
   Lyapunov Stability:
       d/dx [ dx/dt ]_{x=x*} = x*(1 - x*) * alpha = -1.7934 < 0  (Asymptotically stable attractor).
+
+Kinetic Deconstruction:
+  Diagnostic lead time Delta t = log2(10^9 / 10^7) * T_d = log2(100) * 25 days = 166.1 days = 5.46 months
+  is an analytical invariant of clonal doubling between assay limits, while recurrence onset timing
+  is dictated by residual sanctuary inoculum N0.
 """
 
 from typing import Dict, Any, Tuple, Union
@@ -125,11 +130,11 @@ class SpatialGameAssay:
           Phase 1 (Months 0-36): Drug present inside sanctuary shell; population trapped at x* = 0.6133
                                  in a slow-cycling quiescent persister state.
           Phase 2 (Post Month 36): Osimertinib discontinued; drug cleared; sensitive cells regain full
-                                   proliferation, causing explosive regrowth within 12-16 months.
+                                   proliferation, causing regrowth within 10-18 months.
         """
         x_star = self.compute_nash_equilibrium()
         
-        # Net growth rates in vivo (accounting for 90% cell loss factor):
+        # Net growth rates in vivo (accounting for ~90% cell loss factor):
         # Sensitive net doubling time ~ 25 days (g_S = ln(2)/25 day^-1)
         # Persister net doubling time ~ 120 days (g_P = ln(2)/120 day^-1)
         g_S = np.log(2.0) / 25.0
@@ -161,21 +166,48 @@ class SpatialGameAssay:
             "mrd_lead_time_months": round((day_ct - day_mrd) / 30.4375, 1) if (day_ct > 0 and day_mrd > 0) else None
         }
 
+    def compute_lead_time_decomposition(
+        self,
+        n_mrd: float = 1e7,
+        n_ct: float = 1e9,
+        t_double_sensitive_days: float = 25.0
+    ) -> Dict[str, float]:
+        """
+        Analytically computes the exact doubling requirement and lead time window.
+        Demonstrates that Delta t is an invariant analytical property of exponential doubling
+        between assay detection limits:
+            Delta t = log2(N_CT / N_MRD) * T_d
+        """
+        doublings = np.log2(n_ct / n_mrd)
+        lead_time_days = doublings * t_double_sensitive_days
+        lead_time_months = lead_time_days / 30.4375
+        
+        return {
+            "assay_ratio": float(n_ct / n_mrd),
+            "required_clonal_doublings": float(doublings),
+            "lead_time_days": float(lead_time_days),
+            "lead_time_months": float(lead_time_months)
+        }
+
 
 if __name__ == "__main__":
     game = SpatialGameAssay()
     coexists, conds = game.verify_coexistence_conditions()
     stab = game.compute_lyapunov_stability()
-    bifurc = game.simulate_adaura_cessation_bifurcation()
+    bifurc = game.simulate_adaura_cessation_bifurcation(residual_cells_n0=2000)
+    lead_decomp = game.compute_lead_time_decomposition()
     
-    print("=" * 70)
+    print("=" * 75)
     print("  EVOLUTIONARY GAME THEORY & ADAURA CESSATION BENCHMARK")
-    print("=" * 70)
+    print("=" * 75)
     print(f"Coexistence Validated : {coexists} ({conds['game_class']})")
-    print(f"Internal Nash x*      : {stab['nash_equilibrium_x_star']:.4f}")
+    print(f"Internal Nash x*      : {stab['nash_equilibrium_x_star']:.4f} ({stab['nash_equilibrium_x_star']*100:.2f}% Sensitive)")
     print(f"Lyapunov Eigenvalue   : {stab['lyapunov_eigenvalue']:.4f} ({stab['stability_classification']})")
-    print(f"\nADAURA Cessation Regrowth Simulation (Post Month 36):")
-    print(f"  Residual Sanctuary Micro-Nest : {bifurc['initial_sanctuary_cells']:,} cells")
+    print(f"\nAnalytical Lead Time Decomposition:")
+    print(f"  Assay expansion ratio : {lead_decomp['assay_ratio']:.0f}-fold (10^7 -> 10^9 cells)")
+    print(f"  Clonal doublings req  : {lead_decomp['required_clonal_doublings']:.4f} doublings")
+    print(f"  Analytical Lead Time  : {lead_decomp['lead_time_months']:.2f} months ({lead_decomp['lead_time_days']:.1f} days)")
+    print(f"\nADAURA Cessation Regrowth Simulation (N0 = 2,000 cells):")
     print(f"  Molecular (ctDNA) Recurrence  : Month {bifurc['mrd_recurrence_month']} post-cessation")
     print(f"  Clinical (CT Imaging) Relapse : Month {bifurc['ct_imaging_recurrence_month']} post-cessation")
     print(f"  ctDNA Lead Time Preceding CT  : {bifurc['mrd_lead_time_months']} months")
