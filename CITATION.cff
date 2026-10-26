@@ -1,16 +1,18 @@
 cff-version: 1.2.0
-message: "If you use this software, biophysical transport models, game-theoretic simulations, or clinical cohort validation findings, please cite it as below."
+message: "If you use this codebase, biophysical transport solver, or clinical findings in your research, please cite both the software and the under-review manuscript."
+title: "Biophysical Reaction-Diffusion Transport and Evolutionary Sanctuary Dynamics in Compact EGFR-Mutant Lung Adenocarcinoma"
+version: "2.2.0"
+doi: "10.5281/zenodo.23623653"
+date-released: 2026-10-26
+url: "https://lukecele.github.io/spatial-oncology-master/"
+repository-code: "https://github.com/Lukecele/spatial-oncology-master"
+license: "GPL-3.0-or-later"
 authors:
   - family-names: "Celebrano"
     given-names: "Luca"
     orcid: "https://orcid.org/0009-0007-0931-3555"
     affiliation: "Department of Clinical Medicine and Surgery, School of Medicine, University of Naples Federico II, Naples, Italy; Telethon Institute of Genetics and Medicine (TIGEM), Pozzuoli, Italy"
-title: "Biophysical Reaction-Diffusion Transport and Evolutionary Sanctuary Dynamics in Compact EGFR-Mutant Lung Adenocarcinoma"
-version: "2.0.0"
-doi: "10.5281/zenodo.23623653"
-date-released: 2026-10-25
-url: "https://github.com/Lukecele/spatial-oncology-master"
-repository-code: "https://github.com/Lukecele/spatial-oncology-master"
+    email: "l.celebrano@studenti.unina.it"
 keywords:
   - "spatial oncology"
   - "reaction-diffusion transport"
@@ -22,4 +24,15 @@ keywords:
   - "EGFR-mutant NSCLC"
   - "IASLC histology"
   - "computational oncology"
-license: "GPL-3.0-or-later"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Celebrano"
+      given-names: "Luca"
+      orcid: "https://orcid.org/0009-0007-0931-3555"
+      affiliation: "Department of Clinical Medicine and Surgery, School of Medicine, University of Naples Federico II, Naples, Italy; Telethon Institute of Genetics and Medicine (TIGEM), Pozzuoli, Italy"
+  title: "Conditions for Pharmacological Sanctuaries in Perivascular Tumour Cords: A Reaction–Diffusion Analysis, a Regrowth-Kinetics Identity, and a Descriptive Survival Analysis of Histologic Subtype in Resected Lung Adenocarcinoma"
+  journal: "bioRxiv"
+  year: 2026
+  doi: "10.5281/zenodo.23623653"
+  url: "https://doi.org/10.5281/zenodo.23623653"
