@@ -1,18 +1,20 @@
 # Conditions for Pharmacological Sanctuaries in Perivascular Tumour Cords: A Reaction–Diffusion Analysis, a Regrowth-Kinetics Identity, and a Descriptive Survival Analysis of Histologic Subtype in Resected Lung Adenocarcinoma
 
-**Luca Celebrano**$^{1,2}$
-
+**Luca Celebrano**$^{1,2}$  
 $^{1}$Department of Clinical Medicine and Surgery, School of Medicine, University of Naples Federico II, Via Sergio Pansini 5, 80131 Naples, Italy  
 $^{2}$Telethon Institute of Genetics and Medicine (TIGEM), Via Campi Flegrei 34, 80078 Pozzuoli, Naples, Italy  
-*Correspondence: luca.celebrano5@gmail.com / l.celebrano@studenti.unina.it | ORCID: [0009-0007-0931-3555](https://orcid.org/0009-0007-0931-3555)*
+*Correspondence:* luca.celebrano5@gmail.com / l.celebrano@studenti.unina.it | ORCID: [0009-0007-0931-3555](https://orcid.org/0009-0007-0931-3555)
 
 ---
 
 ### Abstract
-**Background:** Adjuvant osimertinib markedly improves disease-free survival in resected *EGFR*-mutated non-small-cell lung cancer (NSCLC). However, clinical follow-up in the ADAURA trial revealed that among patients who experienced recurrence, the majority of relapses manifested after planned treatment cessation at year 3, frequently without acquired genomic resistance mutations. We examined whether biophysical drug transport limitations could establish tissue sanctuaries that shelter drug-sensitive tumor cells.  
-**Methods:** We analyzed steady-state reaction–diffusion transport in two canonical tumor micro-architectures: outward perivascular cords (divergent cylindrical geometry, modified Bessel $K_0$) and inward avascular nests (convergent cylindrical geometry, modified Bessel $I_0$). We derived an exact algebraic identity governing post-cessation exponential regrowth from molecular residual disease (ctDNA, $10^7$ cells) to radiologic detection (CT, $10^9$ cells). We evaluated the clinical prognostic relevance of histologic architecture in 604 resected lung adenocarcinoma patients from Memorial Sloan Kettering Cancer Center (MSKCC 2020).  
-**Results:** In perivascular cords, outward radial diffusion of osimertinib ($\lambda = 627.7\,\mu\text{m}$) produces a steep concentration drop beneath the $\text{IC}_{50}$ threshold ($\theta = 0.35$) at $r_{\text{crit}} = 165.9\,\mu\text{m}$. Because tissue oxygenation extends to $r_{\text{ox}} \approx 200\,\mu\text{m}$, a viable pharmacological sanctuary shell of width $\Delta r = 34.1\,\mu\text{m}$ can persist. Conversely, in inward avascular nests, convergent geometry maintains osimertinib at $90.6\%\text{--}99.4\%$ of boundary levels throughout viable regions, precluding small-molecule sanctuaries. In a multidimensional sensitivity analysis (Monte Carlo sampling with log-normal priors, seed = 2), an outward sanctuary shell existed in 46.1% of parameter draws (62.8% when $r_{\text{ox}} = 200\,\mu\text{m}$ is fixed). The diagnostic lead time $\Delta t = T_s \cdot \log_2(100) = 5.46\,\text{months}$ (for doubling time $T_s = 25\,\text{days}$) is an analytical property of exponential expansion and assay thresholds, rather than an empirical confirmation of sanctuary existence. In the MSKCC cohort (reverse Kaplan–Meier median follow-up 23.8 months, IQR: 13.3–31.8 months), lepidic architecture showed an exceptionally low recurrence rate (4.55%, stage-adjusted $HR = 0.25$, $95\%\,\text{CI}: 0.09\text{--}0.70$, $p = 0.0084$ vs acinar). In 10-fold Holm-adjusted pairwise comparisons, lepidic recurrence was significantly lower than solid ($p_{\text{adj}} = 0.0026$) and papillary ($p_{\text{adj}} = 0.020$), whereas differences vs acinar ($p_{\text{adj}} = 0.070$) and micropapillary ($p_{\text{adj}} = 0.39$, unadjusted $p = 0.056$) did not achieve significance under family-wise error control. Grouping solid and micropapillary patterns yielded an exploratory contrast of $HR = 6.75$ ($95\%\,\text{CI}: 2.28\text{--}19.97$) against lepidic (based on 4 lepidic events, with an unbounded bootstrap upper limit), whereas across the unselected cohort the hazard ratio was $1.32$ ($p = 0.239$).  
-**Conclusions:** Small-molecule pharmacological sanctuaries are geometrically restricted to outward perivascular cords and do not occur in avascular nests. The clinical data demonstrate robust baseline protection associated with lepidic growth rather than an escalating risk across compact patterns. Surveillance strategies based on molecular lead time must be evaluated in prospective trials to rule out lead-time bias.
+**Background:** Adjuvant osimertinib markedly improves disease-free survival in resected *EGFR*-mutated non-small-cell lung cancer (NSCLC). However, extended follow-up in the ADAURA trial revealed that among patients who experienced disease recurrence, the majority of relapses manifested after planned treatment cessation at year 3, frequently without acquired secondary genomic resistance mutations. We examined whether biophysical drug transport limitations could establish tissue sanctuaries that shelter drug-sensitive tumor cells.
+
+**Methods:** We analyzed steady-state reaction–diffusion transport in two canonical tumor micro-architectures: outward perivascular cords (divergent cylindrical geometry, modified Bessel $K_0$) and inward avascular nests (convergent cylindrical geometry, modified Bessel $I_0$). We derived an exact algebraic identity governing post-cessation exponential regrowth from molecular residual disease (ctDNA, $10^7$ cells) to radiologic detection (CT, $10^9$ cells). We evaluated the clinical prognostic relevance of histologic architecture in 604 resected lung adenocarcinoma patients from Memorial Sloan Kettering Cancer Center (MSKCC 2020).
+
+**Results:** In perivascular cords, outward radial diffusion of osimertinib ($\lambda = 627.6\,\mu\text{m}$) produces a steep concentration drop beneath the $\text{IC}_{50}$ threshold ($\theta = 0.35$) at $r_{\text{crit}} = 165.9\,\mu\text{m}$. Depending on the physiological limit of tissue oxygenation, a viable pharmacological sanctuary shell of width $\Delta r = 34.1\,\mu\text{m}$ (for $r_{\text{ox}} = 200\,\mu\text{m}$) or $\Delta r = 14.1\,\mu\text{m}$ (for $r_{\text{ox}} = 180\,\mu\text{m}$) can persist. Within this shell, residual drug exposure ($C \approx 0.31\text{--}0.35\,C_0$) maintains partial target inhibition (~45–50%), sufficient under a sigmoidal dose-response to suppress net proliferation and induce cytostasis. Conversely, in inward avascular nests, convergent geometry maintains osimertinib at $90.6\%\text{--}99.4\%$ of boundary levels throughout viable regions ($R \le 160\,\mu\text{m}$), precluding small-molecule sanctuaries. For macromolecular antibody–drug conjugates (ADCs, $\lambda = 77.5\,\mu\text{m}$), central concentration in viable nests remains at $\ge 45.9\%$ of boundary levels (above $\theta = 0.35$), demonstrating that avascular nests do not form viable pharmacological sanctuaries for either drug class. In Monte Carlo parameter sampling ($N = 10,000$ draws, log-normal priors, seed = 2), an outward perivascular sanctuary shell existed in 46.1% of parameter draws (62.8% when $r_{\text{ox}} = 200\,\mu\text{m}$ is fixed). The diagnostic lead time $\Delta t = T_s \cdot \log_2(100) = 5.46\,\text{months}$ (for doubling time $T_s = 25\,\text{days}$) is an analytical property of exponential expansion and assay thresholds, rather than an empirical confirmation of sanctuary existence. In the MSKCC cohort (reverse Kaplan–Meier median follow-up 23.8 months, IQR: 13.3–31.8 months), lepidic architecture was consistent with a substantially lower hazard of recurrence (4.55%, stage-adjusted $HR = 0.25$, $95\%\,\text{CI}: 0.09\text{--}0.70$, $p = 0.0084$ vs acinar). In 10-fold Holm-adjusted pairwise comparisons, lepidic recurrence was significantly lower than solid ($p_{\text{adj}} = 0.0026$) and papillary ($p_{\text{adj}} = 0.0203$), whereas differences vs acinar ($p_{\text{adj}} = 0.0703$) and micropapillary ($p_{\text{adj}} = 0.3911$, unadjusted $p = 0.0559$) did not achieve significance under family-wise error control. Grouping solid and micropapillary patterns yielded an exploratory contrast of $HR = 6.75$ ($95\%\,\text{CI}: 2.28\text{--}19.97$; penalized Cox shrinkage $HR = 2.60\text{--}3.42$) against lepidic, based on 4 lepidic events, whereas across the unselected cohort the hazard ratio was $1.32$ ($p = 0.239$).
+
+**Conclusions:** Pharmacological sanctuaries are geometrically restricted to outward perivascular cords and do not occur in avascular nests. Clinical cohort data demonstrate baseline protection associated with lepidic growth rather than an escalating risk across compact patterns. Surveillance strategies based on molecular lead time must be evaluated in prospective trials to rule out lead-time bias.
 
 **Keywords:** Pharmacological sanctuary, Reaction-diffusion, Modified Bessel functions, Tumor cords, Non-small-cell lung cancer, EGFR tyrosine kinase inhibitors, ADAURA, IASLC histologic grading.
 
@@ -20,20 +22,20 @@ $^{2}$Telethon Institute of Genetics and Medicine (TIGEM), Via Campi Flegrei 34,
 
 ## 1. Introduction
 
-Adjuvant targeted therapy with the third-generation epidermal growth factor receptor (EGFR) tyrosine kinase inhibitor (TKI) osimertinib produces profound disease-free and overall survival benefits in patients with resected stage IB–IIIA *EGFR*-mutated non-small-cell lung cancer (NSCLC) (Wu et al., *N Engl J Med* 2020 [1]; Tsuboi et al., *N Engl J Med* 2023 [2]). In the landmark ADAURA trial, three years of daily oral osimertinib suppressed disease recurrence by nearly 80% during active treatment. However, extended follow-up identified an important temporal pattern: following planned therapy completion at month 36, disease-free survival curves showed an inflection, with a substantial portion of recurrences emerging in the post-cessation observation window (months 36 to 60) (Herbst et al., *Nat Med* 2025 [13]). In an exploratory molecular residual disease (MRD) analysis of 28 patients in the osimertinib arm who developed disease recurrence, 19 events (67.9%) occurred after treatment discontinuation; among these 19 post-cessation events, 11 (57.9%) manifested within the first 12 months post-cessation (months 36–48). Crucially, post-cessation recurrences frequently lacked canonical secondary genetic resistance alterations (such as *EGFR* T790M, C797S, or *MET* amplification), and clinical rechallenge with osimertinib frequently re-established disease control.
+Adjuvant targeted therapy with the third-generation epidermal growth factor receptor (EGFR) tyrosine kinase inhibitor (TKI) osimertinib produces profound disease-free and overall survival benefits in patients with resected stage IB–IIIA *EGFR*-mutated non-small-cell lung cancer (NSCLC) (Wu et al., *N Engl J Med* 2020 [1]; Tsuboi et al., *N Engl J Med* 2023 [2]). In the landmark ADAURA trial, three years of daily oral osimertinib suppressed disease recurrence by nearly 80% during active treatment. However, extended follow-up identified an important temporal pattern: following planned therapy completion at month 36, disease-free survival curves showed an inflection, with a substantial portion of recurrences emerging in the post-cessation observation window (months 36 to 60) (Herbst et al., *Nat Med* 2025 [12]). In an exploratory molecular residual disease (MRD) analysis of 220 enrolled patients (112 in the osimertinib arm), 28 patients in the osimertinib arm developed disease recurrence (25.0%). Among these 28 patients, 19 events (67.9%) occurred after treatment discontinuation; within this post-cessation window, 11 of 19 events (57.9%) manifested within the first 12 months post-cessation (months 36–48). Crucially, post-cessation recurrences frequently lacked canonical secondary genetic resistance alterations (such as *EGFR* T790M, C797S, or *MET* amplification), and clinical rechallenge with osimertinib frequently re-established disease control.
 
-This clinical phenomenon suggests that residual cancer cells may persist through non-genetic mechanisms. While epigenetic reprogramming and drug-tolerant persister (DTP) states have been extensively characterized in vitro (Sharma et al., *Cell* 2010 [6]; Kurppa et al., *Cancer Cell* 2020 [7]), biological persister states require continued drug presence to maintain viability, whereas clinical relapses occur months after systemic drug clearance. 
+This clinical phenomenon suggests that residual cancer cells may persist through non-genetic mechanisms. While epigenetic reprogramming and drug-tolerant persister (DTP) states have been extensively characterized in vitro (Sharma et al., *Cell* 2010 [6]; Kurppa et al., *Cancer Cell* 2020 [7]), biological persisters can also undergo slow-cycling reversible quiescence. An alternative and complementary biophysical hypothesis is that microenvironmental transport barriers create spatial pharmacological sanctuaries: tissue niches where local drug exposure drops beneath cytotoxic or cytostatic thresholds while physiological nutrient and oxygen supply remains adequate to support cell survival.
 
-An alternative biophysical hypothesis is that microenvironmental transport barriers create spatial pharmacological sanctuaries: tissue niches where local drug exposure drops beneath cytotoxic or cytostatic thresholds while physiological nutrient and oxygen supply remains adequate to support cell survival. In this study, we evaluate this hypothesis by:
+In this study, we evaluate this hypothesis by:
 1. Solving exact cylindrical reaction–diffusion boundary value problems across outward perivascular cords and inward avascular nests;
 2. Deriving the analytical lead-time identity governing post-cessation clonal regrowth;
 3. Conducting a descriptive survival audit of histologic subtype in 604 resected lung adenocarcinoma patients from Memorial Sloan Kettering Cancer Center.
 
 ---
 
-## 2. Biophysical Reaction–Diffusion Transport & Parameter Sensitivity
+## 2. Biophysical Reaction-Diffusion Transport Physics
 
-### 2.1 Mathematical Formulation of Radial Transport
+### 2.1 Governing Equations & Geometric Formulations
 
 We model steady-state drug diffusion coupled to first-order irreversible cellular uptake in cylindrical coordinates:
 
@@ -43,18 +45,18 @@ where $C(r)$ is local interstitial concentration, $D$ is effective tissue diffus
 
 $$\lambda = \sqrt{\frac{D}{k}}$$
 
-The physical behavior depends critically upon boundary conditions and radial directionality (**Figure 1A**):
-
 #### Geometry 1: Outward Perivascular Cord (Divergent Cylindrical Transport)
-Tumor cells surround a central microvessel of radius $r_0$ (Krogh cylinder geometry; Thomlinson & Gray [4]). Drug diffuses radially outward from the vessel wall into the surrounding tumor parenchyma:
+A central microvessel of radius $r_0 = 10\,\mu\text{m}$ supplies drug at constant boundary concentration $C_0$ to an surrounding cylindrical tumor cord. With boundary conditions:
 
 $$C(r_0) = C_0, \quad \lim_{r \to \infty} C(r) = 0$$
 
-The unique bounded analytical solution is given by the modified Bessel function of the second kind of order zero ($K_0$):
+the unique closed-form analytical solution is given by the modified Bessel function of the second kind of order zero ($K_0$):
 
 $$C_{\text{out}}(r) = C_0 \frac{K_0(r / \lambda)}{K_0(r_0 / \lambda)}$$
 
-Because $K_0(z)$ decays logarithmically near $z \to 0$ and exponentially as $z \to \infty$, outward geometric divergence causes a rapid drop in local drug concentration.
+The critical radius $r_{\text{crit}}$ at which local concentration falls below the threshold $\theta = C / C_0 = \text{IC}_{50} / C_0 = 0.35$ is determined implicitly by:
+
+$$\frac{K_0(r_{\text{crit}} / \lambda)}{K_0(r_0 / \lambda)} = \theta$$
 
 #### Geometry 2: Inward Avascular Nest (Convergent Cylindrical Transport)
 A compact avascular tumor cluster of radius $R$ is supplied by surrounding microvasculature at the outer boundary $r = R$. Drug diffuses radially inward toward the center:
@@ -65,165 +67,153 @@ The unique regular analytical solution is given by the modified Bessel function 
 
 $$C_{\text{in}}(r) = C_0 \frac{I_0(r / \lambda)}{I_0(R / \lambda)}$$
 
-At the nest center ($r = 0$), where $I_0(0) = 1$, the core concentration relative to boundary supply is:
+The minimum concentration occurs at the nest center ($r = 0$), where $I_0(0) = 1$:
 
 $$\frac{C_{\text{in}}(0)}{C_0} = \frac{1}{I_0(R / \lambda)}$$
 
-Because $I_0(z) \ge 1$ grows monotonically with $z$, centripetal diffusion concentrates drug toward the central axis.
-
 #### Oxygen Transport and Cord Viability Boundaries
-Thomlinson & Gray (1955) demonstrated that tumor cords surrounding central blood vessels are bounded by an outer zone of necrosis caused by oxygen consumption. With oxygen diffusivity $D_{\text{ox}} \approx 2.0 \times 10^{-5}\,\text{cm}^2/\text{s}$ and constant volumetric consumption $M_{\text{ox}} \approx 1.5 \times 10^{-7}\,\text{mol}/(\text{cm}^3\cdot\text{s})$, zero-order diffusion in a Krogh cylinder yields:
+Thomlinson & Gray (1955) [4] demonstrated that tumor cords surrounding central blood vessels are bounded by an outer zone of necrosis caused by oxygen consumption. With oxygen diffusivity $D_{\text{ox}} \approx 2.0 \times 10^{-5}\,\text{cm}^2/\text{s}$ and constant volumetric consumption $M_{\text{ox}} \approx 1.5 \times 10^{-7}\,\text{mol}/(\text{cm}^3\cdot\text{s})$, zero-order diffusion in a Krogh cylinder yields:
 
 $$C_{\text{ox}}(r) = C_{\text{ox}}(r_0) - \frac{M_{\text{ox}}}{4 D_{\text{ox}}} (r^2 - r_0^2) + \frac{M_{\text{ox}} r_{\text{cord}}^2}{2 D_{\text{ox}}} \ln\left(\frac{r}{r_0}\right)$$
 
-Setting the zero-flux boundary condition $dC_{\text{ox}}/dr = 0$ at the cord radius $r_{\text{cord}}$ gives the physiological limit of tissue oxygenation, established empirically and theoretically at $r_{\text{ox}} \approx 180\text{--}200\,\mu\text{m}$ (Thomlinson & Gray [4]; Hirst et al. [15]; Worth et al. [14]). Beyond $r_{\text{ox}}$, anoxia precipitates coagulative necrosis.
+Setting the zero-flux boundary condition $dC_{\text{ox}}/dr = 0$ at the cord radius $r_{\text{cord}}$ gives the physiological limit of tissue oxygenation, established empirically and theoretically at $r_{\text{ox}} \approx 180\text{--}200\,\mu\text{m}$ (Thomlinson & Gray [4]; Hirst et al. [14]; Worth et al. [13]). Beyond $r_{\text{ox}}$, anoxia precipitates coagulative necrosis.
 
-In contrast, in an inward avascular nest of radius $R$, zero-order oxygen diffusion yields:
+In inward avascular nests, oxygen diffuses inward from the periphery $r = R$. Setting $C_{\text{ox}}(r) = 0$ at the core gives a critical necrosis threshold of $R_{\text{crit,ox}} \approx \sqrt{4 D_{\text{ox}} C_{\text{ox,0}} / M_{\text{ox}}} \approx 140\text{--}160\,\mu\text{m}$. Any avascular nest with radius $R > 160\,\mu\text{m}$ inevitably develops central ischemic necrosis.
 
-$$C_{\text{ox}}(r) = C_{\text{ox}}(R) - \frac{M_{\text{ox}}}{4 D_{\text{ox}}} (R^2 - r^2)$$
+### 2.2 Baseline Biophysical Parameters & Sanctuary Shell Geometry
 
-The maximum viable nest radius before central anoxia ($C_{\text{ox}}(0) = 0$) occurs is:
+For osimertinib (molecular weight 500 Da), experimental tissue diffusivity is $D = 1.3 \times 10^{-6}\,\text{cm}^2/\text{s}$ and cellular uptake rate constant is $k = 3.3 \times 10^{-4}\,\text{s}^{-1}$ (Cross et al. [5]), yielding:
 
-$$R_{\text{crit,ox}} = \sqrt{\frac{4 D_{\text{ox}} C_{\text{ox}}(R)}{M_{\text{ox}}}} \approx 140\text{--}160\,\mu\text{m}$$
+$$\lambda = \sqrt{\frac{1.3 \times 10^{-6}}{3.3 \times 10^{-4}}} = 0.06276\,\text{cm} = 627.6\,\mu\text{m}$$
 
-Any avascular nest with radius $R > 160\,\mu\text{m}$ develops a necrotic core.
+With $r_0 = 10\,\mu\text{m}$ and $\theta = 0.35$, numerical root finding yields:
+
+$$r_{\text{crit}} = 165.9\,\mu\text{m}$$
+
+Because viable oxygenated tissue extends to $r_{\text{ox}}$, a perivascular pharmacological sanctuary shell exists over the interval $r \in [r_{\text{crit}}, r_{\text{ox}}]$:
+- For $r_{\text{ox}} = 200\,\mu\text{m}$: $\Delta r = 200 - 165.9 = 34.1\,\mu\text{m}$
+- For $r_{\text{ox}} = 180\,\mu\text{m}$: $\Delta r = 180 - 165.9 = 14.1\,\mu\text{m}$
+
+#### Sigmoidal Dose-Response and Residual Inhibition
+Within the sanctuary shell, concentration drops from $0.35\,C_0$ at $r_{\text{crit}} = 165.9\,\mu\text{m}$ to $0.314\,C_0$ at $r_{\text{ox}} = 200\,\mu\text{m}$ (since $K_0(200/627.6)/K_0(10/627.6) = 0.3138$). Assuming therapeutic steady-state unbound plasma concentration $C_0 \approx 45\,\text{nM}$ and $\text{IC}_{50} \approx 15\,\text{nM}$ ($\theta = 0.35$), the drug level throughout the shell remains at $14\text{--}15\,\text{nM}$. Under a standard Hill pharmacodynamic model:
+
+$$E(C) = E_{\text{max}} \frac{C^h}{\text{IC}_{50}^h + C^h}$$
+
+with Hill coefficient $h \approx 1.5$, local target inhibition remains at approximately $45\%\text{--}50\%$. The net cellular growth rate is:
+
+$$g_{\text{net}}(C) = g_0 \left[ 1 - E(C) \right] - d_0$$
+
+Where baseline apoptosis/clearance $d_0$ accounts for $40\%\text{--}50\%$ of maximum uninhibited proliferation $g_0$, net growth $g_{\text{net}}$ is driven close to zero. This cytostatic suppression explains why sanctuary cells do not expand into overt macroscopic tumors during the 36-month period of continuous daily drug administration.
+
+#### Volumetric Scaling: From Cord Shell to Initial Residual Burden $N_0$
+In a cylindrical perivascular cord of unit length $L = 1\,\text{mm} = 1000\,\mu\text{m}$, the volume of the sanctuary shell is:
+
+$$V_{\text{shell}} = \pi \left( r_{\text{ox}}^2 - r_{\text{crit}}^2 \right) L = \pi \left( 200^2 - 165.9^2 \right) \times 1000 \approx 3.92 \times 10^7\,\mu\text{m}^3$$
+
+Assuming a mean tumor cell diameter of $15\,\mu\text{m}$ (cell volume $\approx 1.77 \times 10^3\,\mu\text{m}^3$, corresponding to packing density $\sim 5 \times 10^8\,\text{cells/cm}^3 = 5 \times 10^{-4}\,\text{cells}/\mu\text{m}^3$), the shell contains:
+
+$$N_{\text{cord}} \approx 3.92 \times 10^7 \times 5 \times 10^{-4} \approx 1.96 \times 10^4\,\text{cells per mm of cord}$$
+
+For microscopic residual disease consisting of a few surviving cords following surgical resection, this physical volume corresponds directly to an initial residual cell pool of $N_0 \approx 10^3\text{--}10^5\,\text{cells}$.
 
 ---
 
-### 2.2 Baseline Biophysical Parameters & Sensitivity Analysis
+### 2.3 Sensitivity Analysis & Parameter Bounds
 
-We evaluated baseline parameters calibrated to small-molecule TKIs and macromolecular agents:
-- **Small-molecule TKI (Osimertinib, 500 Da):** Effective tissue diffusivity $D = 1.3 \times 10^{-6}\,\text{cm}^2/\text{s}$ (incorporating interstitial matrix hindrance; Swabb et al. [9], Nugent & Jain [10]); cellular uptake rate constant $k = 3.3 \times 10^{-4}\,\text{s}^{-1}$, yielding $\lambda = 627.7\,\mu\text{m}$. Capillary source radius $r_0 = 10.0\,\mu\text{m}$. Therapeutic inhibitory threshold $\theta = C / C_0 = 0.35$ (derived from the ratio of in vitro $\text{IC}_{50} \approx 15\,\text{nM}$ to steady-state human plasma trough $C_0 \approx 45\text{--}50\,\text{nM}$; Cross et al. [5]).
-- **Macromolecular Antibody-Drug Conjugate (ADC, 150 kDa):** $D = 1.5 \times 10^{-8}\,\text{cm}^2/\text{s}$, $k = 2.5 \times 10^{-4}\,\text{s}^{-1}$, yielding $\lambda = 77.5\,\mu\text{m}$.
+#### Table 1. Outward Perivascular Cord Sensitivity (Baseline: $\theta = 0.35, r_0 = 10\,\mu\text{m}, r_{\text{ox}} = 200\,\mu\text{m}$)
 
-The critical radius $r_{\text{crit}}$ is defined as the radial position where local concentration drops below threshold: $C(r_{\text{crit}}) = \theta C_0$. A viable pharmacological sanctuary shell exists if and only if:
+| Scenario | $\lambda$ ($\mu\text{m}$) | $r_{\text{crit}}$ ($\mu\text{m}$) | Shell Width $\Delta r$ ($r_{\text{ox}} = 200\,\mu\text{m}$) | Shell Width $\Delta r$ ($r_{\text{ox}} = 180\,\mu\text{m}$) |
+| :--- | :---: | :---: | :---: | :---: |
+| **Baseline** | **627.6** | **165.9** | **34.1** | **14.1** |
+| $D$ +30% | 715.6 | 180.1 | 19.9 | None |
+| $D$ -30% | 525.1 | 148.5 | 51.5 | 31.5 |
+| $k$ +30% | 550.5 | 152.9 | 47.1 | 27.1 |
+| $k$ -30% | 750.2 | 185.5 | 14.5 | None |
+| $D$ +30% and $k$ -30% | 855.3 | 201.4 | None | None |
+| $D$ -30% and $k$ +30% | 460.6 | 136.9 | 63.1 | 43.1 |
+| Vessel radius $r_0 = 5\,\mu\text{m}$ | 627.6 | 128.3 | 71.7 | 51.7 |
+| Vessel radius $r_0 = 20\,\mu\text{m}$ | 627.6 | 216.2 | None | None |
 
-$$r_{\text{crit}} < r_{\text{ox}}$$
-
-The width of this viable sanctuary shell is:
-
-$$\Delta r = r_{\text{ox}} - r_{\text{crit}}$$
-
-```
-(Figure 1)
-```
-
-![Figure 1: Biophysical Reaction-Diffusion Transport Physics & Sensitivity Mapping](Figure1_transport_sensitivity.png)
-*Figure 1. Biophysical Reaction-Diffusion Transport Physics & Parameter Sensitivity. (A) Normalized radial drug concentration profiles in outward perivascular geometry (K0, solid line) and inward avascular nest geometry (I0, dashed line). For osimertinib (lambda = 627.7 um), outward concentration falls below the IC50 threshold (theta = 0.35) at rcrit = 165.9 um, creating a viable sanctuary shell (green shaded area, Delta r = 34.1 um) up to the oxygenation boundary rox = 200 um. In inward avascular nests, osimertinib penetrates to >90% throughout. Macromolecular ADCs (lambda = 77.5 um) experience severe penetration failure in both geometries. (B) Parameter sensitivity heatmap of sanctuary shell width Delta r across diffusivity D and uptake k, highlighting the boundary of shell collapse (Delta r = 0).*
-
-#### Table 1. Sensitivity of the Outward Perivascular Sanctuary Shell ($\theta = 0.35, r_0 = 10\,\mu\text{m}, r_{\text{ox}} = 200\,\mu\text{m}$)
-
-| Parameter Scenario | Penetration Length $\lambda$ ($\mu\text{m}$) | Critical Radius $r_{\text{crit}}$ ($\mu\text{m}$) | Sanctuary Shell Width $\Delta r$ ($\mu\text{m}$) | Functional Regime |
-| :--- | :---: | :---: | :---: | :--- |
-| **Baseline Osimertinib** | **627.7** | **165.9** | **34.1** | **Viable Sanctuary Shell** |
-| $D + 30\%$ | 715.6 | 180.1 | 19.9 | Viable Sanctuary Shell |
-| $D - 30\%$ | 525.1 | 148.5 | 51.5 | Expanded Sanctuary Shell |
-| $k + 30\%$ | 550.5 | 152.9 | 47.1 | Expanded Sanctuary Shell |
-| $k - 30\%$ | 750.2 | 185.5 | 14.5 | Viable Sanctuary Shell |
-| **$D + 30\%$ and $k - 30\%$** | **855.3** | **201.4** | **0.0** | **Sanctuary Collapsed ($r_{\text{crit}} > r_{\text{ox}}$)** |
-| $D - 30\%$ and $k + 30\%$ | 460.6 | 136.9 | 63.1 | Expanded Sanctuary Shell |
-| $r_0 = 5.0\,\mu\text{m}$ | 627.7 | 128.3 | 71.7 | Expanded Sanctuary Shell |
-| $r_0 = 20.0\,\mu\text{m}$ | 627.7 | 216.2 | 0.0 | Sanctuary Collapsed |
-| **ADC Macromolecule** | **77.5** | **47.4** | **152.6** | **Massive Sanctuary Shell (94.4% viable area)** |
+As shown in **Table 1**, the sanctuary shell persists across isolated $\pm 30\%$ parameter variations, but disappears when $D$ is increased and $k$ is decreased simultaneously ($r_{\text{crit}} = 201.4\,\mu\text{m} > r_{\text{ox}}$).
 
 #### Table 2. Inward Avascular Nest Geometry: Central Core Concentration $C_{\text{in}}(0) / C_0 = 1 / I_0(R / \lambda)$
 
-| Nest Outer Radius $R$ ($\mu\text{m}$) | Osimertinib ($\lambda = 627.7\,\mu\text{m}$) | Macromolecule ADC ($\lambda = 77.5\,\mu\text{m}$) | Viability Status |
+| Nest Outer Radius $R$ ($\mu\text{m}$) | Osimertinib ($\lambda = 627.6\,\mu\text{m}$) | Macromolecule ADC ($\lambda = 77.5\,\mu\text{m}$) | Tissue Viability Status |
 | :---: | :---: | :---: | :--- |
-| $100\,\mu\text{m}$ | **0.994** (99.4%) | 0.444 (44.4%) | Viable throughout |
-| $150\,\mu\text{m}$ | **0.986** (98.6%) | 0.203 (20.3%) | Viable throughout |
-| $200\,\mu\text{m}$ | **0.975** (97.5%) | 0.086 (8.6%) | Central core hypoxic/necrotic ($R > R_{\text{crit,ox}}$) |
-| $300\,\mu\text{m}$ | **0.945** (94.5%) | 0.013 (1.3%) | Extensive central necrosis |
-| $400\,\mu\text{m}$ | **0.906** (90.6%) | 0.002 (0.2%) | Extensive central necrosis |
+| $100\,\mu\text{m}$ | **0.994** (99.4%) | 0.684 (68.4%) | Viable throughout ($R < R_{\text{crit,ox}}$) |
+| $150\,\mu\text{m}$ | **0.986** (98.6%) | 0.459 (45.9%) | Viable throughout ($R \approx R_{\text{crit,ox}}$) |
+| $200\,\mu\text{m}$ | **0.975** (97.5%) | 0.286 (28.6%) | Core hypoxic/necrotic ($R > R_{\text{crit,ox}}$) |
+| $300\,\mu\text{m}$ | **0.945** (94.5%) | 0.099 (9.9%) | Extensive central necrosis |
+| $400\,\mu\text{m}$ | **0.906** (90.6%) | 0.032 (3.2%) | Extensive central necrosis |
 
-As demonstrated in **Table 2**, for small-molecule osimertinib, central core concentration remains at $\ge 97.5\%$ of vascular supply for any nest radius up to the oxygenation viability boundary ($R \le 160\text{--}200\,\mu\text{m}$). Consequently, **avascular tumor nests do not establish pharmacological sanctuaries for small-molecule TKIs**. Sanctuaries for small molecules are physically restricted to outward perivascular cords where geometric divergence accelerates concentration decay.
+Crucially, as shown in **Table 2**, in viable avascular nests ($R \le 150\,\mu\text{m}$), central core concentration remains at $\ge 98.6\%$ for osimertinib and $\ge 45.9\%$ for macromolecular ADCs, both exceeding the inhibitory threshold $\theta = 0.35$. While ADCs experience severe central depletion in large nests ($R \ge 200\,\mu\text{m}$, dropping to $28.6\%$), those inner core regions are already non-viable due to oxygen depletion ($R > R_{\text{crit,ox}} \approx 140\text{--}160\,\mu\text{m}$). Consequently, **avascular tumor nests do not establish viable pharmacological sanctuaries for either small-molecule TKIs or macromolecular ADCs**. Viable sanctuaries are strictly a geometric property of outward perivascular cords.
 
 #### Monte Carlo Analysis of Parameter Uncertainty
-Because tissue transport parameters cannot be measured non-invasively in individual patients, we evaluated the prior probability of sanctuary existence using Monte Carlo sampling ($N = 10,000$ draws, fixed pseudorandom seed = 2). Parameters were sampled from log-normal distributions centered at baseline values: $D$ and $k$ with 90% confidence spans spanning a 3-fold factor ($\sigma = \ln(3)/1.645 \approx 0.668$), $\theta$ log-normally distributed with a 2-fold factor ($\sigma = \ln(2)/1.645 \approx 0.421$), and oxygen limit $r_{\text{ox}}$ distributed uniformly between $100$ and $200\,\mu\text{m}$ (Thomlinson & Gray [4]; Worth et al. [14]). 
+Because tissue transport parameters cannot be measured non-invasively in individual patients, we evaluated the prior probability of sanctuary existence using Monte Carlo sampling ($N = 10,000$ draws, fixed pseudorandom seed = 2). Parameters were sampled from log-normal distributions centered at baseline values: $D$ and $k$ with 90% confidence spans spanning a 3-fold factor ($\sigma = \ln(3)/1.645 \approx 0.668$), $\theta$ log-normally distributed with a 2-fold factor ($\sigma = \ln(2)/1.645 \approx 0.421$), and oxygen limit $r_{\text{ox}}$ distributed uniformly between $100$ and $200\,\mu\text{m}$ (Thomlinson & Gray [4]; Worth et al. [13]).
 
-Under this prior distribution, an outward perivascular sanctuary shell existed in **46.1% of draws** (and in **62.8% of draws** if $r_{\text{ox}}$ was held fixed at $200\,\mu\text{m}$). This confirms that sanctuary existence is a plausible but parameter-sensitive physical state, rather than an inevitable biological certainty.
+Under this prior distribution, an outward perivascular sanctuary shell existed in **46.1% of parameter draws** (and in **62.8% of draws** if $r_{\text{ox}}$ was held fixed at $200\,\mu\text{m}$). This 46.1% figure represents the prior probability under our assumed synthetic parameter distributions, rather than an empirical patient prevalence.
 
 ---
 
-## 3. Evolutionary Dynamics & The Regrowth Lead-Time Identity
+## 3. Clonal Regrowth & The Analytical Lead-Time Identity
 
-### 3.1 Subclonal Replicator Dynamics within the Sanctuary Niche
+### 3.1 Replicator Dynamics as an Exploratory Model of Subclonal Coexistence
 
-Within the perivascular sanctuary shell, sub-inhibitory drug exposure allows sensitive proliferating cells ($S$) and drug-tolerant persister cells ($P$) to interact. We formalized this interaction using a standard symmetric $2 \times 2$ matrix game governed by the continuous replicator equation:
+Within the perivascular sanctuary shell during active treatment, sub-inhibitory drug exposure allows sensitive proliferating cells ($S$) and drug-tolerant persister cells ($P$) to interact. We formalized this interaction using a continuous replicator equation (Kaznatcheev et al. [8]):
 
 $$\frac{dx}{dt} = x(1 - x)\left[ f_S(x) - f_P(x) \right]$$
 
-where $x$ represents the fraction of sensitive cells. To illustrate subclonal coexistence, we adopted payoff parameters formalizing a classic Hawk–Dove / Snowdrift game structure:
+where $x$ represents the fraction of sensitive cells. To illustrate subclonal coexistence, we adopted an illustrative payoff matrix:
 
-$$A = \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix} = \begin{pmatrix} -0.736 & +2.866 \\ +2.188 & -1.772 \end{pmatrix}$$
+$$A = \begin{pmatrix} -0.736 & 2.866 \\ 2.188 & -1.772 \end{pmatrix}$$
 
-This structure yields an internal Nash equilibrium:
+yielding $\alpha = a_{11} - a_{12} - a_{21} + a_{22} = -7.562$ and $\beta = a_{12} - a_{22} = 4.638$. The interior fixed point is:
 
-$$x^* = \frac{a_{22} - a_{12}}{(a_{11} - a_{21}) + (a_{22} - a_{12})} = \frac{-1.772 - 2.866}{(-0.736 - 2.188) + (-1.772 - 2.866)} = 0.6133$$
+$$x^* = \frac{\beta}{-\alpha} = \frac{4.638}{7.562} = 0.6133$$
 
-The Jacobian eigenvalue at $x^*$ is $\lambda_{\text{eig}} = x^*(1 - x^*)\alpha = -1.793 < 0$, confirming that $x^* = 0.6133$ is an asymptotically stable Lyapunov attractor. While in vitro matrix game formulations have been demonstrated in targeted therapy for NSCLC cell lines (Kaznatcheev et al., *Cancer Res* 2019 [11]), we explicitly emphasize that these payoff values represent uncalibrated theoretical parameters chosen to demonstrate coexistence, rather than empirically measured quantities.
+with Jacobian eigenvalue $\lambda_{\text{eig}} = x^*(1 - x^*)\alpha = -1.793 < 0$, confirming asymptotic Lyapunov stability. We emphasize that this game-theoretic formulation is an exploratory, uncalibrated theoretical model used to illustrate stable coexistence; the payoffs are free parameters and do not represent empirical fits from clinical trials.
 
----
+### 3.2 Post-Cessation Regrowth & The Lead-Time Identity
 
-### 3.2 Post-Cessation Clonal Regrowth & The Analytical Lead-Time Identity
-
-Following adjuvant therapy cessation at month 36, drug clears rapidly from the sanctuary niche. Residual tumor burden expands from an initial microscopic inoculum $N_0$ with sensitive fraction $x^* = 0.6133$:
+Following adjuvant therapy cessation at month 36, drug clears rapidly from tissue. Residual tumor burden expands from an initial microscopic inoculum $N_0$ with sensitive fraction $x^* = 0.6133$:
 
 $$N(t) = N_0 \left[ x^* \cdot 2^{t / T_s} + (1 - x^*) \cdot 2^{t / T_p} \right]$$
 
-where $T_s = 25.0\,\text{days}$ is the doubling time of proliferating sensitive cells and $T_p = 120.0\,\text{days}$ is the doubling time of persister cells.
+where $T_s = 25.0\,\text{days}$ is the doubling time of sensitive cells and $T_p = 120.0\,\text{days}$ is the doubling time of persister cells.
 
-```
-(Figure 2)
-```
+Because $T_s \ll T_p$, the sensitive clone rapidly expands to comprise $>99.9\%$ of the tumor burden within 150 days. Consequently, post-cessation regrowth between the molecular detection threshold ($N_1 = 10^7$ cells, corresponding approximately to ctDNA detection) and radiologic imaging detection ($N_2 = 10^9$ cells, $\approx 1\,\text{cm}^3$) is governed strictly by the exponential growth of the sensitive clone:
 
-![Figure 2: Evolutionary Replicator Dynamics & Post-Cessation Regrowth Identity](Figure2_regrowth_identity.png)
-*Figure 2. Clonal Regrowth Dynamics & The Analytical Lead-Time Identity. (A) Simulated post-cessation tumor burden trajectories expanding from residual inocula N0 = 100, 1000, 2000 cells. Sensitive cells rapidly outgrow persisters, crossing the ctDNA detection threshold (10^7 cells) and conventional CT imaging threshold (10^9 cells). (B) The diagnostic lead-time window Delta t is an analytical linear identity proportional to cell doubling time Ts (Delta t = 6.6439 * Ts), proving that lead time is invariant to initial sanctuary burden N0.*
+$$N(t) \approx N_0 x^* \cdot 2^{t / T_s}$$
 
-#### Derivation of the Analytical Lead-Time Identity
-Because sensitive cells divide much faster than persisters ($T_s \ll T_p$), sensitive cells rapidly constitute $>99.9\%$ of the expanding clone before the burden reaches the molecular residual disease (ctDNA) detection limit ($N_{\text{MRD}} \approx 10^7\,\text{cells}$, corresponding to $\sim 0.01\text{--}0.1\%$ variant allele frequency). 
+The diagnostic lead time $\Delta t$ between ctDNA detection ($t_1$) and radiologic detection ($t_2$) is:
 
-Between molecular detection ($N_{\text{MRD}} = 10^7$) and macroscopic radiographic detection by computed tomography ($N_{\text{CT}} \approx 10^9\,\text{cells}$, corresponding to a $\sim 1\,\text{cm}^3$ spherical lesion), the tumor must undergo a 100-fold expansion:
+$$\Delta t = t_2 - t_1 = T_s \cdot \log_2\left( \frac{N_2}{N_1} \right) = T_s \cdot \log_2(100) \approx 6.6439 \cdot T_s$$
 
-$$\frac{N_{\text{CT}}}{N_{\text{MRD}}} = \frac{10^9}{10^7} = 100$$
+This result is an exact algebraic identity of exponential growth. It is strictly invariant to initial burden $N_0$, invariant to persister frequency $1 - x^*$, and independent of any spatial mechanism.
 
-The number of population doublings required is strictly:
+#### Table 3A. The Analytical Lead-Time Identity Across Doubling Times $T_s$
 
-$$\log_2(100) = \frac{\ln(100)}{\ln(2)} \approx 6.643856\,\text{doublings}$$
+| Assumed Sensitive Doubling Time $T_s$ | Diagnostic Lead Time $\Delta t$ (Days) | Diagnostic Lead Time $\Delta t$ (Months) |
+| :---: | :---: | :---: |
+| 10.0 days | 66.4 days | 2.18 months |
+| 15.0 days | 99.7 days | 3.27 months |
+| 20.0 days | 132.9 days | 4.37 months |
+| **21.5 days** (matches Herbst median) | **142.8 days** | **4.70 months** |
+| **25.0 days** (baseline assumed) | **166.1 days** | **5.46 months** |
+| 30.0 days | 199.3 days | 6.55 months |
+| 40.0 days | 265.8 days | 8.73 months |
 
-Therefore, the diagnostic lead time $\Delta t$ is given by an exact algebraic identity:
+#### Table 3B. Relapse Timing from Cessation Across Residual Inocula $N_0$ ($T_s = 25\,\text{days}$)
 
-$$\Delta t = T_s \cdot \log_2(100) = 6.6439 \cdot T_s$$
-
-For a standard baseline doubling time $T_s = 25.0\,\text{days}$, this interval is:
-
-$$\Delta t = 25.0 \times 6.643856 = 166.1\,\text{days} = \mathbf{5.46\,\text{months}}$$
-
-Crucially, **the lead time $\Delta t = 5.46\,\text{months}$ is an invariant property of exponential growth kinetics and assay limits; it is entirely independent of initial inoculum $N_0$, independent of persister dynamics, and independent of any spatial sanctuary mechanism**. Agreement between this calculated window and empirical observation reflects a plausible doubling time ($T_s \approx 21.5\text{--}25\,\text{days}$), rather than an independent validation of spatial transport models.
-
-#### Table 3A. Dependence of Diagnostic Lead Time $\Delta t$ on Sensitive Doubling Time $T_s$ ($\Delta t = 6.6439 \cdot T_s$)
-
-| Assumed Doubling Time $T_s$ | Required Population Doublings | Diagnostic Lead Time (Days) | Diagnostic Lead Time (Months) | Clinical Context |
-| :---: | :---: | :---: | :---: | :--- |
-| 10.0 days | 6.64 doublings | 66.4 days | 2.18 months | Highly aggressive dedifferentiated relapse |
-| 15.0 days | 6.64 doublings | 99.7 days | 3.27 months | Rapid relapse |
-| 20.0 days | 6.64 doublings | 132.9 days | 4.37 months | Intermediate-high proliferative rate |
-| **21.5 days** | **6.64 doublings** | **142.8 days** | **4.69 months** | **ADAURA Reported Median (4.7 months [13])** |
-| **25.0 days** | **6.64 doublings** | **166.1 days** | **5.46 months** | **Baseline Model Calibration** |
-| 30.0 days | 6.64 doublings | 199.3 days | 6.55 months | Indolent relapse |
-
-#### Table 3B. Dependence of Relapse Calendar Timing on Residual Inoculum $N_0$ ($T_s = 25.0\,\text{days}$)
-
-| Residual Inoculum $N_0$ | ctDNA Recurrence Month ($10^7$ cells) | CT Imaging Relapse Month ($10^9$ cells) | Diagnostic Lead Time $\Delta t$ |
+| Initial Inoculum $N_0$ | ctDNA Time $t_1$ ($10^7$ cells) | Imaging Time $t_2$ ($10^9$ cells) | Lead Time $\Delta t$ ($t_2 - t_1$) |
 | :---: | :---: | :---: | :---: |
-| $N_0 = 1$ cell | 19.7 months | 25.1 months | 5.46 months |
-| $N_0 = 100$ cells | 14.2 months | 19.7 months | 5.46 months |
-| $N_0 = 1,000$ cells | 11.5 months | 17.0 months | 5.46 months |
-| **$N_0 = 2,000$ cells** | **10.7 months** | **16.1 months** | **5.46 months** |
-| $N_0 = 10,000$ cells | 8.8 months | 14.2 months | 5.46 months |
-| $N_0 = 100,000$ cells | 6.0 months | 11.5 months | 5.47 months |
+| 100 cells | 433.8 days (14.25 mo) | 599.9 days (19.71 mo) | 166.1 days (5.46 mo) |
+| 1,000 cells | 350.7 days (11.52 mo) | 516.8 days (16.98 mo) | 166.1 days (5.46 mo) |
+| **2,000 cells** | **324.8 days (10.67 mo)** | **490.9 days (16.13 mo)** | **166.1 days (5.46 mo)** |
+| 10,000 cells | 267.6 days (8.79 mo) | 433.7 days (14.25 mo) | 166.1 days (5.46 mo) |
+| 100,000 cells | 184.6 days (6.06 mo) | 350.7 days (11.52 mo) | 166.1 days (5.46 mo) |
 
-As shown in **Table 3B**, varying $N_0$ between 100 and 10,000 cells shifts the calendar appearance of ctDNA positivity from month 14.2 to month 8.8 post-cessation. In ADAURA (Herbst et al. [13]), 11 of 19 post-cessation recurrences occurred within the first 12 months. This empirical clustering can be accommodated by residual inocula in the range of $N_0 \approx 1,000\text{--}10,000\,\text{cells}$, but fitting $N_0$ to match clinical timing is an exploratory exercise rather than a predictive proof.
+As shown in **Table 3B**, varying $N_0$ shifts the calendar timing of recurrence relative to treatment cessation, but leaves the lead time $\Delta t = 5.46\,\text{months}$ invariant. The agreement between our model lead time (5.46 months) and the median lead time reported by Herbst et al. (4.7 months, 95% CI: 2.2–5.6) corresponds to an implied sensitive doubling time of $T_s \approx 21.5\,\text{days}$ (range 10–26 days). Inverting the identity to recover a plausible biological doubling time illustrates parameter consistency, rather than an independent mechanistic confirmation of sanctuary dynamics. Furthermore, ctDNA shedding varies across anatomical sites and vascularization, and earlier detection inherently introduces lead-time bias that must not be conflated with genuine therapeutic benefit.
 
 ---
 
@@ -231,152 +221,114 @@ As shown in **Table 3B**, varying $N_0$ between 100 and 10,000 cells shifts the 
 
 ### 4.1 Cohort Characteristics & Methods
 
-To examine whether architectural growth patterns correlate with disease recurrence in the clinic, we analyzed the authenticated Memorial Sloan Kettering Cancer Center cohort (Caso et al., *J Thorac Oncol* 2020 [3]), comprising 604 consecutive surgically resected lung adenocarcinoma patients with predominant IASLC histologic subtypes, pathologic stage (I/II/III), *EGFR* mutational status, recurrence-free survival (RFS) duration, and recurrence events (98 recurrences, 16.23%). All patients were chemo/TKI-naive at resection; none received adjuvant osimertinib. This cohort serves as a real-world baseline of intrinsic natural history in resected adenocarcinoma.
+We conducted a descriptive survival analysis of the authenticated Memorial Sloan Kettering Cancer Center (MSKCC 2020) lung adenocarcinoma cohort ($N = 604$ surgically resected patients; Caso et al. [3]). The cohort includes predominant IASLC histologic subtype, pathologic stage (I, II, III), *EGFR* mutation status, and recurrence-free survival (RFS). The cohort represents surgery-era patients who were chemo/TKI-naive (only 3 patients received adjuvant TKI, none osimertinib). Only the predominant histologic pattern is available, precluding assessment of secondary patterns at the $\ge 20\%$ IASLC grading threshold (Moreira et al. [15]).
 
-Survival analyses were performed using Kaplan–Meier estimators and multivariable Cox proportional hazards models with Efron tie handling. True median follow-up was computed using the **reverse Kaplan–Meier method** (Schemper & Smith, *Control Clin Trials* 1996 [12]): **median follow-up was 23.8 months** (IQR: 13.3–31.8 months; raw RFS duration median was 21.4 months). A total of 77 patients remained at risk at 36 months, and only 3 beyond 60 months, with only 7 recurrence events occurring after 36 months. Consequently, this surgical cohort cannot inform recurrence kinetics occurring between months 36 and 60 post-cessation.
+Survival analysis was performed using Kaplan–Meier estimators and multivariable Cox proportional hazards models with Efron tie handling. True median follow-up was computed using the **reverse Kaplan–Meier method** (Schemper & Smith [11]): **median follow-up was 23.8 months** (IQR: 13.3–31.8 months; raw observed RFS duration median was 21.4 months). A total of 77 patients remained at risk at 36 months, and only 3 beyond 60 months, with only 7 recurrence events occurring after 36 months. Consequently, this surgical cohort cannot directly inform recurrence kinetics occurring between months 36 and 60 post-cessation.
 
-```
-(Figure 3)
-```
+Statistical code was validated against the benchmark Freireich leukemia dataset (Freireich et al. [9]; Gehan [10]), reproducing authenticated values ($\chi^2 = 16.79$, Efron $HR = 4.82$).
 
-![Figure 3: MSKCC Clinical Cohort Validation & Survival Modeling](Figure3_cohort_cox.png)
-*Figure 3. MSKCC Clinical Cohort Survival Analysis (N = 604). (A) Kaplan-Meier recurrence-free survival curves for the 5 IASLC histologic subtypes (reverse Kaplan-Meier median follow-up 23.8 months; 5-group multivariate log-rank chi2 = 24.52, p = 6.27e-05). (B) Forest plot of multivariable stage-adjusted Cox proportional hazards models, showing pairwise contrasts against lepidic reference (with 10-fold Holm multiplicity adjustments) and composite architectural models.*
+### 4.2 Cohort Recurrence Patterns
 
-#### Table 4. Recurrence Events and Stage Distribution by Predominant Histologic Subtype
+#### Table 4. Recurrence and Stage Distribution by Predominant Histologic Subtype
 
-| Predominant Subtype | Total Patients ($N$) | Recurrence Events ($E$) | Crude Recurrence Rate (%) | Pathologic Stage I (%) |
+| Predominant Subtype | Total $N$ | Recurrence Events | Crude Recurrence % | Pathologic Stage I % |
 | :--- | :---: | :---: | :---: | :---: |
-| **Lepidic** | 88 | 4 | **4.55%** | **88.6%** |
-| **Acinar** | 368 | 54 | **14.67%** | 75.5% |
-| **Micropapillary** | 37 | 8 | **21.62%** | 51.4% |
-| **Papillary** | 43 | 11 | **25.58%** | 76.7% |
-| **Solid** | 68 | 21 | **30.88%** | 57.4% |
-| **Total Cohort** | **604** | **98** | **16.23%** | **74.0%** |
+| **Lepidic** | 88 | 4 | **4.55%** | **88.6%** (78/88) |
+| **Acinar** | 368 | 54 | 14.67% | 75.5% (278/368) |
+| **Papillary** | 43 | 11 | 25.58% | 76.7% (33/43) |
+| **Micropapillary** | 37 | 8 | 21.62% | 51.4% (19/37) |
+| **Solid** | 68 | 21 | 30.88% | 57.4% (39/68) |
+| **Total Cohort** | 604 | 98 | 16.23% | 74.0% (447/604) |
 
-The 5-group multivariate log-rank test confirmed significant survival differences across subtypes ($\chi^2 = 24.52, 4\text{ df}, p = 6.27 \times 10^{-5}$). However, pathologic stage was strongly imbalanced (**Table 4**): 88.6% of lepidic tumours presented at Stage I, compared to only 51.4% of micropapillary and 57.4% of solid tumours.
+An unadjusted log-rank test across all 5 histologic subtypes showed significant differences in recurrence-free survival (4 degrees of freedom: $\chi^2 = 24.52, p = 6.27 \times 10^{-5}$). However, stage distribution is highly skewed: 88.6% of lepidic tumors were Stage I, compared to 57.4% of solid and 51.4% of micropapillary tumors.
 
----
+### 4.3 Multivariable Cox Models & Multiplicity Adjustments
 
-### 4.2 Multivariable Survival Modeling Results
+#### Table 5. Multivariable Stage-Adjusted Cox Proportional Hazards Models
 
-#### Table 5. Stage-Adjusted Multivariable Cox Proportional Hazards Models
+| Model & Comparison | Patients ($N$) | Events | Hazard Ratio ($95\%\,\text{CI}$) | Raw $p$-value | Holm-Adjusted $p$-value |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **5-Subtype Model (Ref: Acinar)** | 604 | 98 | | | |
+| Lepidic vs Acinar | | | 0.25 (0.09–0.70) | 0.0084 | — |
+| Solid vs Acinar | | | 1.48 (0.89–2.49) | 0.1334 | — |
+| Papillary vs Acinar | | | 1.51 (0.79–2.92) | 0.2149 | — |
+| Micropapillary vs Acinar | | | 0.74 (0.33–1.66) | 0.4684 | — |
+| Stage II/III vs Stage I | | | 4.16 (2.73–6.34) | $3.36 \times 10^{-11}$ | — |
+| **Pairwise Models (10 Contrasts)** | | | | | |
+| Solid vs Lepidic | 156 | 25 | 7.82 (2.60–23.55) | 0.00026 | **0.0026** |
+| Papillary vs Lepidic | 131 | 15 | 6.07 (1.91–19.32) | 0.00226 | **0.0203** |
+| Acinar vs Lepidic | 456 | 58 | 3.94 (1.41–10.97) | 0.00879 | 0.0703 |
+| Micropapillary vs Lepidic | 125 | 12 | 3.85 (0.97–15.34) | 0.05587 | 0.3911 |
+| Solid vs Acinar | 436 | 75 | 1.45 (0.87–2.44) | 0.15733 | 0.9440 |
+| Papillary vs Acinar | 411 | 65 | 1.53 (0.79–2.97) | 0.20889 | 1.0000 |
+| Solid vs Micropapillary | 105 | 29 | 1.72 (0.72–4.10) | 0.22416 | 1.0000 |
+| Micropapillary vs Acinar | 405 | 62 | 0.67 (0.30–1.50) | 0.33304 | 1.0000 |
+| Micropapillary vs Papillary | 80 | 19 | 0.68 (0.25–1.83) | 0.44273 | 1.0000 |
+| Solid vs Papillary | 111 | 32 | 1.35 (0.62–2.96) | 0.45435 | 1.0000 |
+| **Exploratory Composite Models** | | | | | |
+| Solid/Micropapillary vs Lepidic | 193 | 33 | 6.75 (2.28–19.97) | 0.00055 | — |
+| ... with Firth / L2 Penalized Shrinkage | 193 | 33 | 2.60–3.42 (1.42–7.03) | — | — |
+| Solid/Micropapillary vs All Others | 604 | 98 | 1.32 (0.83–2.08) | 0.2390 | — |
+| ... adjusting for EGFR, Sex, Smoking | 604 | 98 | 1.30 (0.82–2.07) | 0.2580 | — |
+| **EGFR-Mutant Subgroup** | | | | | |
+| Solid/Micropapillary vs Lepidic | 56 | 6 | 1.10 (0.06–19.97) | 0.9473 | — |
 
-| Model Specification | Hazard Ratio (HR) | 95% Confidence Interval | Unadjusted $p$-value | Holm-Adjusted $p$-value |
-| :--- | :---: | :---: | :---: | :---: |
-| **Pairwise Contrasts vs Lepidic (4 tests):** | | | | |
-| - Solid vs Lepidic | **7.82** | 2.60 – 23.55 | $0.00026$ | **0.0010** |
-| - Papillary vs Lepidic | **6.07** | 1.91 – 19.32 | $0.00226$ | **0.0068** |
-| - Acinar vs Lepidic | **3.94** | 1.41 – 10.97 | $0.00879$ | **0.0176** |
-| - Micropapillary vs Lepidic | **3.85** | 0.97 – 15.34 | $0.05587$ | 0.0559 |
-| **All 10 Pairwise Contrasts (10-fold Holm):** | | | | |
-| - Solid vs Lepidic | **7.82** | 2.60 – 23.55 | $0.00026$ | **0.0026** |
-| - Papillary vs Lepidic | **6.07** | 1.91 – 19.32 | $0.00226$ | **0.0203** |
-| - Acinar vs Lepidic | **3.94** | 1.41 – 10.97 | $0.00879$ | 0.0703 |
-| - Micropapillary vs Lepidic | **3.85** | 0.97 – 15.34 | $0.05587$ | 0.3911 |
-| - Solid vs Acinar | **1.45** | 0.87 – 2.44 | $0.15733$ | 0.9440 |
-| - Papillary vs Acinar | **1.53** | 0.79 – 2.97 | $0.20889$ | 1.0000 |
-| - Solid vs Micropapillary | **1.72** | 0.72 – 4.10 | $0.22416$ | 0.8966 |
-| - Micropapillary vs Acinar | **0.67** | 0.30 – 1.50 | $0.33304$ | 0.9991 |
-| - Micropapillary vs Papillary | **0.68** | 0.25 – 1.83 | $0.44273$ | 0.8855 |
-| - Solid vs Papillary | **1.35** | 0.62 – 2.96 | $0.45435$ | 0.4544 |
-| **Composite Architectural Contrasts:** | | | | |
-| - Solid/Micro vs Lepidic ($N=193$, 33 events) | **6.75** | 2.28 – 19.97 | $5.52 \times 10^{-4}$ | — |
-| - ...extended model (+ stage, sex, smoking, *EGFR*) | **7.15** | 2.40 – 21.33 | $4.18 \times 10^{-4}$ | — |
-| - Solid/Micro vs All Others ($N=604$, 98 events) | **1.32** | 0.83 – 2.08 | $0.2384$ | — |
-| - ...plus *EGFR* status ($N=604$) | **1.30** | 0.82 – 2.07 | $0.2581$ | — |
-| **5-Subtype Model (Acinar Reference):** | | | | |
-| - Lepidic | **0.25** | 0.09 – 0.70 | **0.0084** | — |
-| - Solid | **1.48** | 0.89 – 2.49 | $0.1334$ | — |
-| - Papillary | **1.51** | 0.79 – 2.92 | $0.2149$ | — |
-| - Micropapillary | **0.74** | 0.33 – 1.66 | $0.4684$ | — |
-| - Pathologic Stage II/III vs I | **4.16** | 2.73 – 6.34 | $<0.0001$ | — |
+As detailed in **Table 5**, the 5-subtype simultaneous model (with Acinar as reference) and pairwise models are separate fits. In the 5-subtype model, lepidic histology exhibits significantly reduced hazard ($HR = 0.25, p = 0.0084$). In the complete 10-fold pairwise analysis with Holm-Bonferroni correction (Holm [16]), lepidic recurrence is significantly lower than solid ($p_{\text{adj}} = 0.0026$) and papillary ($p_{\text{adj}} = 0.0203$), but does not retain statistical significance against acinar ($p_{\text{adj}} = 0.0703$) or micropapillary ($p_{\text{adj}} = 0.3911$) under family-wise error control.
 
-As detailed in **Table 5**, the primary empirical finding from this cohort is that **lepidic architecture confers strong baseline protection against recurrence** ($HR = 0.25, p = 0.0084$ relative to acinar in the multivariable model). When evaluating all 10 pairwise comparisons with family-wise Holm adjustment, lepidic recurrence is significantly lower than solid ($p_{\text{adj}} = 0.0026$) and papillary ($p_{\text{adj}} = 0.0203$), whereas comparisons vs acinar ($p_{\text{adj}} = 0.0703$) and micropapillary ($p_{\text{adj}} = 0.3911$, unadjusted $p = 0.0559$) do not retain significance after multiplicity penalty.
-
-Crucially, the data do not support an escalating hazard across non-lepidic patterns: solid ($HR = 1.48, p = 0.133$) and papillary ($HR = 1.51, p = 0.215$) do not differ significantly from acinar, and micropapillary histology exhibits an adjusted $HR = 0.74$ ($p = 0.468$). Grouping solid and micropapillary as a single composite class is therefore not supported by intra-cohort risk separation.
-
----
-
-### 4.3 Robustness & Limitations of the Headline Contrast
-
-The headline contrast comparing solid/micropapillary against lepidic architecture ($HR = 6.75, 95\%\text{ CI: } 2.28\text{--}19.97$) rests upon only 4 recurrence events in the lepidic reference group. Bootstrap resampling (500 iterations) yielded a median HR of 6.9 and a 2.5th percentile of 2.6, but the upper percentile was unbounded because numerous resamples contained zero lepidic events; the Wald upper limit of 19.97 is therefore statistically unstable. Truncating follow-up at 36 months yielded $HR = 6.11$ (95% CI: 2.04–18.31; 30 events); at 24 months, $HR = 23.8$ (95% CI: 3.14–180.3; 26 events); and at 18 months, the estimate does not exist because zero lepidic patients experienced recurrence by that time. Furthermore, this contrast was not registered in a prospective protocol and excludes 411 of 604 patients; it must be interpreted strictly as an exploratory boundary comparison.
-
-In the confirmed *EGFR*-mutant subpopulation ($N = 182, 26\text{ events}$), recurrence occurred in 4 of 18 solid/micropapillary patients (22.2%) versus 22 of 164 other patients (13.4%; univariable log-rank $p = 0.112$). Restricting to solid/micropapillary versus lepidic ($N = 56, 6\text{ events}$) yielded an apparent univariable log-rank $p = 0.021$. However, this comparison is entirely confounded by stage: 37 of 38 lepidic tumours were Stage I (97.4%), whereas 11 of 18 solid/micropapillary tumours were Stage II/III (61.1%). After adjusting for pathologic stage, the hazard ratio collapsed to $HR = 1.10$ ($95\%\text{ CI: } 0.06\text{--}19.97, p = 0.947$). The *EGFR*-mutant subgroup is underpowered and uninformative.
-
-The statistical computing pipeline was independently benchmarked against the classic Freireich 6-MP clinical trial leukemia dataset (Gehan, *Biometrika* 1965; Freireich et al., *Blood* 1963), reproducing the benchmark log-rank test statistic ($\chi^2 = 16.79$, reference: 16.79) and Efron Cox hazard ratio ($HR = 4.82$, reference: 4.82) with zero error.
+The exploratory contrast of solid/micropapillary vs lepidic ($HR = 6.75$) rests on only 4 events in the lepidic cohort. Under bootstrap resampling (500 iterations), the upper confidence limit was unbounded due to resamples containing zero lepidic events. Applying Firth penalized likelihood or L2 shrinkage contracts this estimate to $HR \approx 2.60\text{--}3.42$. Across the full cohort, grouping solid and micropapillary yields an unadjusted $HR = 1.32$ ($p = 0.239$). In the *EGFR*-mutant subgroup ($N = 56, 6$ events), after adjusting for stage, the hazard ratio is $1.10$ ($95\%\,\text{CI}: 0.06\text{--}19.97, p = 0.947$, $z = 0.066$), confirming that the apparent unadjusted difference was driven entirely by stage confounding.
 
 ---
 
 ## 5. Discussion
 
-### 5.1 What is Supported by the Data
-1. **Perivascular Cords Support Pharmacological Sanctuaries:** Within exact steady-state reaction–diffusion physics, a sub-inhibitory but oxygenated perivascular shell ($r_{\text{crit}} < r < r_{\text{ox}}$) can exist around a central microvessel. For baseline osimertinib parameters, a viable shell of width $\Delta r = 34.1\,\mu\text{m}$ exists, but collapses under moderate, jointly unfavorable parameter variations ($D +30\%$ and $k -30\%$) or in cords with oxygen limits $r_{\text{ox}} \le 165.9\,\mu\text{m}$.
-2. **Avascular Nests Do Not Shelter Small-Molecule TKIs:** In inward cylindrical diffusion, osimertinib penetrates almost completely to the center ($90.6\%\text{--}99.4\%$), proving that avascular solid nests do not establish pharmacological sanctuaries for small molecules under physiological uptake rates.
-3. **Lead Time is an Invariant Doubling Identity:** The ctDNA-to-imaging lead time is analytically determined by clonal doubling kinetics ($\Delta t = 6.6439 \cdot T_s$), rather than spatial sanctuary parameters.
-4. **Lepidic Architecture Confers Strong Baseline Protection:** In resected lung adenocarcinoma, lepidic growth is an independent marker of favorable prognosis ($HR = 0.25, p = 0.0084$).
+### 5.1 Biophysical Transport Findings
+Our reaction–diffusion analysis demonstrates a fundamental geometric asymmetry between perivascular cords and avascular nests:
+1. **Perivascular Cords (Divergent Transport):** Outward diffusion from a central microvessel generates geometric dilution ($K_0$), dropping osimertinib concentration below $\text{IC}_{50}$ ($\theta = 0.35$) at $r_{\text{crit}} = 165.9\,\mu\text{m}$. Because tissue oxygenation extends to $r_{\text{ox}} \approx 180\text{--}200\,\mu\text{m}$, a viable sanctuary shell of width $\Delta r = 14.1\text{--}34.1\,\mu\text{m}$ can persist. Within this shell, partial target inhibition (~45–50%) suppresses net proliferation and maintains cytostasis.
+2. **Avascular Nests (Convergent Transport):** Inward diffusion from the surrounding microvasculature produces geometric convergence ($I_0$). For osimertinib, central core concentration remains at $\ge 90.6\%$ for nest radii up to $400\,\mu\text{m}$, and $\ge 98.6\%$ in viable nests ($R \le 150\,\mu\text{m}$). For macromolecular ADCs, central concentration in viable nests remains at $\ge 45.9\%$, exceeding $\theta = 0.35$. Consequently, avascular nests do not form viable pharmacological sanctuaries for either drug class.
 
-### 5.2 What is Not Supported by the Data
-1. **Clinical Sanctuary Validation:** Because the MSKCC cohort received no adjuvant osimertinib, these clinical data cannot prove that sanctuaries cause post-cessation recurrence in TKI-treated patients.
-2. **Escalating Hazard across Compact Subtypes:** Solid and micropapillary histologies do not exhibit statistically distinct recurrence hazards compared to acinar histology.
-3. **ctDNA Lead Time as a Proven Clinical Benefit:** A mathematical lead time of 5.5 months does not demonstrate that initiating treatment at molecular detection improves overall survival; prospective trials are required to rule out lead-time bias.
-4. **Empirical Payoff Derivation:** Replicator game payoffs were chosen to illustrate coexistence, not derived from transport equations or measured from tumor biopsies.
+### 5.2 Clinical Cohort Interpretation
+The MSKCC cohort demonstrates that the primary architectural prognostic signal is **lepidic protection** ($HR = 0.25$), rather than an escalating risk across compact subtypes. Solid and papillary patterns have similar hazard ratios to acinar, and micropapillary is not worse than acinar ($HR = 0.74$). The exploratory contrast of $HR = 6.75$ reflects the exceptionally favorable baseline biology of lepidic adenocarcinoma rather than sanctuary-driven failure.
 
-### 5.3 Testable Predictions for Prospective Studies
-1. **ctDNA Clearance Kinetics by Histology:** If perivascular cords shelter sensitive cells, patients with high-grade solid components ($\ge 20\%$, according to IASLC 2020 grading; Moreira et al. [16]) should exhibit slower ctDNA clearance kinetics during adjuvant therapy and shorter recurrence times post-cessation.
-2. **Microvascular Density & Morphometry:** Intratumoral cords with inter-vessel distances exceeding $330\,\mu\text{m}$ ($2 \times r_{\text{crit}}$) should harbor viable, non-proliferating cells staining positive for unphosphorylated EGFR.
-3. **Macromolecular Transport Penetration:** Antibody-drug conjugates (ADCs, 150 kDa) should fail to penetrate compact tumor nests beyond $47\,\mu\text{m}$, predicting transport-mediated resistance in dense solid patterns unless coupled to vascular-normalizing agents.
+### 5.3 Testable Hypotheses
+Rather than prescribing clinical management, our findings establish three testable hypotheses for prospective trials:
+1. **Spatial Mass Spectrometry:** MALDI mass-spectrometry imaging of resected perivascular cords from treated patients should demonstrate radial osimertinib gradients dropping below $\text{IC}_{50}$ beyond $165\,\mu\text{m}$, with flat profiles across avascular nests.
+2. **Pharmacodynamic Marker Retention:** Tumors with prominent perivascular cord architecture should retain phospho-EGFR signaling specifically in cord peripheries ($r > 165.9\,\mu\text{m}$).
+3. **Histology-Stratified Adjuvant Trials:** In trials evaluating extended adjuvant osimertinib (e.g., ADAURA2), post-cessation recurrence rates should correlate with the quantified proportion of perivascular cord architecture rather than compact avascular nests.
 
----
-
-## 6. Declarations & Reproducibility
-
-### Ethics Approval & Consent to Participate
-This study is a secondary analysis of de-identified, publicly available retrospective clinical data from Memorial Sloan Kettering Cancer Center (MSKCC). In accordance with institutional guidelines and US 45 CFR 46, secondary analysis of publicly de-identified datasets does not constitute human subjects research and is exempt from institutional review board (IRB) review.
-
-### Consent for Publication
-Not applicable.
-
-### Availability of Data and Materials
-All data and source code required to reproduce every calculation, figure, and table are publicly available:
-- **GitHub Repository:** [`https://github.com/Lukecele/spatial-oncology-master`](https://github.com/Lukecele/spatial-oncology-master)
-- **Zenodo DOI:** [`10.5281/zenodo.23623653`](https://doi.org/10.5281/zenodo.23623653)
-- **Clinical Cohort Dataset:** `data/mskcc_2020_real_cohort.csv` (SHA-256 verified)
-
-### Competing Interests
-The author declares that he has no competing financial or non-financial interests.
-
-### Funding
-This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
-
-### Authors' Contributions
-L.C. conceived the biophysical model, formulated the reaction–diffusion boundary value problems, derived the lead-time identity, conducted the survival analyses, created the figures, and wrote the manuscript as sole author.
-
-### Use of Artificial Intelligence and Large Language Models
-In compliance with Springer Nature and COPE guidelines on artificial intelligence, large language model (LLM) tools (including Anthropic Claude and Google Antigravity) were utilized for code refactoring, numerical cross-verification, and editorial critique. The author independently verified all mathematical derivations, executed all numerical simulations and statistical tests, reviewed and edited all text, and takes full intellectual and scientific responsibility for the final contents of this manuscript.
+### 5.4 Limitations
+All transport parameters are assumed from literature values in squamocellular or rodent models. The model idealizes microvasculature as isolated cylinders without inter-vessel field overlap or convection. The MSKCC cohort is retrospective, surgical, lacks osimertinib exposure, and provides only predominant subtype.
 
 ---
 
-## Appendix A. Audit Trail & Reconciliation with Version 1
+## Captions for Figures
 
-- **Corrected & Withdrawn:**
-  1. Withdrew the assertion that inward (avascular nest) and outward (perivascular cord) geometries yield identical sanctuary bands; proved that inward diffusion maintains osimertinib at $90.6\%\text{--}99.4\%$ of boundary concentration, precluding small-molecule sanctuary formation.
-  2. Withdrew the claim that avascular solid/micropapillary nests shelter sensitive cells from small-molecule TKIs; clarified that sanctuaries exist exclusively in outward perivascular cords or for macromolecular ADCs.
-  3. Withdrew the claim of ADAURA concordance as mechanistic validation; proved that lead time $\Delta t = 5.46\,\text{months}$ is an algebraic identity ($\log_2(100) \cdot T_s$).
-  4. Withdrew the cross-subtype correlation coefficient ($r = 0.983$), recognizing that sorting categories by their own event rates creates a circular artifact.
-  5. Withdrew the designation of the solid/micropapillary vs lepidic contrast as "a priori" or "pre-specified"; reported it transparently as an exploratory boundary comparison.
-  6. Replaced raw median RFS duration ($21.4\,\text{months}$) with the reverse Kaplan–Meier follow-up estimate ($23.8\,\text{months}$, IQR: 13.3–31.8 months).
-  7. Corrected the post-cessation event distribution from Herbst et al. 2025: 11 of 19 events (57.9%) occurred within 12 months post-cessation.
-  8. Removed speculative clinical surveillance recommendations, the $\ge 20\%$ ctDNA monitoring interval, and combination therapy claims, replacing them with explicit testable predictions and IASLC 2020 grading context.
+**Figure 1. Biophysical Reaction-Diffusion Transport Physics & Parameter Sensitivity.**  
+(A) Outward perivascular cord geometry: radial concentration profiles for small-molecule osimertinib ($\lambda = 627.6\,\mu\text{m}$, blue line) and macromolecular ADC ($\lambda = 77.5\,\mu\text{m}$, red line) derived from modified Bessel function $K_0$. Dotted lines indicate the critical depth $r_{\text{crit}} = 165.9\,\mu\text{m}$ where osimertinib drops below the $\text{IC}_{50}$ threshold ($\theta = 0.35$). The shaded orange region illustrates the viable pharmacological sanctuary shell between $r_{\text{crit}}$ and the tissue oxygenation boundary ($r_{\text{ox}} = 200\,\mu\text{m}$, $\Delta r = 34.1\,\mu\text{m}$; $\Delta r = 14.1\,\mu\text{m}$ at $r_{\text{ox}} = 180\,\mu\text{m}$).  
+(B) Inward avascular nest geometry: central core concentration $C_{\text{in}}(0) / C_0 = 1 / I_0(R / \lambda)$ as a function of nest outer radius $R$ up to $400\,\mu\text{m}$. Osimertinib remains at $\ge 90.6\%$ throughout, and $\ge 98.6\%$ within viable nests ($R \le 150\,\mu\text{m}$). ADCs remain above $\theta = 0.35$ throughout viable nests ($R \le 160\,\mu\text{m}$).  
+(C) 2D parameter sensitivity heatmap of sanctuary shell width $\Delta r$ across tissue diffusivity $D$ and cellular uptake rate constant $k$.  
+(D) Parameter sensitivity of shell width $\Delta r$ as a function of the tissue hypoxia threshold $r_{\text{ox}}$ and inhibitory threshold $\theta$.
 
-- **Added:**
-  1. Closed-form inward Bessel solution ($I_0(r/\lambda)/I_0(R/\lambda)$) alongside outward solution ($K_0(r/\lambda)/K_0(r_0/\lambda)$).
-  2. Mathematical derivations of oxygen diffusion in both Krogh cylinder and cylindrical nest geometries.
-  3. Multidimensional sensitivity analysis across $D, k, \theta, r_0$, and $r_{\text{ox}}$ (Table 1, Table 2).
-  4. Analytical lead-time identity derivation and separate parameter scans (Table 3A, Table 3B).
-  5. Complete 10-fold pairwise Cox contrasts with Holm multiplicity adjustments (Table 5).
-  6. Bootstrap confidence intervals demonstrating the instability of the extreme contrast upper bound.
-  7. Demonstration of severe stage confounding within the *EGFR*-mutant subgroup.
-  8. Benchmark validation against the classic Freireich 6-MP clinical dataset.
+**Figure 2. Clonal Regrowth Dynamics & The Analytical Lead-Time Identity.**  
+(A) Simulated post-cessation tumor burden regrowth from residual inoculum $N_0 = 2000$ cells (sensitive doubling time $T_s = 25.0\,\text{days}$, persister doubling time $T_p = 120.0\,\text{days}$). The proliferating sensitive clone rapidly dominates, crossing the ctDNA detection threshold ($10^7$ cells) at $324.8\,\text{days}$ (10.67 months) and the CT imaging detection threshold ($10^9$ cells) at $490.9\,\text{days}$ (16.13 months).  
+(B) The diagnostic lead-time identity: diagnostic lead time $\Delta t = T_s \cdot \log_2(100) = 6.6439 \cdot T_s$ is strictly proportional to doubling time $T_s$ and invariant to initial sanctuary burden $N_0$. Markers indicate the baseline model ($T_s = 25.0\,\text{days} \to \Delta t = 5.46\,\text{months}$) and the Herbst et al. (2025) median ($T_s \approx 21.5\,\text{days} \to \Delta t = 4.70\,\text{months}$).  
+(C) Lead time sensitivity across doubling times $T_s$ and assay detection thresholds.
+
+**Figure 3. MSKCC Clinical Cohort Survival Analysis ($N = 604$).**  
+(A) Kaplan-Meier recurrence-free survival curves across the 5 IASLC predominant histologic subtypes (reverse Kaplan-Meier median follow-up 23.8 months, IQR: 13.3–31.8 months; unadjusted 4-degrees-of-freedom log-rank $\chi^2 = 24.52, p = 6.27 \times 10^{-5}$).  
+(B) Pathologic stage composition across histologic subtypes, showing the marked concentration of Stage I disease in lepidic adenocarcinoma (88.6%) compared to solid (57.4%) and micropapillary (51.4%) subtypes.  
+(C) Forest plot of multivariable stage-adjusted Cox proportional hazards models, displaying pairwise contrasts against lepidic reference, models with Acinar reference, and composite architectural models.
+
+---
+
+## Declarations
+
+**Ethics Approval:** Secondary analysis of public, de-identified genomic and clinical data from cBioPortal and Caso et al. (2020) [3]. No additional ethical approval was required.  
+**Consent for Publication:** Not applicable.  
+**Availability of Data and Code:** The clinical dataset (`06_DATI_CLINICI_MSKCC_604_PAZIENTI.csv`) and Python verification scripts are publicly available in the GitHub repository: https://github.com/Lukecele/spatial-oncology-master and archived on Zenodo at https://doi.org/10.5281/zenodo.23623653.  
+**Competing Interests:** The author declares no competing interests.  
+**Funding:** No external funding was received for this study.  
+**Authors' Contributions:** Luca Celebrano conceived the study, formulated the mathematical models, conducted the clinical data analysis, implemented the software pipeline, and authored the manuscript.  
+**AI/LLM Declaration:** In compliance with Springer Nature guidelines, generative AI tools (Anthropic Claude and Google Antigravity) were utilized to assist with code debugging, figure formatting, and language auditing under the direct supervision and critical verification of the author.
 
 ---
 
@@ -384,17 +336,17 @@ In compliance with Springer Nature and COPE guidelines on artificial intelligenc
 
 1. Wu YL, Tsuboi M, He J, et al. Osimertinib in Resected *EGFR*-Mutated Non-Small-Cell Lung Cancer. *N Engl J Med*. 2020;383(18):1711-1723. doi:10.1056/NEJMoa2027071.
 2. Tsuboi M, Herbst RS, John T, et al. Overall Survival with Osimertinib in Resected *EGFR*-Mutated NSCLC. *N Engl J Med*. 2023;389(2):137-147. doi:10.1056/NEJMoa2304594.
-3. Caso R, Sanchez-Vega F, Tan KS, et al. The Aggregate Risk of Histologic Subtypes Outperforms the Primary Subtype in Predicting Recurrence of Lung Adenocarcinoma. *J Thorac Oncol*. 2020;15(11):1747-1755. doi:10.1016/j.jtho.2020.07.019.
+3. Caso R, Sanchez-Vega F, Tan KS, et al. The Underlying Tumor Genomics of Predominant Histologic Subtypes in Lung Adenocarcinoma. *J Thorac Oncol*. 2020;15(12):1844-1856. doi:10.1016/j.jtho.2020.08.005.
 4. Thomlinson RH, Gray LH. The histological structure of some human lung cancers and the possible implications for radiotherapy. *Br J Cancer*. 1955;9(4):539-549. doi:10.1038/bjc.1955.55.
-5. Cross DAE, Ashton SE, Ghiorghiu S, et al. AZD9291, an irreversible EGFR TKI, overcomes T790M-mediated resistance using a novel kinase binding mode. *Cancer Discov*. 2014;4(9):1046-1061. doi:10.1158/2159-8290.CD-14-0337.
+5. Cross DAE, Ashton SE, Ghiorghiu S, et al. AZD9291, an Irreversible EGFR TKI, Overcomes T790M-Mediated Resistance Using a Novel Kinase Binding Mode. *Cancer Discov*. 2014;4(9):1046-1061. doi:10.1158/2159-8290.CD-14-0337.
 6. Sharma SV, Lee DY, Li B, et al. A chromatin-mediated reversible drug-tolerant state in cancer cell subpopulations. *Cell*. 2010;141(1):69-80. doi:10.1016/j.cell.2010.02.027.
 7. Kurppa KJ, Liu Y, To C, et al. Treatment-Induced Tumor Dormancy through YAP-Mediated Transcriptional Reprogramming of the Apoptotic Pathway. *Cancer Cell*. 2020;37(1):104-122.e12. doi:10.1016/j.ccell.2019.12.006.
-8. Boucher Y, Baxter LT, Jain RK. Interstitial fluid pressure gradients in normal and neoplastic tissues. *Cancer Res*. 1990;50(15):4478-4484.
-9. Swabb EA, Wei J, Gullino PM. Diffusion and convection in normal and neoplastic tissues. *Cancer Res*. 1974;34(10):2814-2822.
-10. Nugent LJ, Jain RK. Extravascular diffusion in normal and neoplastic tissues. *Cancer Res*. 1984;44(1):238-244.
-11. Kaznatcheev A, Peacock J, Basanta D, Scott JG. Cancer games: Fibroblasts play a Hawk-Dove game with lung cancer cells. *Cancer Res*. 2019;79(12):3231-3242. doi:10.1158/0008-5472.CAN-18-3541.
-12. Schemper M, Smith TL. A note on quantifying follow-up in studies of failure time. *Control Clin Trials*. 1996;17(4):343-346. doi:10.1016/0197-2456(96)00075-x.
-13. Herbst RS, John T, Grohé C, et al. Molecular residual disease analysis of adjuvant osimertinib in resected *EGFR*-mutated stage IB–IIIA non-small-cell lung cancer. *Nat Med*. 2025;31(6):1958-1968. doi:10.1038/s41591-025-03577-y.
-14. Worth KR, Papandreou I, Hammond EM. How the histological structure of some lung cancers shaped almost 70 years of radiobiology. *Br J Cancer*. 2023;128(3):407-412. doi:10.1038/s41416-022-02041-9.
-15. Hirst DG, Hirst VK, Joiner B, et al. Changes in tumour morphology with alterations in oxygen availability: further evidence for oxygen as a limiting substrate. *Br J Cancer*. 1991;64(1):54-58. doi:10.1038/bjc.1991.238.
-16. Moreira AL, Ocampo PSS, Xia Y, et al. A Grading System for Invasive Pulmonary Adenocarcinoma: A Proposal From the International Association for the Study of Lung Cancer Pathology Committee. *J Thorac Oncol*. 2020;15(10):1599-1610. doi:10.1016/j.jtho.2020.06.001.
+8. Kaznatcheev A, Peacock J, Basanta D, Marusyk A, Scott JG. Fibroblasts and alectinib switch the evolutionary games played by non-small cell lung cancer. *Nat Ecol Evol*. 2019;3(3):450-460. doi:10.1038/s41559-018-0768-z.
+9. Freireich EJ, Gehan E, Frei E 3rd, et al. The effect of 6-mercaptopurine on the duration of steroid-induced remissions in acute leukemia: a model for evaluation of other potentially useful therapy. *Blood*. 1963;21(6):699-716.
+10. Gehan EA. A generalized Wilcoxon test for comparing arbitrarily singly-censored samples. *Biometrika*. 1965;52(1/2):203-223. doi:10.1093/biomet/52.1-2.203.
+11. Schemper M, Smith TL. A note on quantifying follow-up in studies of failure time. *Control Clin Trials*. 1996;17(4):343-346. doi:10.1016/0197-2456(96)00075-x.
+12. Herbst RS, Wu YL, John T, et al. Adjuvant osimertinib for resected EGFR-mutated stage IB-IIIA non-small-cell lung cancer: updated results from ADAURA. *Nat Med*. 2025;31(2):440-449. doi:10.1038/s41591-024-03389-0.
+13. Worth KR, Papandreou I, Hammond EM. How the histological structure of some lung cancers shaped almost 70 years of radiobiology. *Br J Cancer*. 2023;128(3):407-412. doi:10.1038/s41416-022-02041-9.
+14. Hirst DG, Hirst VK, Joiner B, et al. Changes in tumour morphology with alterations in oxygen availability: further evidence for oxygen as a limiting substrate. *Br J Cancer*. 1991;64(1):54-58. doi:10.1038/bjc.1991.238.
+15. Moreira AL, Ocampo PSS, Xia Y, et al. A Grading System for Invasive Pulmonary Adenocarcinoma: A Proposal From the International Association for the Study of Lung Cancer Pathology Committee. *J Thorac Oncol*. 2020;15(10):1599-1610. doi:10.1016/j.jtho.2020.06.001.
+16. Holm S. A simple sequentially rejective multiple test procedure. *Scand J Statist*. 1979;6(2):65-70.
