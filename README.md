@@ -19,6 +19,10 @@
 > **Permanent Archival DOI:** Zenodo [`10.5281/zenodo.23623653`](https://doi.org/10.5281/zenodo.23623653).  
 > **Author:** Luca Celebrano (School of Medicine, University of Naples Federico II & TIGEM) | ORCID: [`0009-0007-0931-3555`](https://orcid.org/0009-0007-0931-3555).
 
+> [!TIP]
+> **Support Open Science:**  
+> If you find this unified biophysical model, analytical lead-time identity, or clinical survival validation helpful in your research, please consider giving this repository a ⭐ **Star** on GitHub!
+
 ---
 
 ## Executive Summary
@@ -89,6 +93,10 @@ To execute the test suite locally:
 git clone https://github.com/Lukecele/spatial-oncology-master.git
 cd spatial-oncology-master
 pip install -r requirements.txt
+
+# Instant interactive diagnostic demo
+./quickstart.sh
+# or: python scripts/celebrano_sanctuary_demo.py
 
 # Run all 15 unit tests
 python -m unittest discover -s tests -v

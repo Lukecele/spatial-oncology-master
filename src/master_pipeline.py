@@ -101,6 +101,12 @@ class MasterSpatialOncologyPipeline:
 
 
 if __name__ == "__main__":
+    print(r"""
+========================================================================
+ ⭐ Star on GitHub: https://github.com/Lukecele/spatial-oncology-master
+    If you find this research useful, please star the repository!
+========================================================================
+""")
     pipeline = MasterSpatialOncologyPipeline()
     results = pipeline.execute_all()
     print("\n" + "=" * 70)

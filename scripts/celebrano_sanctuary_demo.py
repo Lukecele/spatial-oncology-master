@@ -22,6 +22,7 @@ def print_banner():
      CELEBRANO SANCTUARY MODEL (CSM) - COMPUTATIONAL ONCOLOGY DIAGNOSTIC ENGINE
      Author: Luca Celebrano | University of Naples Federico II & TIGEM
      Open Science Archive DOI: 10.5281/zenodo.23623653 | GPL-3.0
+     ⭐ Star on GitHub: https://github.com/Lukecele/spatial-oncology-master
 ========================================================================================
 """
     print(banner)
