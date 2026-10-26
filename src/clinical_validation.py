@@ -78,6 +78,32 @@ class MSKCCClinicalValidator:
             results[s] = {"N": n, "recurrences": rec, "recurrence_rate": rate, "stage_1_pct": st1_pct}
         return results
 
+    def compare_high_vs_low_sanctuary(self) -> Dict[str, Any]:
+        """
+        Log-rank comparison between high-sanctuary (Solid/Micropapillary)
+        and baseline lepidic architecture (Extreme biophysical contrast, N=193).
+        """
+        sub_df = self.df[self.df["PREDOMINANT_HISTOLOGIC_SUBTYPE"].isin(["Solid", "Micropapillary", "Lepidic"])].copy()
+        sub_df["is_high_sanctuary"] = sub_df["PREDOMINANT_HISTOLOGIC_SUBTYPE"].isin(["Solid", "Micropapillary"]).astype(int)
+
+        high = sub_df[sub_df["is_high_sanctuary"] == 1]
+        low = sub_df[sub_df["is_high_sanctuary"] == 0]
+
+        lr = logrank_test(
+            high["RFS_MONTHS"], low["RFS_MONTHS"],
+            event_observed_A=high["RECURRENCE_EVENT"],
+            event_observed_B=low["RECURRENCE_EVENT"]
+        )
+
+        return {
+            "n_high_sanctuary": len(high),
+            "n_low_sanctuary": len(low),
+            "events_high": int(high["RECURRENCE_EVENT"].sum()),
+            "events_low": int(low["RECURRENCE_EVENT"].sum()),
+            "logrank_test_stat": float(lr.test_statistic),
+            "logrank_p_value": float(lr.p_value)
+        }
+
     def compute_followup_and_survival_metrics(self) -> Dict[str, Any]:
         """
         Computes follow-up duration distributions using reverse Kaplan-Meier method
@@ -171,16 +197,19 @@ class MSKCCClinicalValidator:
                      duration_col="RFS_MONTHS", event_col="RECURRENCE_EVENT")
         s_egfr = cph_egfr.summary.loc["is_solid_micro"]
 
+        model1_data = {
+            "n": len(df_comp),
+            "events": int(df_comp["RECURRENCE_EVENT"].sum()),
+            "adjusted_hr": float(s1["exp(coef)"]),
+            "ci_lower": float(s1["exp(coef) lower 95%"]),
+            "ci_upper": float(s1["exp(coef) upper 95%"]),
+            "p_value": float(s1["p"])
+        }
+
         return {
             "pairwise_contrasts_vs_lepidic": pairwise_results,
-            "model1_extreme_contrast": {
-                "n": len(df_comp),
-                "events": int(df_comp["RECURRENCE_EVENT"].sum()),
-                "adjusted_hr": float(s1["exp(coef)"]),
-                "ci_lower": float(s1["exp(coef) lower 95%"]),
-                "ci_upper": float(s1["exp(coef) upper 95%"]),
-                "p_value": float(s1["p"])
-            },
+            "model1_extreme": model1_data,
+            "model1_extreme_contrast": model1_data,
             "model2_full_cohort": {
                 "n": len(df_full),
                 "events": int(df_full["RECURRENCE_EVENT"].sum()),

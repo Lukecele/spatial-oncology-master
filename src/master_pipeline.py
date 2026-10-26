@@ -37,14 +37,21 @@ class MasterSpatialOncologyPipeline:
         self.data_dir = Path(data_dir) if data_dir else self.base_dir
         self.results_dir = Path(results_dir) if results_dir else self.base_dir
         
-        # Resolve cohort path
-        primary_csv = self.base_dir / "06_DATI_CLINICI_MSKCC_604_PAZIENTI.csv"
-        secondary_csv = self.base_dir / "spatial-oncology-master" / "data" / "mskcc_2020_real_cohort.csv"
-        self.cohort_path = primary_csv if primary_csv.exists() else secondary_csv
+        # Robust resolution of cohort path across different working directories & CI runners
+        candidates = [
+            self.base_dir.parent / "data" / "mskcc_2020_real_cohort.csv",
+            self.base_dir / "data" / "mskcc_2020_real_cohort.csv",
+            self.base_dir / "06_DATI_CLINICI_MSKCC_604_PAZIENTI.csv",
+            Path.cwd() / "data" / "mskcc_2020_real_cohort.csv",
+            Path.cwd() / "06_DATI_CLINICI_MSKCC_604_PAZIENTI.csv",
+        ]
+        if len(self.base_dir.parents) > 1:
+            candidates.append(self.base_dir.parents[1] / "06_DATI_CLINICI_MSKCC_604_PAZIENTI.csv")
+        self.cohort_path = next((p for p in candidates if p is not None and p.exists()), None)
 
         self.transport_model = BiophysicalTransportModel()
         self.game_assay = SpatialGameAssay()
-        self.clinical_validator = MSKCCClinicalValidator(self.cohort_path) if self.cohort_path.exists() else None
+        self.clinical_validator = MSKCCClinicalValidator(self.cohort_path) if self.cohort_path else None
 
     def run_biophysical_transport(self, r_nest_um: float = 200.0) -> Dict[str, Any]:
         """Runs Pillar 1: Reaction-diffusion transport in avascular nest."""
