@@ -8,10 +8,12 @@
 [![License: GPL-3.0](https://img.shields.io/badge/Code_License-GPL--3.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 [![Documentation: CC BY 4.0](https://img.shields.io/badge/Doc_License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Python 3.10 | 3.11 | 3.12 | 3.13](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue.svg)](https://www.python.org/downloads/)
+[![Interactive Web Portal](https://img.shields.io/badge/Web%20Portal-Live%20Demo-brightgreen.svg)](https://lukecele.github.io/spatial-oncology-master/)
 
 ---
 
 > [!NOTE]
+> 🌐 **Interactive Scientific Portal:** Explore the live interactive manuscript, reaction-diffusion simulation, and survival analyses at [lukecele.github.io/spatial-oncology-master/](https://lukecele.github.io/spatial-oncology-master/).  
 > **Manuscript Under Review:** Submitted to the *Journal of Mathematical Biology* (Springer Nature), Manuscript ID: **`JOMB-D-26-01395`** (*Under Consideration*).  
 > **Preprint Tracking:** bioRxiv screening in progress (**`BIORXIV/2026/761610`**).  
 > **Permanent Archival DOI:** Zenodo [`10.5281/zenodo.23623653`](https://doi.org/10.5281/zenodo.23623653).  
