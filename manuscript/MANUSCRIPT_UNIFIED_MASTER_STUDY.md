@@ -320,7 +320,7 @@ Rather than prescribing clinical management, our findings establish three testab
 3. **Histology-Stratified Adjuvant Trials:** In trials evaluating extended adjuvant osimertinib, post-cessation recurrence rates should correlate with the quantified proportion of perivascular cord architecture rather than compact avascular nests.
 
 ### 5.4 Limitations
-All transport parameters are assumed from biophysical measurements in neoplastic tissue. The model idealizes microvasculature as isolated cylinders without inter-vessel field overlap or convection. The MSKCC cohort is retrospective, surgical, lacks osimertinib exposure, provides only predominant subtype, and does not record adjuvant systemic chemotherapy.
+All transport parameters are assumed from biophysical measurements in neoplastic tissue. The model idealizes microvasculature as isolated cylinders without inter-vessel field overlap or convection. Additionally, while plasma protein binding is parameterized at a standard baseline of ~95% ($C_0 \approx 40\,\text{nM}$), physiological inter-patient pharmacokinetic variability and albumin fluctuations can dynamically modulate the free fraction, shifting the threshold $\theta$ and either expanding or compressing the viable sanctuary shell width $\Delta r$ as quantified in our parametric sensitivity analysis. The MSKCC cohort is retrospective, surgical, lacks osimertinib exposure, provides only predominant subtype, and does not record adjuvant systemic chemotherapy.
 
 ---
 

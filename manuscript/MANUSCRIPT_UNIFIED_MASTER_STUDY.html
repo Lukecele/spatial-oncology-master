@@ -1428,10 +1428,18 @@ cord architecture rather than compact avascular nests.</p>
 <h3 id="limitations">5.4 Limitations</h3>
 <p>All transport parameters are assumed from biophysical measurements in
 neoplastic tissue. The model idealizes microvasculature as isolated
-cylinders without inter-vessel field overlap or convection. The MSKCC
-cohort is retrospective, surgical, lacks osimertinib exposure, provides
-only predominant subtype, and does not record adjuvant systemic
-chemotherapy.</p>
+cylinders without inter-vessel field overlap or convection.
+Additionally, while plasma protein binding is parameterized at a
+standard baseline of ~95% (<span class="math inline">\(C_0 \approx
+40\,\text{nM}\)</span>), physiological inter-patient pharmacokinetic
+variability and albumin fluctuations can dynamically modulate the free
+fraction, shifting the threshold <span
+class="math inline">\(\theta\)</span> and either expanding or
+compressing the viable sanctuary shell width <span
+class="math inline">\(\Delta r\)</span> as quantified in our parametric
+sensitivity analysis. The MSKCC cohort is retrospective, surgical, lacks
+osimertinib exposure, provides only predominant subtype, and does not
+record adjuvant systemic chemotherapy.</p>
 <hr />
 <hr />
 <h2 id="declarations">Declarations</h2>
