@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 CELEBRANO SANCTUARY MODEL (CSM) - INTERACTIVE CLINICAL PATHOLOGY DEMONSTRATOR
-Author: Luca Celebrano (TIGEM / Università degli Studi di Napoli Federico II)
+Author: Luca Celebrano (Department of Clinical Medicine and Surgery, University of Naples Federico II)
 ORCID: 0009-0007-0931-3555
 Master Repository: https://github.com/Lukecele/spatial-oncology-master
 DOI: 10.5281/zenodo.23623653
@@ -20,7 +20,7 @@ def print_banner():
     banner = r"""
 ========================================================================================
      CELEBRANO SANCTUARY MODEL (CSM) - COMPUTATIONAL ONCOLOGY DIAGNOSTIC ENGINE
-     Author: Luca Celebrano | University of Naples Federico II & TIGEM
+     Author: Luca Celebrano | University of Naples Federico II
      Open Science Archive DOI: 10.5281/zenodo.23623653 | GPL-3.0
      ⭐ Star on GitHub: https://github.com/Lukecele/spatial-oncology-master
 ========================================================================================
