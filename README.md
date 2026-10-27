@@ -59,32 +59,27 @@ This repository hosts the audited, reproducible computational architecture inves
 ```text
 spatial-oncology-master/
 ├── data/
-│   ├── mskcc_2020_real_cohort.csv      # Authenticated MSKCC clinical cohort (N=604, SHA-256 verified)
+│   ├── mskcc_2020_real_cohort.csv      # MSKCC clinical cohort (N=604, SHA-256 verified)
 │   └── audit_clinical_cohort_report.tsv # Cohort baseline distributions and hash certificate
 ├── src/
+│   ├── spatial_sanctuary/              # Installable Python package (CLI: spatial-sanctuary)
 │   ├── biophysical_diffusion_model.py  # Exact K0 (outward) & I0 (inward) Bessel solvers, O2 transport, Monte Carlo
 │   ├── replicator_dynamics_game.py     # 2x2 matrix game, Lyapunov stability & analytical lead-time identity
 │   ├── clinical_validation.py          # Reverse KM, pairwise Cox models with 10-fold Holm adjustment, Freireich benchmark
 │   ├── master_pipeline.py              # End-to-end multi-scale pipeline orchestrator
-│   └── audit_verification_suite.py     # Complete automated numerical audit script
-├── tests/
-│   ├── test_exact_biophysical_model.py # Unit tests for Bessel ODE solutions & boundary limits
-│   ├── test_exact_game_theory_model.py # Unit tests for Replicator dynamics, Nash attractor & lead time
-│   └── test_master_clinical_validation.py # Unit tests for MSKCC cohort statistics, log-rank & Cox models
-├── figures/
-│   ├── Figure1_transport_sensitivity.png # Figure 1: Bessel transport profiles & 2D sensitivity heatmap
-│   ├── Figure2_regrowth_identity.png     # Figure 2: Post-cessation regrowth & lead-time identity
-│   └── Figure3_cohort_cox.png            # Figure 3: MSKCC Kaplan-Meier curves & Cox models forest plot
-├── manuscript/
-│   ├── MANUSCRIPT_UNIFIED_MASTER_STUDY.pdf # Official 17-page vector publication PDF with MathJax
-│   ├── MANUSCRIPT_UNIFIED_MASTER_STUDY.md  # Full source text in GitHub Flavored Markdown
-│   ├── MANUSCRIPT_UNIFIED_MASTER_STUDY.html # High-fidelity standalone interactive web edition
-│   └── 09_MANOSCRITTO_FORMATO_WORD.docx   # Publication manuscript in Word (.docx) with embedded figures
-├── .github/workflows/
-│   └── ci.yml                          # Continuous Integration matrix (Python 3.10, 3.11, 3.12, 3.13)
-├── CITATION.cff                        # Machine-readable academic citation metadata
+│   └── audit_verification_suite.py     # Automated numerical audit script
+├── tests/                              # Unit tests (Bessel solutions, replicator dynamics, cohort statistics, CLI)
+├── scripts/                            # Demo script and publication figure generator
+├── notebooks/                          # Interactive demonstration notebook
+├── figures/                            # Publication figures (600 DPI)
+├── manuscript/                         # Manuscript (PDF, Markdown, HTML, Word) and figures
+├── docs/                               # Interactive web portal (GitHub Pages)
+├── .github/workflows/                  # CI (Python 3.10-3.13) and Docker image publishing
+├── CITATION.cff                        # Machine-readable citation metadata
+├── Dockerfile                          # Container image (GHCR)
+├── pyproject.toml                      # Package build configuration
 ├── LICENSE                             # GNU General Public License v3.0 (GPL-3.0)
-└── requirements.txt                    # Deterministic minimal dependencies
+└── requirements.txt                    # Minimal dependencies
 ```
 
 ---
@@ -145,12 +140,17 @@ spatial-sanctuary pipeline
 
 ## Citation
 
+Please cite the archived software (Zenodo). The associated manuscript is under peer review and will be added here once published.
+
 ```bibtex
-@article{celebrano2026conditions,
-  title={Conditions for Pharmacological Sanctuaries in Perivascular Tumour Cords: A Reaction--Diffusion Analysis, a Regrowth-Kinetics Identity, and a Descriptive Survival Analysis of Histologic Subtype in Resected Lung Adenocarcinoma},
-  author={Celebrano, Luca},
-  journal={Journal of Mathematical Biology},
-  year={2026},
-  note={Manuscript ID: JOMB-D-26-01395. bioRxiv ID: BIORXIV/2026/761610. DOI: 10.5281/zenodo.23623653}
+@software{celebrano2026spatialsanctuary,
+  title     = {Spatial Oncology Master Study: reaction-diffusion transport, evolutionary sanctuary dynamics and clinical cohort analysis in EGFR-mutant lung adenocarcinoma},
+  author    = {Celebrano, Luca},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.23623653},
+  url       = {https://doi.org/10.5281/zenodo.23623653}
 }
 ```
+
+GitHub's "Cite this repository" button reads the same information from [`CITATION.cff`](CITATION.cff).

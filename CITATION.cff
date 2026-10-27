@@ -1,9 +1,10 @@
 cff-version: 1.2.0
-message: "If you use this codebase, biophysical transport solver, or clinical findings in your research, please cite both the software and the under-review manuscript."
+message: "If you use this codebase, biophysical transport solver, or clinical analysis in your research, please cite the archived software (Zenodo DOI). The associated manuscript is under peer review and is listed under references."
 title: "Biophysical Reaction-Diffusion Transport and Evolutionary Sanctuary Dynamics in Compact EGFR-Mutant Lung Adenocarcinoma"
-version: "2.2.0"
+type: software
+version: "2.2.1"
 doi: "10.5281/zenodo.23623653"
-date-released: 2026-10-26
+date-released: 2026-10-27
 url: "https://lukecele.github.io/spatial-oncology-master/"
 repository-code: "https://github.com/Lukecele/spatial-oncology-master"
 license: "GPL-3.0-or-later"
@@ -24,15 +25,15 @@ keywords:
   - "EGFR-mutant NSCLC"
   - "IASLC histology"
   - "computational oncology"
-preferred-citation:
-  type: article
-  authors:
-    - family-names: "Celebrano"
-      given-names: "Luca"
-      orcid: "https://orcid.org/0009-0007-0931-3555"
-      affiliation: "Department of Clinical Medicine and Surgery, School of Medicine, University of Naples Federico II, Naples, Italy"
-  title: "Conditions for Pharmacological Sanctuaries in Perivascular Tumour Cords: A Reaction–Diffusion Analysis, a Regrowth-Kinetics Identity, and a Descriptive Survival Analysis of Histologic Subtype in Resected Lung Adenocarcinoma"
-  journal: "bioRxiv"
-  year: 2026
-  doi: "10.5281/zenodo.23623653"
-  url: "https://doi.org/10.5281/zenodo.23623653"
+references:
+  - type: article
+    authors:
+      - family-names: "Celebrano"
+        given-names: "Luca"
+        orcid: "https://orcid.org/0009-0007-0931-3555"
+        affiliation: "Department of Clinical Medicine and Surgery, School of Medicine, University of Naples Federico II, Naples, Italy"
+    title: "Conditions for Pharmacological Sanctuaries in Perivascular Tumour Cords: A Reaction–Diffusion Analysis, a Regrowth-Kinetics Identity, and a Descriptive Survival Analysis of Histologic Subtype in Resected Lung Adenocarcinoma"
+    journal: "Journal of Mathematical Biology"
+    year: 2026
+    status: submitted
+    notes: "Under peer review (manuscript ID JOMB-D-26-01395)."

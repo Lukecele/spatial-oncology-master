@@ -4,11 +4,10 @@
   "upload_type": "software",
   "access_right": "open",
   "license": "GPL-3.0-or-later",
-  "version": "v2.0.0",
   "creators": [
     {
       "name": "Celebrano, Luca",
-      "affiliation": "Department of Clinical Medicine and Surgery, School of Medicine, University of Naples Federico II, Naples, Italy; Telethon Institute of Genetics and Medicine (TIGEM), Pozzuoli, Italy",
+      "affiliation": "Department of Clinical Medicine and Surgery, School of Medicine, University of Naples Federico II, Naples, Italy",
       "orcid": "0009-0007-0931-3555"
     }
   ],
