@@ -93,25 +93,45 @@ spatial-oncology-master/
 
 This repository is continuously tested across Python 3.10, 3.11, 3.12, and 3.13 via GitHub Actions.
 
-To execute the test suite locally:
+### Installation
 
+#### Option 1: Python Package (pip)
 ```bash
 git clone https://github.com/Lukecele/spatial-oncology-master.git
 cd spatial-oncology-master
-pip install -r requirements.txt
+pip install -e .
+```
 
-# Instant interactive diagnostic demo
+#### Option 2: Docker Container
+```bash
+# Pull and run directly from GitHub Container Registry
+docker run -it ghcr.io/lukecele/spatial-oncology-master:latest simulate
+```
+
+---
+
+### Command-Line Interface (CLI)
+
+The package installs both `spatial-sanctuary` and `osimertinib-sanctuary` executables:
+
+```bash
+# 1. Simulate radial reaction-diffusion concentration & sanctuary shell width
+spatial-sanctuary simulate --c0 40.0 --lambda-um 627.65 --theta 0.35
+
+# 2. Compute exact post-cessation regrowth lead-time identity (Delta t)
+spatial-sanctuary lead-time --doubling-time-days 25.0
+
+# 3. Validate MSKCC 604 clinical cohort survival models
+spatial-sanctuary validate
+
+# 4. Run 10,000 Monte Carlo draws parameter sensitivity audit
+spatial-sanctuary audit
+
+# 5. Run full end-to-end master pipeline
+spatial-sanctuary pipeline
+
+# Interactive zero-dependency diagnostic demo
 ./quickstart.sh
-# or: python scripts/celebrano_sanctuary_demo.py
-
-# Run all 15 unit tests
-python -m unittest discover -s tests -v
-
-# Run end-to-end master pipeline
-python src/master_pipeline.py
-
-# Run complete numerical audit suite
-python src/audit_verification_suite.py
 ```
 
 ---

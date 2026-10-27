@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spatial-sanctuary"
+version = "2.2.0"
+description = "Biophysical Reaction-Diffusion Transport Solver & Evolutionary Sanctuary Dynamics in Compact EGFR-Mutant NSCLC (Osimertinib)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "GPL-3.0-or-later" }
+authors = [
+  { name = "Luca Celebrano", email = "l.celebrano@studenti.unina.it" }
+]
+maintainers = [
+  { name = "Luca Celebrano", email = "l.celebrano@studenti.unina.it" }
+]
+keywords = [
+  "spatial-biology",
+  "reaction-diffusion",
+  "bessel-functions",
+  "osimertinib",
+  "adaura",
+  "pharmacological-sanctuary",
+  "evolutionary-game-theory",
+  "lung-adenocarcinoma",
+  "mathematical-oncology"
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+  "Topic :: Scientific/Engineering :: Medical Science Apps.",
+  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "numpy>=1.22.0",
+  "scipy>=1.9.0",
+  "pandas>=1.5.0",
+  "lifelines>=0.27.0",
+  "matplotlib>=3.6.0"
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=7.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/Lukecele/spatial-oncology-master"
+Documentation = "https://lukecele.github.io/spatial-oncology-master/"
+Repository = "https://github.com/Lukecele/spatial-oncology-master.git"
+"Bug Tracker" = "https://github.com/Lukecele/spatial-oncology-master/issues"
+"Interactive Space" = "https://huggingface.co/spaces/Lucace/spatial-oncology-simulator"
+"Clinical Dataset" = "https://huggingface.co/datasets/Lucace/mskcc-lung-adenocarcinoma-spatial-cohort"
+
+[project.scripts]
+spatial-sanctuary = "spatial_sanctuary.cli:main"
+osimertinib-sanctuary = "spatial_sanctuary.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"spatial_sanctuary" = ["data/*.csv", "data/*.tsv"]

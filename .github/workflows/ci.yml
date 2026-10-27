@@ -31,6 +31,14 @@ jobs:
       run: |
         python -m unittest discover -s tests -v
 
+    - name: Install spatial-sanctuary package & verify CLI
+      run: |
+        pip install .
+        spatial-sanctuary --version
+        osimertinib-sanctuary simulate
+        spatial-sanctuary validate
+        spatial-sanctuary lead-time
+
     - name: Execute Master Orchestration Pipeline
       run: |
         python src/master_pipeline.py

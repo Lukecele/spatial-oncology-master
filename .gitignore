@@ -3,3 +3,7 @@ __pycache__/
 *$py.class
 .ipynb_checkpoints/
 results/*.tmp
+build/
+dist/
+*.egg-info/
+.pytest_cache/
