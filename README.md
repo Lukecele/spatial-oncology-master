@@ -3,8 +3,9 @@
 [![Master Study CI](https://github.com/Lukecele/spatial-oncology-master/actions/workflows/ci.yml/badge.svg)](https://github.com/Lukecele/spatial-oncology-master/actions/workflows/ci.yml)
 [![Journal: Journal of Mathematical Biology](https://img.shields.io/badge/Submitted-Journal%20of%20Mathematical%20Biology%20(Springer)-007acc.svg)](https://www.springer.com/journal/285)
 [![Manuscript ID: JOMB-D-26-01395](https://img.shields.io/badge/Springer%20Nature-Editor%20Assigned%20(JOMB--D--26--01395)-brightgreen.svg)](https://www.editorialmanager.com/jomb/)
-[![Preprint: bioRxiv](https://img.shields.io/badge/bioRxiv-BIORXIV%2F2026%2F761610-b31b1b.svg)](https://submit.biorxiv.org/)
-[![DOI: Zenodo](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23623653-blue.svg)](https://doi.org/10.5281/zenodo.23623653)
+[![DOI: Zenodo](https://zenodo.org/badge/DOI/10.5281/zenodo.23623653.svg)](https://doi.org/10.5281/zenodo.23623653)
+[![Bioconda Recipe](https://img.shields.io/badge/bioconda-spatial--sanctuary%20v2.2.1-brightgreen.svg?logo=conda-forge&logoColor=white)](https://github.com/bioconda/bioconda-recipes/pull/70821)
+[![Docker Image](https://img.shields.io/badge/ghcr.io-spatial--oncology--master-blue?logo=docker&logoColor=white)](https://github.com/Lukecele/spatial-oncology-master/pkgs/container/spatial-oncology-master)
 [![Substack Article](https://img.shields.io/badge/Substack-Article%20Live-FF6719?logo=substack&logoColor=white)](https://lucacelebrano.substack.com/p/why-resected-lung-cancers-relapse)
 [![License: GPL-3.0](https://img.shields.io/badge/Code_License-GPL--3.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 [![Documentation: CC BY 4.0](https://img.shields.io/badge/Doc_License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
@@ -18,7 +19,6 @@
 > [!NOTE]
 > 🌐 **Interactive Scientific Portal:** Explore the live interactive manuscript, reaction-diffusion simulation, and survival analyses at [lukecele.github.io/spatial-oncology-master/](https://lukecele.github.io/spatial-oncology-master/).  
 > **Manuscript Under Review:** Submitted to the *Journal of Mathematical Biology* (Springer Nature), Manuscript ID: **`JOMB-D-26-01395`** (*Editor Assigned*).  
-> **Preprint Tracking:** bioRxiv screening in progress (**`BIORXIV/2026/761610`**).  
 > **Hugging Face Dataset:** [`Lucace/mskcc-lung-adenocarcinoma-spatial-cohort`](https://huggingface.co/datasets/Lucace/mskcc-lung-adenocarcinoma-spatial-cohort) ($N = 604$ MSKCC cohort & multi-center validation).  
 > **Hugging Face Space:** [`Lucace/spatial-oncology-simulator`](https://huggingface.co/spaces/Lucace/spatial-oncology-simulator) (Interactive reaction-diffusion and clinical survival simulator).  
 > **Substack Publication:** [Why Resected Lung Cancers Relapse Post-Osimertinib Without Resistance Mutations](https://lucacelebrano.substack.com/p/why-resected-lung-cancers-relapse).  
