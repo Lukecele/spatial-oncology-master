@@ -2,9 +2,10 @@
 
 [![Master Study CI](https://github.com/Lukecele/spatial-oncology-master/actions/workflows/ci.yml/badge.svg)](https://github.com/Lukecele/spatial-oncology-master/actions/workflows/ci.yml)
 [![Journal: Journal of Mathematical Biology](https://img.shields.io/badge/Submitted-Journal%20of%20Mathematical%20Biology%20(Springer)-007acc.svg)](https://www.springer.com/journal/285)
-[![Manuscript ID: JOMB-D-26-01395](https://img.shields.io/badge/Springer%20Nature%20ID-JOMB--D--26--01395-orange.svg)](https://www.editorialmanager.com/jomb/)
+[![Manuscript ID: JOMB-D-26-01395](https://img.shields.io/badge/Springer%20Nature-Editor%20Assigned%20(JOMB--D--26--01395)-brightgreen.svg)](https://www.editorialmanager.com/jomb/)
 [![Preprint: bioRxiv](https://img.shields.io/badge/bioRxiv-BIORXIV%2F2026%2F761610-b31b1b.svg)](https://submit.biorxiv.org/)
 [![DOI: Zenodo](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23623653-blue.svg)](https://doi.org/10.5281/zenodo.23623653)
+[![Substack Article](https://img.shields.io/badge/Substack-Article%20Live-FF6719?logo=substack&logoColor=white)](https://lucacelebrano.substack.com/p/why-resected-lung-cancers-relapse)
 [![License: GPL-3.0](https://img.shields.io/badge/Code_License-GPL--3.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 [![Documentation: CC BY 4.0](https://img.shields.io/badge/Doc_License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Python 3.10 | 3.11 | 3.12 | 3.13](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue.svg)](https://www.python.org/downloads/)
@@ -14,8 +15,9 @@
 
 > [!NOTE]
 > 🌐 **Interactive Scientific Portal:** Explore the live interactive manuscript, reaction-diffusion simulation, and survival analyses at [lukecele.github.io/spatial-oncology-master/](https://lukecele.github.io/spatial-oncology-master/).  
-> **Manuscript Under Review:** Submitted to the *Journal of Mathematical Biology* (Springer Nature), Manuscript ID: **`JOMB-D-26-01395`** (*Under Consideration*).  
+> **Manuscript Under Review:** Submitted to the *Journal of Mathematical Biology* (Springer Nature), Manuscript ID: **`JOMB-D-26-01395`** (*Editor Assigned*).  
 > **Preprint Tracking:** bioRxiv screening in progress (**`BIORXIV/2026/761610`**).  
+> **Substack Publication:** [Why Resected Lung Cancers Relapse Post-Osimertinib Without Resistance Mutations](https://lucacelebrano.substack.com/p/why-resected-lung-cancers-relapse).  
 > **Permanent Archival DOI:** Zenodo [`10.5281/zenodo.23623653`](https://doi.org/10.5281/zenodo.23623653).  
 > **Author:** Luca Celebrano (School of Medicine, University of Naples Federico II & TIGEM) | ORCID: [`0009-0007-0931-3555`](https://orcid.org/0009-0007-0931-3555).
 
