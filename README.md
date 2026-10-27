@@ -11,6 +11,7 @@
 [![Python 3.10 | 3.11 | 3.12 | 3.13](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue.svg)](https://www.python.org/downloads/)
 [![Interactive Web Portal](https://img.shields.io/badge/Web%20Portal-Live%20Demo-brightgreen.svg)](https://lukecele.github.io/spatial-oncology-master/)
 [![Hugging Face Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-ffd21e)](https://huggingface.co/datasets/Lucace/mskcc-lung-adenocarcinoma-spatial-cohort)
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/Lucace/spatial-oncology-simulator)
 
 ---
 
@@ -19,6 +20,7 @@
 > **Manuscript Under Review:** Submitted to the *Journal of Mathematical Biology* (Springer Nature), Manuscript ID: **`JOMB-D-26-01395`** (*Editor Assigned*).  
 > **Preprint Tracking:** bioRxiv screening in progress (**`BIORXIV/2026/761610`**).  
 > **Hugging Face Dataset:** [`Lucace/mskcc-lung-adenocarcinoma-spatial-cohort`](https://huggingface.co/datasets/Lucace/mskcc-lung-adenocarcinoma-spatial-cohort) ($N = 604$ MSKCC cohort & multi-center validation).  
+> **Hugging Face Space:** [`Lucace/spatial-oncology-simulator`](https://huggingface.co/spaces/Lucace/spatial-oncology-simulator) (Interactive reaction-diffusion and clinical survival simulator).  
 > **Substack Publication:** [Why Resected Lung Cancers Relapse Post-Osimertinib Without Resistance Mutations](https://lucacelebrano.substack.com/p/why-resected-lung-cancers-relapse).  
 > **Permanent Archival DOI:** Zenodo [`10.5281/zenodo.23623653`](https://doi.org/10.5281/zenodo.23623653).  
 > **Author:** Luca Celebrano (Department of Clinical Medicine and Surgery, School of Medicine, University of Naples Federico II) | ORCID: [`0009-0007-0931-3555`](https://orcid.org/0009-0007-0931-3555).
