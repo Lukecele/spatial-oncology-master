@@ -172,7 +172,7 @@ def cmd_pipeline(args):
     """Runs the master multi-scale pipeline."""
     from .master_pipeline import MasterSpatialOncologyPipeline
     pipeline = MasterSpatialOncologyPipeline()
-    res = pipeline.run_all()
+    res = pipeline.execute_all()
     print("\n[OK] Master pipeline executed successfully.")
 
 
