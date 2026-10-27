@@ -10,6 +10,7 @@
 [![Documentation: CC BY 4.0](https://img.shields.io/badge/Doc_License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Python 3.10 | 3.11 | 3.12 | 3.13](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue.svg)](https://www.python.org/downloads/)
 [![Interactive Web Portal](https://img.shields.io/badge/Web%20Portal-Live%20Demo-brightgreen.svg)](https://lukecele.github.io/spatial-oncology-master/)
+[![Hugging Face Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-ffd21e)](https://huggingface.co/datasets/Lucace/mskcc-lung-adenocarcinoma-spatial-cohort)
 
 ---
 
@@ -17,9 +18,10 @@
 > 🌐 **Interactive Scientific Portal:** Explore the live interactive manuscript, reaction-diffusion simulation, and survival analyses at [lukecele.github.io/spatial-oncology-master/](https://lukecele.github.io/spatial-oncology-master/).  
 > **Manuscript Under Review:** Submitted to the *Journal of Mathematical Biology* (Springer Nature), Manuscript ID: **`JOMB-D-26-01395`** (*Editor Assigned*).  
 > **Preprint Tracking:** bioRxiv screening in progress (**`BIORXIV/2026/761610`**).  
+> **Hugging Face Dataset:** [`Lucace/mskcc-lung-adenocarcinoma-spatial-cohort`](https://huggingface.co/datasets/Lucace/mskcc-lung-adenocarcinoma-spatial-cohort) ($N = 604$ MSKCC cohort & multi-center validation).  
 > **Substack Publication:** [Why Resected Lung Cancers Relapse Post-Osimertinib Without Resistance Mutations](https://lucacelebrano.substack.com/p/why-resected-lung-cancers-relapse).  
 > **Permanent Archival DOI:** Zenodo [`10.5281/zenodo.23623653`](https://doi.org/10.5281/zenodo.23623653).  
-> **Author:** Luca Celebrano (School of Medicine, University of Naples Federico II & TIGEM) | ORCID: [`0009-0007-0931-3555`](https://orcid.org/0009-0007-0931-3555).
+> **Author:** Luca Celebrano (Department of Clinical Medicine and Surgery, School of Medicine, University of Naples Federico II) | ORCID: [`0009-0007-0931-3555`](https://orcid.org/0009-0007-0931-3555).
 
 > [!TIP]
 > **Support Open Science:**  
