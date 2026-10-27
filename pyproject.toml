@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "spatial-sanctuary"
-version = "2.2.0"
+version = "2.2.1"
 description = "Biophysical Reaction-Diffusion Transport Solver & Evolutionary Sanctuary Dynamics in Compact EGFR-Mutant NSCLC (Osimertinib)"
 readme = "README.md"
 requires-python = ">=3.9"

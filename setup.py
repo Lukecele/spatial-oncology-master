@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="spatial-sanctuary",
-    version="2.2.0",
+    version="2.2.1",
     package_dir={"": "src"},
     packages=find_packages(where="src"),
     package_data={"spatial_sanctuary": ["data/*.csv", "data/*.tsv"]},

@@ -13,10 +13,11 @@ ROOT = Path(__file__).resolve().parents[1]
 
 class TestSpatialSanctuaryCLI(unittest.TestCase):
     def test_cli_version(self):
+        from spatial_sanctuary import __version__
         cmd = [sys.executable, "-m", "spatial_sanctuary.cli", "--version"]
         res = subprocess.run(cmd, cwd=str(ROOT), env={"PYTHONPATH": str(ROOT / "src")}, capture_output=True, text=True)
         self.assertEqual(res.returncode, 0)
-        self.assertIn("spatial-sanctuary 2.2.0", res.stdout)
+        self.assertIn(f"spatial-sanctuary {__version__}", res.stdout)
 
     def test_cli_simulate(self):
         cmd = [sys.executable, "-m", "spatial_sanctuary.cli", "simulate", "--json"]

@@ -22,7 +22,7 @@ from .master_pipeline import (
     MasterSpatialOncologyPipeline,
 )
 
-__version__ = "2.2.0"
+__version__ = "2.2.1"
 __author__ = "Luca Celebrano"
 __email__ = "l.celebrano@studenti.unina.it"
 
