@@ -5,7 +5,7 @@
 
 **Date:** October 25, 2026  
 **Subject:** Submission of Original Research Article: *"Biophysical Reaction-Diffusion Transport and Evolutionary Sanctuary Dynamics in Compact EGFR-Mutant Lung Adenocarcinoma"*  
-**Corresponding Author:** Luca Celebrano (University of Naples Federico II / TIGEM)  
+**Corresponding Author:** Luca Celebrano (University of Naples Federico II )  
 **Preprint Reference:** bioRxiv Tracking ID: `BIORXIV/2026/761610` (Submitted under CC-BY 4.0 license)  
 
 ---
@@ -56,5 +56,5 @@ Sincerely,
 
 **Luca Celebrano**  
 Department of Clinical Medicine and Surgery, School of Medicine, University of Naples Federico II, 80131 Naples, Italy  
-Telethon Institute of Genetics and Medicine (TIGEM), 80078 Pozzuoli, Naples, Italy  
+  
 Email: `l.celebrano@studenti.unina.it` | ORCID: [0009-0007-0931-3555](https://orcid.org/0009-0007-0931-3555)  

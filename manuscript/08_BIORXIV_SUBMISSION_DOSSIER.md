@@ -4,7 +4,7 @@
 *Biophysical Reaction-Diffusion Transport and Evolutionary Sanctuary Dynamics in Compact EGFR-Mutant Lung Adenocarcinoma*
 
 **Autore:** Luca Celebrano  
-**Istituzione:** Università degli Studi di Napoli Federico II & TIGEM  
+**Istituzione:** Università degli Studi di Napoli Federico II   
 **Portale di Sottomissione:** [https://submit.biorxiv.org/](https://submit.biorxiv.org/)  
 **Costo:** **0 € (Completamente Gratuito)**  
 **bioRxiv Official Tracking ID:** `BIORXIV/2026/761610`
@@ -22,7 +22,7 @@
 * **Primary Affiliation:**  
   `Department of Clinical Medicine and Surgery, School of Medicine, University of Naples Federico II, 80131 Naples, Italy`
 * **Secondary Affiliation:**  
-  `Telethon Institute of Genetics and Medicine (TIGEM), 80078 Pozzuoli, Naples, Italy`
+  ``
 * **Corresponding Author:** Yes (`Luca Celebrano`)
 
 ---

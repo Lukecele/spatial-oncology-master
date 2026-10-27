@@ -2,7 +2,7 @@
 
 **Document Purpose:** Dedicated methodological briefing and forensic reconciliation report for independent Artificial Intelligence auditors (e.g., Claude, automated reviewer agents) and human statistical reviewers auditing the `spatial-oncology-master` repository.
 
-**Lead Author:** Luca Celebrano (School of Medicine, University of Naples Federico II & TIGEM)  
+**Lead Author:** Luca Celebrano (School of Medicine, University of Naples Federico II )  
 **Repository Target:** `/home/luca/Scrivania/PROGETTO_FINALE_ONCOLOGIA/spatial-oncology-master`  
 **Certified Cohort File:** `06_DATI_CLINICI_MSKCC_604_PAZIENTI.csv`  
 
