@@ -228,6 +228,8 @@ def main():
         sys.exit(0)
 
     args.func(args)
+    if not getattr(args, "json", False):
+        print("\n⭐ Support open-science oncology: Star the repository on GitHub -> https://github.com/Lukecele/spatial-oncology-master", file=sys.stderr)
 
 
 if __name__ == "__main__":
