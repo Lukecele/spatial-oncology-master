@@ -13,7 +13,9 @@
 [![Python >=3.9 (CI: 3.10–3.13)](https://img.shields.io/badge/python-%3E%3D3.9%20(CI%3A%203.10%E2%80%933.13)-blue.svg)](https://www.python.org/downloads/)
 [![Interactive Web Portal](https://img.shields.io/badge/Web%20Portal-Live%20Demo-brightgreen.svg)](https://lukecele.github.io/spatial-oncology-master/)
 [![Hugging Face Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-ffd21e)](https://huggingface.co/datasets/Lucace/mskcc-lung-adenocarcinoma-spatial-cohort)
-[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/Lucace/spatial-oncology-simulator)
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Simulator%20%26%20Bedside%20CRI-blue)](https://huggingface.co/spaces/Lucace/spatial-oncology-simulator)
+[![Expanded Study: Spatial Continuum](https://img.shields.io/badge/Expanded%20Study-spatial--continuum--oncology-darkred.svg)](https://github.com/Lukecele/spatial-continuum-oncology)
+[![Preprint: medRxiv](https://img.shields.io/badge/medRxiv-Under%20Screening%20(MEDRXIV%2F2026%2F366778)-00599c.svg)](https://submit.medrxiv.org)
 
 ---
 
