@@ -227,6 +227,8 @@ def main():
         parser.print_help()
         sys.exit(0)
 
+    if not getattr(args, "json", False):
+        print("⭐ Spatial Sanctuary Engine | Star on GitHub: https://github.com/Lukecele/spatial-oncology-master\n", file=sys.stderr)
     args.func(args)
     if not getattr(args, "json", False):
         print("\n⭐ Support open-science oncology: Star the repository on GitHub -> https://github.com/Lukecele/spatial-oncology-master", file=sys.stderr)
