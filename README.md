@@ -13,8 +13,8 @@
 [![Documentation: CC BY 4.0](https://img.shields.io/badge/Doc_License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Python >=3.9 (CI: 3.10–3.13)](https://img.shields.io/badge/python-%3E%3D3.9%20(CI%3A%203.10%E2%80%933.13)-blue.svg)](https://www.python.org/downloads/)
 [![Interactive Web Portal](https://img.shields.io/badge/Web%20Portal-Live%20Demo-brightgreen.svg)](https://lukecele.github.io/spatial-oncology-master/)
-[![Hugging Face Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-ffd21e)](https://huggingface.co/datasets/Lucace/mskcc-lung-adenocarcinoma-spatial-cohort)
-[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Simulator%20%26%20Bedside%20CRI-blue)](https://huggingface.co/spaces/Lucace/spatial-oncology-simulator)
+[![Hugging Face Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-ffd21e)](https://huggingface.co/datasets/spatial-continuum-lab/mskcc-lung-adenocarcinoma-spatial-cohort)
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Simulator%20%26%20Bedside%20CRI-blue)](https://huggingface.co/spaces/spatial-continuum-lab/spatial-continuum-clinical-app)
 [![Expanded Study: Spatial Continuum](https://img.shields.io/badge/Expanded%20Study-spatial--continuum--oncology-darkred.svg)](https://github.com/Lukecele/spatial-continuum-oncology)
 [![Preprint: medRxiv](https://img.shields.io/badge/medRxiv-Under%20Screening%20(MEDRXIV%2F2026%2F366778)-00599c.svg)](https://submit.medrxiv.org)
 
@@ -24,17 +24,16 @@
 > 📄 **Permanent Preprint:** Posted on Research Square (Springer Nature), DOI: [`10.21203/rs.3.rs-11530312/v1`](https://doi.org/10.21203/rs.3.rs-11530312/v1).  
 > 🌐 **Interactive Scientific Portal:** Explore the live interactive manuscript, reaction-diffusion simulation, and survival analyses at [lukecele.github.io/spatial-oncology-master/](https://lukecele.github.io/spatial-oncology-master/).  
 > **Manuscript Under Review:** Submitted to the *Journal of Mathematical Biology* (Springer Nature), Manuscript ID: **`JOMB-D-26-01395`** (*Editor Assigned*).  
-> ⭐️ **Support Open Science:** If you find this computational framework or MSKCC survival analysis useful, please consider giving this repository a star on GitHub!  
 > **Expanded Continuum Study:** See [Lukecele/spatial-continuum-oncology](https://github.com/Lukecele/spatial-continuum-oncology) for the grand unified biophysical reaction-diffusion theory, post-ADAURA cessation dynamics, and the SG-ADAURA clinical trial protocol.  
-> **Hugging Face Dataset:** [`Lucace/mskcc-lung-adenocarcinoma-spatial-cohort`](https://huggingface.co/datasets/Lucace/mskcc-lung-adenocarcinoma-spatial-cohort) ($N = 604$ MSKCC cohort & multi-center validation).  
-> **Hugging Face Space:** [`Lucace/spatial-oncology-simulator`](https://huggingface.co/spaces/Lucace/spatial-oncology-simulator) (Interactive reaction-diffusion and clinical survival simulator).  
+> **Hugging Face Dataset:** [`spatial-continuum-lab/mskcc-lung-adenocarcinoma-spatial-cohort`](https://huggingface.co/datasets/spatial-continuum-lab/mskcc-lung-adenocarcinoma-spatial-cohort) ($N = 604$ MSKCC cohort & multi-center validation).  
+> **Hugging Face Space:** [`spatial-continuum-lab/spatial-continuum-clinical-app`](https://huggingface.co/spaces/spatial-continuum-lab/spatial-continuum-clinical-app) (Interactive reaction-diffusion and clinical survival simulator).  
 > **Substack Publication:** [Why Resected Lung Cancers Relapse Post-Osimertinib Without Resistance Mutations](https://lucacelebrano.substack.com/p/why-resected-lung-cancers-relapse).  
 > **Permanent Archival DOI:** Zenodo [`10.5281/zenodo.23623653`](https://doi.org/10.5281/zenodo.23623653).  
 > **Author:** Luca Celebrano (Department of Clinical Medicine and Surgery, School of Medicine, University of Naples Federico II) | ORCID: [`0009-0007-0931-3555`](https://orcid.org/0009-0007-0931-3555).
 
 > [!TIP]
-> **Support Open Science:**  
-> If you find this unified biophysical model, analytical lead-time identity, or clinical survival validation helpful in your research, please consider giving this repository a ⭐ **Star** on GitHub!
+> ⭐️ **Support Open Science:**  
+> If you find this unified biophysical model, analytical lead-time identity, or clinical survival validation helpful in your research, please consider giving this repository a **Star** on GitHub!
 
 ---
 
