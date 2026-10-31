@@ -6,7 +6,7 @@
 [![Journal: Journal of Mathematical Biology](https://img.shields.io/badge/Submitted-Journal%20of%20Mathematical%20Biology%20(Springer)-007acc.svg)](https://www.springer.com/journal/285)
 [![Manuscript ID: JOMB-D-26-01395](https://img.shields.io/badge/Springer%20Nature-Editor%20Assigned%20(JOMB--D--26--01395)-brightgreen.svg)](https://www.editorialmanager.com/jomb/)
 [![DOI: Zenodo](https://zenodo.org/badge/DOI/10.5281/zenodo.23623653.svg)](https://doi.org/10.5281/zenodo.23623653)
-[![Bioconda Recipe](https://img.shields.io/badge/bioconda-spatial--sanctuary%20v2.2.2-brightgreen.svg?logo=conda-forge&logoColor=white)](https://anaconda.org/bioconda/spatial-sanctuary)
+[![Bioconda Recipe](https://img.shields.io/badge/bioconda-spatial--sanctuary%20v2.2.2-brightgreen.svg?logo=conda-forge&logoColor=white)](https://github.com/bioconda/bioconda-recipes/pull/70840)
 [![Docker Image](https://img.shields.io/badge/ghcr.io-spatial--oncology--master-blue?logo=docker&logoColor=white)](https://github.com/Lukecele/spatial-oncology-master/pkgs/container/spatial-oncology-master)
 [![Substack Article](https://img.shields.io/badge/Substack-Article%20Live-FF6719?logo=substack&logoColor=white)](https://lucacelebrano.substack.com/p/why-resected-lung-cancers-relapse)
 [![License: GPL-3.0](https://img.shields.io/badge/Code_License-GPL--3.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
