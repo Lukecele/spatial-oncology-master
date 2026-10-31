@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this codebase, biophysical transport solver, or clinical analysis in your research, please cite the archived software (Zenodo DOI). The associated manuscript is under peer review and is listed under references."
 title: "Biophysical Reaction-Diffusion Transport and Evolutionary Sanctuary Dynamics in Compact EGFR-Mutant Lung Adenocarcinoma"
 type: software
-version: "2.2.1"
+version: "2.2.2"
 doi: "10.5281/zenodo.23623653"
 date-released: 2026-10-27
 url: "https://lukecele.github.io/spatial-oncology-master/"
