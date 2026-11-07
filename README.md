@@ -7,6 +7,7 @@
 [![Manuscript ID: JOMB-D-26-01395](https://img.shields.io/badge/Springer%20Nature-Editor%20Assigned%20(JOMB--D--26--01395)-brightgreen.svg)](https://www.editorialmanager.com/jomb/)
 [![DOI: Zenodo](https://zenodo.org/badge/DOI/10.5281/zenodo.23623653.svg)](https://doi.org/10.5281/zenodo.23623653)
 [![Bioconda Recipe](https://img.shields.io/badge/bioconda-spatial--sanctuary%20v2.2.2-brightgreen.svg?logo=conda-forge&logoColor=white)](https://github.com/bioconda/bioconda-recipes/pull/70840)
+[![bio.tools](https://img.shields.io/badge/bio.tools-Spatial%20Sanctuary-60d9c5.svg)](https://bio.tools/spatial-sanctuary)
 [![Docker Image](https://img.shields.io/badge/ghcr.io-spatial--oncology--master-blue?logo=docker&logoColor=white)](https://github.com/Lukecele/spatial-oncology-master/pkgs/container/spatial-oncology-master)
 [![Substack Article](https://img.shields.io/badge/Substack-Article%20Live-FF6719?logo=substack&logoColor=white)](https://lucacelebrano.substack.com/p/why-resected-lung-cancers-relapse)
 [![License: GPL-3.0](https://img.shields.io/badge/Code_License-GPL--3.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
@@ -29,6 +30,8 @@
 > **Hugging Face Space:** [`spatial-continuum-lab/tumor-cord-sanctuary-3d`](https://huggingface.co/spaces/spatial-continuum-lab/tumor-cord-sanctuary-3d) (Interactive 3D reaction-diffusion tumor cord & drug washout digital twin).  
 > **Substack Publication:** [Why Resected Lung Cancers Relapse Post-Osimertinib Without Resistance Mutations](https://lucacelebrano.substack.com/p/why-resected-lung-cancers-relapse).  
 > **Permanent Archival DOI:** Zenodo [`10.5281/zenodo.23623653`](https://doi.org/10.5281/zenodo.23623653).  
+>
+> **bio.tools:** [`spatial-sanctuary`](https://bio.tools/spatial-sanctuary)
 > **Author:** Luca Celebrano (Department of Clinical Medicine and Surgery, School of Medicine, University of Naples Federico II) | ORCID: [`0009-0007-0931-3555`](https://orcid.org/0009-0007-0931-3555).
 
 > [!TIP]
