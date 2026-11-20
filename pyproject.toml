@@ -10,10 +10,10 @@ readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "GPL-3.0-or-later" }
 authors = [
-  { name = "Luca Celebrano", email = "l.celebrano@studenti.unina.it" }
+  { name = "Luca Celebrano", email = "luca.celebrano1@gmail.com" }
 ]
 maintainers = [
-  { name = "Luca Celebrano", email = "l.celebrano@studenti.unina.it" }
+  { name = "Luca Celebrano", email = "luca.celebrano1@gmail.com" }
 ]
 keywords = [
   "spatial-biology",

@@ -1,5 +1,5 @@
 # Multi-stage reproducible Docker container for spatial-sanctuary (Osimertinib Master Study)
-# Author: Luca Celebrano (University of Naples Federico II)
+# Author: Luca Celebrano (Independent Researcher, Naples, Italy)
 # License: GNU General Public License v3.0 (GPL-3.0)
 
 FROM python:3.11-slim as base

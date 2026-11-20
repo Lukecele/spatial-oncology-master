@@ -1,8 +1,8 @@
 # Conditions for Pharmacological Sanctuaries in Perivascular Tumour Cords: A Reaction–Diffusion Analysis, a Regrowth-Kinetics Identity, and a Descriptive Survival Analysis of Histologic Subtype in Resected Lung Adenocarcinoma
 
 **Luca Celebrano**$^{1}$  
-$^{1}$Department of Clinical Medicine and Surgery, School of Medicine, University of Naples Federico II, Via Sergio Pansini 5, 80131 Naples, Italy  
-*Correspondence:* luca.celebrano5@gmail.com / l.celebrano@studenti.unina.it | ORCID: [0009-0007-0931-3555](https://orcid.org/0009-0007-0931-3555)
+$^{1}$Independent Researcher, Naples, Italy  
+*Correspondence:* luca.celebrano1@gmail.com / luca.celebrano1@gmail.com | ORCID: [0009-0007-0931-3555](https://orcid.org/0009-0007-0931-3555)
 
 ---
 

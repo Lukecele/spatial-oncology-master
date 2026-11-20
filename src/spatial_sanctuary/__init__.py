@@ -2,7 +2,7 @@
 spatial-sanctuary: Biophysical Reaction-Diffusion Transport Solver &
 Evolutionary Sanctuary Dynamics in Compact EGFR-Mutant Non-Small Cell Lung Cancer.
 
-Author: Luca Celebrano (Department of Clinical Medicine and Surgery, School of Medicine, University of Naples Federico II)
+Author: Luca Celebrano (Department of Clinical Medicine and Surgery, Independent Researcher, Naples, Italy)
 ORCID: 0009-0007-0931-3555
 License: GNU General Public License v3.0 (GPL-3.0)
 """
@@ -24,7 +24,7 @@ from .master_pipeline import (
 
 __version__ = "2.2.1"
 __author__ = "Luca Celebrano"
-__email__ = "l.celebrano@studenti.unina.it"
+__email__ = "luca.celebrano1@gmail.com"
 
 __all__ = [
     "BiophysicalTransportModel",

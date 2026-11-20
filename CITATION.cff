@@ -12,8 +12,8 @@ authors:
   - family-names: "Celebrano"
     given-names: "Luca"
     orcid: "https://orcid.org/0009-0007-0931-3555"
-    affiliation: "Department of Clinical Medicine and Surgery, School of Medicine, University of Naples Federico II, Naples, Italy"
-    email: "l.celebrano@studenti.unina.it"
+    affiliation: "Independent Researcher, Naples, Italy"
+    email: "luca.celebrano1@gmail.com"
 keywords:
   - "spatial oncology"
   - "reaction-diffusion transport"
@@ -31,7 +31,7 @@ references:
       - family-names: "Celebrano"
         given-names: "Luca"
         orcid: "https://orcid.org/0009-0007-0931-3555"
-        affiliation: "Department of Clinical Medicine and Surgery, School of Medicine, University of Naples Federico II, Naples, Italy"
+        affiliation: "Independent Researcher, Naples, Italy"
     title: "Conditions for Pharmacological Sanctuaries in Perivascular Tumour Cords: A Reaction–Diffusion Analysis, a Regrowth-Kinetics Identity, and a Descriptive Survival Analysis of Histologic Subtype in Resected Lung Adenocarcinoma"
     journal: "Journal of Mathematical Biology"
     year: 2026

@@ -1,5 +1,7 @@
 # Conditions for Pharmacological Sanctuaries in Perivascular Tumour Cords: A Reaction–Diffusion Analysis, a Regrowth-Kinetics Identity, and a Descriptive Survival Analysis of Histologic Subtype in Resected Lung Adenocarcinoma
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23838235.svg)](https://doi.org/10.5281/zenodo.23838235)
+
 [![GitHub stars](https://img.shields.io/github/stars/Lukecele/spatial-oncology-master?style=for-the-badge&logo=github&color=gold)](https://github.com/Lukecele/spatial-oncology-master)
 [![Research Square DOI](https://img.shields.io/badge/Research%20Square-10.21203%2Frs.3.rs--11530312%2Fv1-007acc.svg)](https://doi.org/10.21203/rs.3.rs-11530312/v1)
 [![Master Study CI](https://github.com/Lukecele/spatial-oncology-master/actions/workflows/ci.yml/badge.svg)](https://github.com/Lukecele/spatial-oncology-master/actions/workflows/ci.yml)
@@ -22,17 +24,14 @@
 ---
 
 > [!NOTE]
-> 📄 **Permanent Preprint:** Posted on Research Square (Springer Nature), DOI: [`10.21203/rs.3.rs-11530312/v1`](https://doi.org/10.21203/rs.3.rs-11530312/v1).  
-> 🌐 **Interactive Scientific Portal:** Explore the live interactive manuscript, reaction-diffusion simulation, and survival analyses at [lukecele.github.io/spatial-oncology-master/](https://lukecele.github.io/spatial-oncology-master/).  
-> **Manuscript Under Review:** Submitted to the *Journal of Mathematical Biology* (Springer Nature), Manuscript ID: **`JOMB-D-26-01395`** (*Editor Assigned*).  
+> 🌐 **Interactive Scientific Portal:** Explore the live interactive manuscript, reaction-diffusion simulation, and survival analyses at [lucacelebrano.me/spatial-oncology-master/](https://lucacelebrano.me/spatial-oncology-master/).  
 > **Expanded Continuum Study:** See [Lukecele/spatial-continuum-oncology](https://github.com/Lukecele/spatial-continuum-oncology) for the grand unified biophysical reaction-diffusion theory, post-ADAURA cessation dynamics, and the SG-ADAURA clinical trial protocol.  
 > **Hugging Face Dataset:** [`spatial-continuum-lab/mskcc-lung-adenocarcinoma-spatial-cohort`](https://huggingface.co/datasets/spatial-continuum-lab/mskcc-lung-adenocarcinoma-spatial-cohort) ($N = 604$ MSKCC cohort & multi-center validation).  
 > **Hugging Face Space:** [`spatial-continuum-lab/tumor-cord-sanctuary-3d`](https://huggingface.co/spaces/spatial-continuum-lab/tumor-cord-sanctuary-3d) (Interactive 3D reaction-diffusion tumor cord & drug washout digital twin).  
 > **Substack Publication:** [Why Resected Lung Cancers Relapse Post-Osimertinib Without Resistance Mutations](https://lucacelebrano.substack.com/p/why-resected-lung-cancers-relapse).  
-> **Permanent Archival DOI:** Zenodo [`10.5281/zenodo.23623653`](https://doi.org/10.5281/zenodo.23623653).  
->
-> **bio.tools:** [`spatial-sanctuary`](https://bio.tools/spatial-sanctuary)
-> **Author:** Luca Celebrano (Department of Clinical Medicine and Surgery, School of Medicine, University of Naples Federico II) | ORCID: [`0009-0007-0931-3555`](https://orcid.org/0009-0007-0931-3555).
+> **Permanent Archival DOI:** Zenodo [`10.5281/zenodo.23838235`](https://doi.org/10.5281/zenodo.23838235).  
+> **bio.tools:** [`spatial-sanctuary`](https://bio.tools/spatial-sanctuary)  
+> **Author:** Luca Celebrano (Independent Researcher, Naples, Italy) | ORCID: [`0009-0007-0931-3555`](https://orcid.org/0009-0007-0931-3555).
 
 > [!TIP]
 > ⭐️ **Support Open Science:**  
