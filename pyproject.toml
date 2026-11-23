@@ -58,8 +58,8 @@ Homepage = "https://github.com/Lukecele/spatial-oncology-master"
 Documentation = "https://lukecele.github.io/spatial-oncology-master/"
 Repository = "https://github.com/Lukecele/spatial-oncology-master.git"
 "Bug Tracker" = "https://github.com/Lukecele/spatial-oncology-master/issues"
-"Interactive Space" = "https://huggingface.co/spaces/Lucace/spatial-oncology-simulator"
-"Clinical Dataset" = "https://huggingface.co/datasets/Lucace/mskcc-lung-adenocarcinoma-spatial-cohort"
+"Interactive Space" = "https://huggingface.co/spaces/spatial-continuum-lab/spatial-oncology-simulator"
+"Clinical Dataset" = "https://huggingface.co/datasets/spatial-continuum-lab/mskcc-lung-adenocarcinoma-spatial-cohort"
 
 [project.scripts]
 spatial-sanctuary = "spatial_sanctuary.cli:main"
