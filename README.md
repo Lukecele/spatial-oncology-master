@@ -7,7 +7,6 @@
 [![Master Study CI](https://github.com/Lukecele/spatial-oncology-master/actions/workflows/ci.yml/badge.svg)](https://github.com/Lukecele/spatial-oncology-master/actions/workflows/ci.yml)
 [![Journal: Journal of Mathematical Biology](https://img.shields.io/badge/Submitted-Journal%20of%20Mathematical%20Biology%20(Springer)-007acc.svg)](https://www.springer.com/journal/285)
 [![Manuscript ID: JOMB-D-26-01395](https://img.shields.io/badge/Springer%20Nature-Editor%20Assigned%20(JOMB--D--26--01395)-brightgreen.svg)](https://www.editorialmanager.com/jomb/)
-[![DOI: Zenodo](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.23623653-blue)](https://doi.org/10.5281/zenodo.23623653)
 [![Bioconda Recipe](https://img.shields.io/badge/bioconda-spatial--sanctuary%20v2.2.2-brightgreen.svg?logo=conda-forge&logoColor=white)](https://github.com/bioconda/bioconda-recipes/pull/70840)
 [![bio.tools](https://img.shields.io/badge/bio.tools-Spatial%20Sanctuary-60d9c5.svg)](https://bio.tools/spatial-sanctuary)
 [![Docker Image](https://img.shields.io/badge/ghcr.io-spatial--oncology--master-blue?logo=docker&logoColor=white)](https://github.com/Lukecele/spatial-oncology-master/pkgs/container/spatial-oncology-master)
@@ -27,7 +26,7 @@
 > **Expanded Continuum Study:** See [Lukecele/spatial-continuum-oncology](https://github.com/Lukecele/spatial-continuum-oncology) for the grand unified biophysical reaction-diffusion theory, post-ADAURA cessation dynamics, and the SG-ADAURA clinical trial protocol.  
 > **Hugging Face Dataset:** [`spatial-continuum-lab/mskcc-lung-adenocarcinoma-spatial-cohort`](https://huggingface.co/datasets/spatial-continuum-lab/mskcc-lung-adenocarcinoma-spatial-cohort) ($N = 604$ MSKCC cohort & multi-center validation).  
 > **Hugging Face Space:** [`spatial-continuum-lab/tumor-cord-sanctuary-3d`](https://huggingface.co/spaces/spatial-continuum-lab/tumor-cord-sanctuary-3d) (Interactive 3D reaction-diffusion tumor cord & drug washout digital twin).  
-> **Permanent Archival DOI:** Zenodo [`10.5281/zenodo.23838235`](https://doi.org/10.5281/zenodo.24393483).  
+> **Permanent Archival DOI:** Zenodo [`10.5281/zenodo.24393483`](https://doi.org/10.5281/zenodo.24393483).  
 > **bio.tools:** [`spatial-sanctuary`](https://bio.tools/spatial-sanctuary)  
 > **Author:** Luca Celebrano (Independent Researcher, Naples, Italy) | ORCID: [`0009-0007-0931-3555`](https://orcid.org/0009-0007-0931-3555).
 
@@ -154,8 +153,8 @@ Please cite the archived software (Zenodo). The associated manuscript is under p
   author    = {Celebrano, Luca},
   year      = {2026},
   publisher = {Zenodo},
-  doi       = {10.5281/zenodo.23623653},
-  url       = {https://doi.org/10.5281/zenodo.23623653}
+  doi       = {10.5281/zenodo.24393483},
+  url       = {https://doi.org/10.5281/zenodo.24393483}
 }
 ```
 
