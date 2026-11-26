@@ -3,7 +3,7 @@
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.24393483-blue)](https://doi.org/10.5281/zenodo.24393483)
 
 [![GitHub stars](https://img.shields.io/github/stars/Lukecele/spatial-oncology-master?style=for-the-badge&logo=github&color=gold)](https://github.com/Lukecele/spatial-oncology-master)
-[![Research Square DOI](https://img.shields.io/badge/Research%20Square-10.21203%2Frs.3.rs--11530312%2Fv1-007acc.svg)](https://doi.org/10.21203/rs.3.rs-11530312/v1)
+[![Research Square DOI](https://img.shields.io/badge/Research%20Square-10.21203%2Frs.3.rs--11530312%2Fv2-007acc.svg)](https://doi.org/10.21203/rs.3.rs-11530312/v2)
 [![Master Study CI](https://github.com/Lukecele/spatial-oncology-master/actions/workflows/ci.yml/badge.svg)](https://github.com/Lukecele/spatial-oncology-master/actions/workflows/ci.yml)
 [![Journal: Journal of Mathematical Biology](https://img.shields.io/badge/Submitted-Journal%20of%20Mathematical%20Biology%20(Springer)-007acc.svg)](https://www.springer.com/journal/285)
 [![Manuscript ID: JOMB-D-26-01395](https://img.shields.io/badge/Springer%20Nature-Editor%20Assigned%20(JOMB--D--26--01395)-brightgreen.svg)](https://www.editorialmanager.com/jomb/)
